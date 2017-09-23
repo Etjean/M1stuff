@@ -10,7 +10,7 @@
 ## methode 2
 #start = time.time()
 #for i in list(range(taille)):
-#    a = i
+#    a = i  
 #print("methode 2 (for in list(range)) : %.1f secondes" %( time.time() - start ))
 
 
