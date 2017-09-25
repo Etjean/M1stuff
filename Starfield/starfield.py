@@ -8,8 +8,8 @@ class Star():
     def __init__(self):
         self.x = rd.randint(4, 396)
         self.y = rd.randint(4, 396)
-        self.d = sqrt((self.x-200)**2 + (self.y-200)**2)
-        self.oval = canvas.create_line(self.x2, self.y-2, self.x+2, self.y+2, fill='white')
+        self.d = math.sqrt((self.x-200)**2 + (self.y-200)**2)
+        self.oval = canvas.create_oval(self.x-1, self.y-1, self.x+1, self.y+1, fill='white')
 
 
 win = tk.Tk()
@@ -20,12 +20,12 @@ canvas.pack()
 
 
 starz = []
-for i in range(100):
+for i in range(30):
     s = Star()
     starz.append(s)
 
 while True:
-    time.sleep(0.05)
+    time.sleep(0.01)
     for i, s in enumerate(starz):
         if abs(s.x-200) >= 202 or abs(s.y-200) >= 202:
             canvas.delete(s.oval)

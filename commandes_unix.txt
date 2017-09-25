@@ -6,15 +6,21 @@ xpdf              #pdfs sur mon portable
 firefox           
 
 
+export DISPLAY=:0     #après avoir lancé Xming, pour pouvoir ouvrir les applis graphiques linux sur win10
 
-git                 #affiche l'aide générale
-git help [sketuveux]  #affiche l'aide à propos de sketuveux
+
+git                                      #affiche l'aide générale
+git help [sketuveux]                     #affiche l'aide à propos de sketuveux
 git clone http://github.com/Etjean/ejean.git
-git pull            #met à jour local depuis github
-git add .           #ajoute tout le local à la liste des trucs à modifier sur github
-git add file        #ajoute seulement file à la liste des trucs à modifier sur github
-git status          #montre les trucs qui vont etre modifiés sur github
-git push            #modifie github depuis le local
+git log                                  #montre l'historique de tous les commit
+git pull                                 #met à jour local depuis github
+git add .                                #ajoute tout le local à la liste des trucs à modifier sur github
+git add file                             #ajoute seulement file à la liste des trucs à modifier sur github
+git status                               #montre les trucs qui vont etre modifiés sur github
+git commit -a                            #valide tous les trucs aoutés avec add
+git commit -am [message du commit]
+git commit file
+git push                                 #modifie définitivemet github depuis le local
 
 
 sudo                        #execute en tant que root
