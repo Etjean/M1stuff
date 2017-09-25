@@ -1,0 +1,87 @@
+
+gedit             #textes sur ubuntu
+medit             #textes sur mon portable
+evince            #pdfs sur ubuntu
+xpdf              #pdfs sur mon portable
+firefox           
+
+
+
+git                 #affiche l'aide générale
+git help [sketuveux]  #affiche l'aide à propos de sketuveux
+git clone http://github.com/Etjean/ejean.git
+git pull            #met à jour local depuis github
+git add .           #ajoute tout le local à la liste des trucs à modifier sur github
+git add file        #ajoute seulement file à la liste des trucs à modifier sur github
+git status          #montre les trucs qui vont etre modifiés sur github
+git push            #modifie github depuis le local
+
+
+sudo                        #execute en tant que root
+sudo apt-cache update
+sudo apt-cache search [mots clés]
+sudo apt-get install [nom paquet]
+
+
+
+mkdir
+grep
+cat
+
+history
+!511          #execute la commande 511 de l'history
+
+chmod
+ls -l file      #montre les droits de file
+chmod +x file      #rend file executable par tt le monde
+chmod -w file      #rend file non editable par tlm
+
+ls
+ls -a  #fichiers cachés = fichiers ".qqchose"
+ls -l
+ls -al
+
+cd
+cd ..
+cd ~
+cd /           #cd vers répertoire ancetre
+cd dir1/dir2/  #cd dir2 dans dir1
+
+mv
+mv file1 file2      #renommer
+mv dir1/file1 dir2/     #déplacer
+mv dir1/file1 dir2/file2      #déplacer et renommer
+mv dir1/ dir2/           #renommer si dir2 n'existe pas, déplacer dir1 dans dir2 sinon
+
+cp            #copier
+cp path1/file path2
+
+rm           #remove
+rm -r        #remove recursivement
+rm -r dir    #remove tous les fichier de dir1 en demandant confirmation à chaque fois
+rm -f        #force le remove
+ATTENTION avec la prochaine, je crois qu'il y a moyen de faire des conneries...
+rm -rf dir   #remove dir et son contenu sans demander confirmation
+rm -d dir    #remove un dir (s'il est vide je crois)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
