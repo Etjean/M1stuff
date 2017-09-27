@@ -4,35 +4,43 @@ import random as rd
 import math
 
 
+
+
+height = 1000
+width = 1000
+sz_star = 1
+
+
+
 class Star():
     def __init__(self):
-        self.x = rd.randint(4, 396)
-        self.y = rd.randint(4, 396)
-        self.d = math.sqrt((self.x-200)**2 + (self.y-200)**2)
-        self.oval = canvas.create_oval(self.x-1, self.y-1, self.x+1, self.y+1, fill='white')
+        self.x = rd.randint(4, width-4)
+        self.y = rd.randint(4, height-4)
+        self.d = math.sqrt((self.x-width//2)**2 + (self.y-height//2)**2)
+        self.oval = canvas.create_oval(self.x-sz_star, self.y-sz_star, self.x+sz_star, self.y+sz_star, fill='white')
 
 
 win = tk.Tk()
 
-canvas = tk.Canvas(win, width = 400, height = 400, background = 'black')
+canvas = tk.Canvas(win, width = width, height = height, background = 'black')
 canvas.pack()
 
 
 
 starz = []
-for i in range(30):
+for i in range(10):
     s = Star()
     starz.append(s)
 
 while True:
-    time.sleep(0.01)
+    time.sleep(0.001)
     for i, s in enumerate(starz):
-        if abs(s.x-200) >= 202 or abs(s.y-200) >= 202:
+        if abs(s.x-width/2) >= width/2+10 or abs(s.y-height/2) >= height/2+10:
             canvas.delete(s.oval)
             starz[i] = Star()
         else:
-            dx = (s.x-200)/20
-            dy = (s.y-200)/20
+            dx = (s.x-width/2)/(width/30)
+            dy = (s.y-height/2)/(height/30)
             canvas.move(s.oval, dx, dy)
             s.x = s.x + dx
             s.y = s.y + dy
