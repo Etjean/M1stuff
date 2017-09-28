@@ -277,23 +277,25 @@ for (SEUIL in seuilz){
     specz2 = c(specz2, spec2)
 }
 
-plot(1-specz1, sensz1, ylim=range(c(sensz1, sensz2)), "l")
+#plot(1-specz1, sensz1, ylim=range(c(sensz1, sensz2)), "l")
+#par(new = TRUE)
+#plot(1-specz2, sensz2, ylim=range(c(sensz1, sensz2)), "l", axes = FALSE, xlab = "", ylab = "")
+
+plot(1-specz1, sensz1, ylim=range(c(sensz1, sensz2)), "l", xlab = "spécificité", ylab = "sensibilité", col = "orange", main="Courbes ROC de deux populations de flétans : Détermination du sexe en fonction de la taille")
 par(new = TRUE)
-plot(1-specz2, sensz2, ylim=range(c(sensz1, sensz2)), "l", axes = FALSE, xlab = "", ylab = "")
+plot(1-specz2, sensz2, ylim=range(c(sensz1, sensz2)), "l", axes = FALSE, xlab = "", ylab = "", col = "red")
 
-
-#fonction trapezes
-trapezes = function(vect){
+trapeze = function(specz, sensz){
+    sensz = 1-sensz
     integrale = 0
-    for (i in 1:length(vect)){
-        pas = 1/length(vect)
-        integrale = integrale + (vect[i+pas]+vect[i])*pas/2
+    for (i in range(length(specz)-1)){
+        integrale = integrale + (sensz[i]+sensz[i+1])/2
     }
-    print(paste("intégrale par la méthode des trapèzes = ", integrale))
     return(integrale)
 }
 
-
+print(trapeze(specz1, sensz1))
+print(trapeze(specz2, sensz2))
 
 
 
