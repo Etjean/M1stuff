@@ -59,7 +59,7 @@ segments3d(c(0, axe[1]), c(0, axe[2]), c(0, axe[3]), col = "green")
 
 #calcul de l'angle
 print(angle_rad <- acos(axe%*%norm))
-print(angle_deg <- angle_rad*180/pi)
+print(angle_deg <- angle_rad*180/piq)
 
 
 

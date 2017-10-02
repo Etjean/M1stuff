@@ -279,9 +279,9 @@ for (SEUIL in seuilz){
 
 
 
-# plot(1-specz1, sensz1, ylim=range(c(sensz1, sensz2)), "l", xlab = "spécificité", ylab = "sensibilité", col = "orange", main="Courbes ROC de deux populations de flétans: sexe en fonction de la taille")
-# par(new = TRUE)
-# plot(1-specz2, sensz2, ylim=range(c(sensz1, sensz2)), "l", axes = FALSE, xlab = "", ylab = "", col = "red")
+plot(1-specz1, sensz1, ylim=range(c(sensz1, sensz2)), "l", xlab = "spécificité", ylab = "sensibilité", col = "orange", main="Courbes ROC de deux populations de flétans: sexe en fonction de la taille")
+par(new = TRUE)
+plot(1-specz2, sensz2, ylim=range(c(sensz1, sensz2)), "l", axes = FALSE, xlab = "", ylab = "", col = "red")
 
 
 trapeze = function(specz, sensz){
