@@ -1,0 +1,28 @@
+import java.util.*; //importation de Scanner
+
+public class Exo2 {
+    public static void main (String [] argv) {
+        Scanner sc = new Scanner(System.in);
+        int x, y;
+        System.out.println("Entrez les coordonées (x, y) :");
+        System.out.println("Entrez x :");
+        do {x = sc.nextInt();} while (x<0 || x>400);
+        System.out.println("Entrez y :");
+        do {y = sc.nextInt();} while (y<0 || y>400);
+        System.out.println("x = "+x);
+        System.out.println("y = "+y);
+        sc.close();
+        System.out.println(carre(5));
+        System.out.println(cube(5));
+        System.out.println(puiss4(5));
+    }
+    static int carre(int n) {
+    	return n^2;
+    }
+    static int cube(int n) {
+    	return n^3;
+    }
+    static int puiss4(int n) {
+    	return n^4;
+    }
+}
