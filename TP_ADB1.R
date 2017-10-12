@@ -1,4 +1,6 @@
 #TP1 Analyse de Données Biologiques
+
+#CHAPTER 2--------------------------------------------------------------------------------------
 #lecture du jeu de données
 pockets = read.table("descriptor_pocket.mat")
 
@@ -10,31 +12,15 @@ print(dim(pockets))
 
 #ajout de la fréquence des différents types de residus
 aromatic = apply(cbind(pockets$F, pockets$Y, pockets$H, pockets$W), 1, sum)
-pockets = cbind(pockets, aromatic)
-
 polar = apply(cbind(pockets$C, pockets$D, pockets$E, pockets$H, pockets$K, pockets$N, pockets$Q, pockets$R, pockets$S, pockets$T, pockets$W, pockets$Y), 1, sum)
-pockets = cbind(pockets, polar)
-
 aliphatic = apply(cbind(pockets$I, pockets$L, pockets$V), 1, sum)
-pockets = cbind(pockets, aliphatic)
-
 charged = apply(cbind(pockets$D, pockets$E, pockets$R, pockets$K, pockets$H), 1, sum)
-pockets = cbind(pockets, charged)
-
 negative = apply(cbind(pockets$D, pockets$E), 1, sum)
-pockets = cbind(pockets, negative)
-
 positive = apply(cbind(pockets$R, pockets$K, pockets$H), 1, sum)
-pockets = cbind(pockets, positive)
-
 hydrophobic = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$L, pockets$I, pockets$M, pockets$F, pockets$W, pockets$H, pockets$Y, pockets$K), 1, sum)
-pockets = cbind(pockets, hydrophobic)
-
 small = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$S, pockets$D, pockets$N, pockets$P), 1, sum)
-pockets = cbind(pockets, small)
-
 tiny = apply(cbind(pockets$A, pockets$C, pockets$G, pockets$S), 1, sum)
-pockets = cbind(pockets, tiny)
+pockets = cbind(pockets, aromatic, polar, aliphatic, charged, negative, positive, hydrophobic, small, tiny)
 
 print(pockets)
 print(dim(pockets))     #37 descriptors
@@ -46,7 +32,6 @@ pockets = cbind(pockets[,1:27], pockets[,29:37], pockets[,28])
 colnames(pockets)[37] = noms[28]
 
 
-#2.3.1--------------------------------------------------------------------------
 #PLOTS
 #boxplot(scale(pockets[,-37]), las=2)
 
@@ -88,11 +73,23 @@ print(names(pockets[which(pockets_pvalues < 0.05)]))
 #correlation
 print(drug.corr <- cor(pockets[,-37]))
 library(corrplot)
-corrplot(drug.corr)
+# corrplot(drug.corr)
 #plot(pockets$polar, pockets$hydrophobic)
-plot(pockets$Real_volume, pockets$C_ATOM)
+#plot(pockets$Real_volume, pockets$C_ATOM)
 
-#max(
+
+
+#CHAPTER 3--------------------------------------------------------------------------------------
+#3.2.1
+dist = dist(scale(pockets[,-37]))
+tree = hclust(dist, method = "ward.D2")
+plot(tree, hang=-1, labels = pockets$drugg)
+rect.hclust(tree, k = 4, border = "red")
+
+#3.2.2
+kmeans(pockets[, -37], 2)
+
+
 
 
 
