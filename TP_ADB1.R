@@ -33,34 +33,35 @@ colnames(pockets)[37] = noms[28]
 
 
 #PLOTS
-#boxplot(scale(pockets[,-37]), las=2)
+boxplot(scale(pockets[,-37]), las=2)
 
 #ma version
-#hist(pockets$polar[pockets$drugg == 1], freq=F, col = "green", xlim = c(0, 1))
-#hist(pockets$polar[pockets$drugg == 0], freq=F, col =rgb(1,0,0,0.5), add=T)
+hist(pockets$polar[pockets$drugg == 1], freq=F, col = "green", xlim = c(0, 1))
+hist(pockets$polar[pockets$drugg == 0], freq=F, col =rgb(1,0,0,0.5), add=T)
 
 #version prof
-#par(mfrow = c(1, 2))
-#for (i in c(1:36))
-#    by(pockets[,i], pockets$drugg, hist, main = "un histogramme")
+par(mfrow = c(1, 2))
+for (i in c(1:36))
+    by(pockets[,i], pockets$drugg, hist, main = "un histogramme")
 
 #ma version
-#for (i in 1:36){
-#    print(mean(pockets[,i][pockets$drugg == 1]))
-#    print(mean(pockets[,i][pockets$drugg == 0]))
-#    print(sd(pockets[,i][pockets$drugg == 1]))
-#    print(sd(pockets[,i][pockets$drugg == 0]))
-#}
+for (i in 1:36){
+    print(mean(pockets[,i][pockets$drugg == 1]))
+    print(mean(pockets[,i][pockets$drugg == 0]))
+    print(sd(pockets[,i][pockets$drugg == 1]))
+    print(sd(pockets[,i][pockets$drugg == 0]))
+}
 
 #version prof
-#lapply(pockets, mean)  global
-#lapply(pockets, sd)
-#print(means <- aggregate(pockets[,-37], by=list(pockets$drugg), FUN = mean))
-#print(sds <- aggregate(pockets[,-37], by=list(pockets$drugg), FUN = mean))
+lapply(pockets, mean)  global
+lapply(pockets, sd)
+print(means <- aggregate(pockets[,-37], by=list(pockets$drugg), FUN = mean))
+print(sds <- aggregate(pockets[,-37], by=list(pockets$drugg), FUN = mean))
 
 #tests
 pockets_pvalues = c()
 for (i in 1:36){
+# optionnel, il faudrait comparer les variances, comme condition d'application du Student
 #    var.test(pockets[,i][pockets$drugg == 1], pockets[,i][pockets$drugg == 0])
     pvalue = t.test(pockets[,i][pockets$drugg == 1], pockets[,i][pockets$drugg == 0])$p.value
     pockets_pvalues = c(pockets_pvalues, pvalue)
@@ -73,9 +74,9 @@ print(names(pockets[which(pockets_pvalues < 0.05)]))
 #correlation
 print(drug.corr <- cor(pockets[,-37]))
 library(corrplot)
-# corrplot(drug.corr)
-#plot(pockets$polar, pockets$hydrophobic)
-#plot(pockets$Real_volume, pockets$C_ATOM)
+corrplot(drug.corr)
+plot(pockets$polar, pockets$hydrophobic)
+plot(pockets$Real_volume, pockets$C_ATOM)
 
 
 
