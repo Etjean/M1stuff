@@ -1,0 +1,49 @@
+import java.util.*; //importation de Scanner
+
+public class Personne {
+	
+	char nom;
+	char prenom;
+	
+	Personne () {
+		Scanner clavier = new Scanner(System.in);
+		System.out.println("Nom ?");
+		this.nom = clavier.nextInt();
+		System.out.println("Prenom ?");
+		this.prenom = clavier.nextInt();
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		Personne moi = new Personne(); 
+		System.out.println(moi.prenom);
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}
