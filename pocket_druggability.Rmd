@@ -133,11 +133,11 @@ What does it mean?
 3. Plot (scatter-plot) the volume of each pocket (descriptor Real_volume) in function of its
 number of atoms (descriptor C_atom). Are these two descriptors significantly correlated?
 ```{r}
-drug.corr = cor(pockets[,-37])
-library(corrplot)
-corrplot(drug.corr)
-plot(pockets$polar, pockets$hydrophobic)
-plot(pockets$Real_volume, pockets$C_ATOM)
+# drug.corr = cor(pockets[,-37])
+# library(corrplot)
+# corrplot(drug.corr)
+# plot(pockets$polar, pockets$hydrophobic)
+# plot(pockets$Real_volume, pockets$C_ATOM)
 ```
 
 4. Compute the linear regression to predict the pocket volume knowing its number of atoms.
@@ -193,10 +193,10 @@ the dendrogram stable in terms of tree-structure.
 observe?
 ```{r}
 pockets.tree = hclust(pockets.dist, method = "ward.D2")
-plot(pockets.tree, hang=-1, labels = pockets$drugg)
-rect.hclust(pockets.tree, k = 4, border = "red")
-rect.hclust(pockets.tree, k = 6, border = "red")
-rect.hclust(pockets.tree, k = 8, border = "red")
+plot(pockets.tree, hang=-1, labels = pockets$drugg, xlab = "Poches (1 = druggable, 0 = non-druggable)", ylab = "Distance", main = "Dendrogramme par la méthode de Ward")
+rect.hclust(pockets.tree, k = 5, border = "red")
+# rect.hclust(pockets.tree, k = 6, border = "red")
+# rect.hclust(pockets.tree, k = 8, border = "red")
 ```
 
 5. Extraction and analysis of pocket clusters
@@ -261,7 +261,21 @@ that you must know the number of clusters.
 descriptors. What are the outputs of the function? Are the group is homogeneous in terms
 of druggability?
 ```{r}
-pockets.kmeans = kmeans(pockets[, -37], 2)
+pockets.kmeans = kmeans(pockets[, -37], centers = 3)
+pockets.kmeans$cluster
+plot(hclust(pockets.dist), hang = -1, labels = as.factor(pockets.kmeans$cluster))
+I.intra = rep(0, 10)
+I.intra
+for (i in 1:length(I.intra)){
+  I.intra[i] = kmeans(pockets, centers = i)$tot.withinss
+}
+
+```
+
+```{r}
+plot(I.intra, type = "l", xlab = "Nombre de clusters", ylab = "Inertie intra-classe", main = "Détermination du nombre de cluster idéal par la méthode des kmeans")
+abline(v=3, col = "red")
+text(3, 40000000, "3 clusters", col = "red")
 ```
 
 3. As the K-means seeds are randomly chosen, it is important to perform the K-means several
