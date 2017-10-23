@@ -193,7 +193,7 @@ the dendrogram stable in terms of tree-structure.
 observe?
 ```{r}
 pockets.tree = hclust(pockets.dist, method = "ward.D2")
-plot(pockets.tree, hang=-1, labels = pockets$drugg, xlab = "Poches (1 = druggable, 0 = non-druggable)", ylab = "Distance", main = "Dendrogramme par la méthode de Ward")
+plot(pockets.tree, hang=-1, labels = pockets$drugg, xlab = "Poches (1 = druggable, 0 = non-druggable)", ylab = "Distance", main = "Dendrogramme par la m?thode de Ward")
 rect.hclust(pockets.tree, k = 5, border = "red")
 # rect.hclust(pockets.tree, k = 6, border = "red")
 # rect.hclust(pockets.tree, k = 8, border = "red")
@@ -273,7 +273,7 @@ for (i in 1:length(I.intra)){
 ```
 
 ```{r}
-plot(I.intra, type = "l", xlab = "Nombre de clusters", ylab = "Inertie intra-classe", main = "Détermination du nombre de cluster idéal par la méthode des kmeans")
+plot(I.intra, type = "l", xlab = "Nombre de clusters", ylab = "Inertie intra-classe", main = "D?termination du nombre de cluster id?al par la m?thode des kmeans")
 abline(v=3, col = "red")
 text(3, 40000000, "3 clusters", col = "red")
 ```
@@ -324,6 +324,20 @@ the PCA, you will use the library FactoMineR.
 Justify your answer.
 3. Compute the PCA from pocket descriptors without the graph representation.
 4. Analyze the obtained outputs.
+```{r}
+library(FactoMineR)
+pockets.acp12 = PCA(pockets, ncp = 5, axes=c(1, 2))
+plot(pockets.acp12, choix = "ind", col.ind = (pockets[,37]+1), title = "NOIRS = non-druggables // ROUGES = druggables")
+pockets.acp34 = PCA(pockets, ncp = 5, axes=c(3, 4))
+# dimension 1 : SMALL + TINY // AROMATIC
+# dimension 2 : POLAR + CHARGED // HYDROPHOBIC + ALIPHATIC
+# dimension 3 : C_RESIDUES + C_ATOM + REAL_VOLUME // MEAN_ALPHA.SPHERE_SA + MEAN_ALPHA.SPHERE_RADIUS
+
+barplot(pockets.acp$eig[,1], main="valeurs propres", names.arg=1:nrow(pockets.acp$eig))
+barplot(pockets.acp$eig[,3], main="Somme cumulÃ© des variances")
+```
+
+
 5. To analyze the variability explained by each CP, plot the cumulate sum of data variability
 explained by the different PCs (= cumulate sum of eigen values).
 6. Plot the projection of descriptors in the plane defined by the two first PCs (first PCA
@@ -343,6 +357,22 @@ cation + kmeans), project pockets onto the PCA first plane and color them accord
 the obtained clusters. What do you observe? Explain these clusters using descriptors.
 10. Analyze the second PCA plane composed by the third and fourth PCs using the same
 procedure.
+
+
+```{r}
+#Couleurs des individus en fonctions des clusters
+pockets.kmeans = kmeans(scale(pockets[, -37]), centers = 5)
+plot(pockets.acpclusters, choix = "ind", col.ind = pockets.kmeans$cluster)
+```
+
+
+
+
+
+
+
+
+
 Supplementary questions
 The PCA analysis is often used as to reduce the dimensionality of data, and for producing
 insight as to structure of latent variables (cf. Velicer & Jackson, 1990). Instead of working with
