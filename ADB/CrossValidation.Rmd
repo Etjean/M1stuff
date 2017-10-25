@@ -1,0 +1,89 @@
+---
+title: "Devoir"
+author: "Sandrine FARTEK"
+output: pdf_document
+---
+
+# Preparation of the data 
+```{r echo=FALSE}
+pockets.dat = read.table("descriptor_pocket.mat")
+pockets.dat = na.omit(pockets.dat)
+
+aromatic = apply(pockets.dat[,c("F","Y","H","W")],1,sum)
+polar = apply(pockets.dat[,c("C","D","E","H","K","N","Q","R","S","T","W","Y")],1,sum)
+aliphatic = apply(pockets.dat[,c("I","L","V")],1,sum)
+charged = apply(pockets.dat[,c("D","E","R","K","H")],1,sum)
+negative = apply(pockets.dat[,c("D","E")],1,sum)
+positive = apply(pockets.dat[,c("H","K","R")],1,sum)
+hydrophobic = apply(pockets.dat[,c("C","G","A","T","V","L","I","M","F","W","Y","H","K")],1,sum)
+small = apply(pockets.dat[,c("C","V","T","G","A","S","D","N","P")],1,sum)
+tiny = apply(pockets.dat[,c("F","Y","H","W")],1,sum)
+
+pockets.dat = cbind(pockets.dat[,-28], aromatic, polar, aliphatic, charged, negative, positive, hydrophobic, small, tiny, drugg=pockets.dat[,28])
+```
+
+
+# Test and application samples
+```{r echo=FALSE}
+matAppTest <- function(myData, output = c(TRUE, FALSE)) {
+  if(missing(output)) { output = F }
+  # Spliting procedure
+  vIndApp <- sample(1:nrow(myData), nrow(myData)*(2/3), replace=F)
+  vIndTest <- (1:nrow(myData))[-vIndApp]
+  matApp <- pockets.dat[vIndApp,]
+  matTest <- pockets.dat[vIndTest,]
+  results <- list(matApp, matTest)
+  # Output
+  if(output) {
+    write.table(matApp, file="matApp.csv")
+    write.table(matTest, file="matTest.csv")
+  }
+  return(results)
+}
+
+res1 <- matAppTest(pockets.dat, F)
+matApp <- res1[[1]]
+matTest <- res1[[2]]
+
+# Samples variables comparison
+#par(mfrow=c(2,1))
+#for (i in 1:ncol(matApp)) {
+#	hist(matApp[,i], main = colnames(matApp)[i])
+#  hist(matTest[,i], main = colnames(matTest)[i])
+#}
+```
+
+
+# K-fold Cross-validation samples
+```{r echo=FALSE}
+matKFold <- function(matApp, k) {
+  if(k < 2 || floor(k) != k) { stop("argument \"k\" must be an integer greater than 1.") }
+
+  results <- list()
+  for(i in 1:k) {
+    vInd <- sample(1:nrow(matApp), nrow(matApp)*(1/(k-i+1)), replace=F)
+    results[[i]] <- matApp[vInd,]
+    matApp <- matApp[-vInd,]
+  }
+  return(results)
+}
+
+res2 <- matKFold(matApp, 5)
+```
+
+
+# Cross-validation
+```{r}
+crossValidation <- function(matKFold) {
+  if(length(matKFold) < 2) { stop("argument \"k\" must be an integer greater than 1.") }
+  for(i in 1:length(matKFold)) {
+    # Splitting
+    matApp <- do.call("rbind",matKFold[c(-i)])
+    matTest <- matKFold[[i]]
+    # Test
+  }
+}
+
+crossValidation(res2)
+```
+

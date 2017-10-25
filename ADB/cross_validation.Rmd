@@ -1,0 +1,73 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+#Loading of the dataframe
+```{r}
+pockets = read.table("descriptor_pocket.mat")
+pockets = na.omit(pockets)
+
+aromatic = apply(cbind(pockets$F, pockets$Y, pockets$H, pockets$W), 1, sum)
+polar = apply(cbind(pockets$C, pockets$D, pockets$E, pockets$H, pockets$K, pockets$N, pockets$Q, pockets$R, pockets$S, pockets$T, pockets$W, pockets$Y), 1, sum)
+aliphatic = apply(cbind(pockets$I, pockets$L, pockets$V), 1, sum)
+charged = apply(cbind(pockets$D, pockets$E, pockets$R, pockets$K, pockets$H), 1, sum)
+negative = apply(cbind(pockets$D, pockets$E), 1, sum)
+positive = apply(cbind(pockets$R, pockets$K, pockets$H), 1, sum)
+hydrophobic = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$L, pockets$I, pockets$M, pockets$F, pockets$W, pockets$H, pockets$Y, pockets$K), 1, sum)
+small = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$S, pockets$D, pockets$N, pockets$P), 1, sum)
+tiny = apply(cbind(pockets$A, pockets$C, pockets$G, pockets$S), 1, sum)
+pockets = cbind(pockets.dat[,-28], aromatic, polar, aliphatic, charged, negative, positive, hydrophobic, small, tiny, drugg=pockets.dat[,28])
+```
+
+#Splitting into 2/3 Learning & 1/3 Test
+```{r}
+index = sample(nrow(pockets), round(2/3*nrow(pockets)), replace=F)
+pockets.lrn = pockets[index,]
+pockets.tst = pockets[-index,]
+```
+
+
+#K-fold cross validation of the learning sample
+```{r}
+k = 4
+
+#Division of the learning sample into k parts
+pockets.kparts = c()
+pockets.rest = pockets.lrn
+for (i in 1:k) {
+  index.k = sample(nrow(pockets.rest), round(1/(k-i+1)*nrow(pockets.rest)), replace=F)
+  pockets.kparts = c(pockets.kparts, pockets.rest[index.k,])
+  pockets.rest = pockets.rest[-index.k,]
+  
+}
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

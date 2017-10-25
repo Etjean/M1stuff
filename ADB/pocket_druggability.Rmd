@@ -333,8 +333,8 @@ pockets.acp34 = PCA(pockets, ncp = 5, axes=c(3, 4))
 # dimension 2 : POLAR + CHARGED // HYDROPHOBIC + ALIPHATIC
 # dimension 3 : C_RESIDUES + C_ATOM + REAL_VOLUME // MEAN_ALPHA.SPHERE_SA + MEAN_ALPHA.SPHERE_RADIUS
 
-barplot(pockets.acp$eig[,1], main="valeurs propres", names.arg=1:nrow(pockets.acp$eig))
-barplot(pockets.acp$eig[,3], main="Somme cumulé des variances")
+barplot(pockets.acp12$eig[,1], main="valeurs propres", names.arg=1:nrow(pockets.acp12$eig))
+barplot(pockets.acp12$eig[,3], main="Somme cumulé des variances")
 ```
 
 
@@ -362,7 +362,7 @@ procedure.
 ```{r}
 #Couleurs des individus en fonctions des clusters
 pockets.kmeans = kmeans(scale(pockets[, -37]), centers = 5)
-plot(pockets.acpclusters, choix = "ind", col.ind = pockets.kmeans$cluster)
+plot(pockets.acp12, choix = "ind", col.ind = pockets.kmeans$cluster)
 ```
 
 
