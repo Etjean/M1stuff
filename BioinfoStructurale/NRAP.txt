@@ -1,0 +1,303 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                   (CHARMM) - Developmental Version 29b2   February 15, 2003   
+       Copyright(c) 1984-2001  President and Fellows of Harvard College
+                              All Rights Reserved
+      Current operating system: Linux-2.4.20-20.9(i686)@herge.ebgm.jussieu.f
+                 Created on  3/16/ 4 at 17:24:35 by user: fuchs       
+
+            Maximum number of ATOMS:     25140, and RESidues:       14000
+            Current HEAP size:         2048000, and STACK size:    500000
+
+ RDTITL> * CALC ENE OF 2 WATER MLC
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    !=================================================
+ CHARMM>    ! Read residue toplogy and parameter files
+ CHARMM>    !=================================================
+ CHARMM>     
+  
+ CHARMM>    open read card unit 11 name ~/tools/c29b2/toppar/top_all22_prot.inp
+ VOPEN> Attempting to open::/home/herge/fuchs/tools/c29b2/toppar/top_all22_prot.inp::
+ OPNLGU> Unit 11 opened for READONLY access to /home/herge/fuchs/tools/c29b2/toppar/top_all22_prot.inp
+  
+ CHARMM>    read rtf card unit 11
+ MAINIO> Residue topology file being read from unit  11.
+ TITLE> *>>>>>>>>CHARMM22 ALL-HYDROGEN TOPOLOGY FILE FOR PROTEINS <<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>> AUGUST 1999 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<
+ TITLE> *>>>>>> 410-706-7442 OR EMAIL: ALEX,MMIRIS.AB.UMD.EDU  <<<<<<<<<
+ TITLE> *
+  
+ CHARMM>    close unit 11
+ VCLOSE: Closing unit   11 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    open read card unit 11 name ~/tools/c29b2/toppar/par_all22_prot.inp
+ VOPEN> Attempting to open::/home/herge/fuchs/tools/c29b2/toppar/par_all22_prot.inp::
+ OPNLGU> Unit 11 opened for READONLY access to /home/herge/fuchs/tools/c29b2/toppar/par_all22_prot.inp
+  
+ CHARMM>    read para card unit 11
+
+          PARAMETER FILE BEING READ FROM UNIT 11
+ TITLE> *>>>> CHARMM22 ALL-HYDROGEN PARAMETER FILE FOR PROTEINS <<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>> AUGUST 1999 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<
+ TITLE> *>>>>>> 410-706-7442 OR EMAIL: ALEX,MMIRIS.AB.UMD.EDU  <<<<<<<<<
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    close unit 11
+ VCLOSE: Closing unit   11 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Read and generate waterbox
+ CHARMM>    !==================================================
+ CHARMM>     
+  
+ CHARMM>    open read card unit 11 name water.pdb
+ VOPEN> Attempting to open::water.pdb::
+ OPNLGU> Unit 11 opened for READONLY access to water.pdb
+  
+ CHARMM>    read sequence pdb unit 11
+ MAINIO> Sequence information being read from unit  11.
+ TITLE>  2 water molecules facing each other
+ TITLE>  *
+
+          RESIDUE SEQUENCE --     2 RESIDUES
+          TIP3TIP3
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        2
+         Number of atoms         =        6   Number of groups     =        2
+         Number of bonds         =        6   Number of angles     =        2
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of HB acceptors  =        2   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    rewind unit 11
+                    REWINDING UNIT    11
+  
+ CHARMM>    read coor pdb unit 11
+          SPATIAL COORDINATES BEING READ FROM UNIT 11
+ TITLE>  2 WATER MOLECULES FACING EACH OTHER
+ TITLE>  *
+  
+ CHARMM>    close unit 11
+ VCLOSE: Closing unit   11 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! mini and calc energy
+ CHARMM>    !==================================================
+ CHARMM>    !SKIP ALL EXCL angl
+ CHARMM>    ener
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found      6 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       13 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+        9 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0     48.09535      0.00000     79.99263
+ENER INTERN>        0.00060      0.00008      0.00000      0.00000      0.00000
+ENER EXTERN>       37.68512     10.40955      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    mini NRAP nstep 10000 nprint 1 TOLGRD 0.0001
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        9 atom  pairs and        6 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       13 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+        9 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ NRAPH> An energy minimization has been requested.
+
+ NSTEP  =        10000   NPRINT =            1
+ STEP   =    0.0200000   TFREQ  =   50.0000000
+ TOLGRD =    0.0001000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0     48.09475      0.00060     79.99263      0.00000
+MINI INTERN>        0.00000      0.00008      0.00000      0.00000      0.00000
+MINI EXTERN>       37.68512     10.40955      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        1     42.24011      5.85464     64.60817      0.11929
+MINI INTERN>        0.00000      0.06223      0.00000      0.00000      0.00000
+MINI EXTERN>       32.92126      9.25663      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        2     35.43390      6.80621     47.56491      0.21035
+MINI INTERN>        0.00000      0.35087      0.00000      0.00000      0.00000
+MINI EXTERN>       27.17889      7.90415      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        3     25.68803      9.74587     52.35422      0.35200
+MINI INTERN>        0.00000      1.77090      0.00000      0.00000      0.00000
+MINI EXTERN>       18.88505      5.03208      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        4     23.99423      1.69381    117.46992      0.56186
+MINI INTERN>        0.00000     13.69838      0.00000      0.00000      0.00000
+MINI EXTERN>        9.30377      0.99208      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        5     49.51246    -25.51823    107.46450      0.55098
+MINI INTERN>        0.00000     34.89150      0.00000      0.00000      0.00000
+MINI EXTERN>       11.24060      3.38036      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        6      4.71813     44.79433     54.73029      0.95369
+MINI INTERN>        0.00000      8.27348      0.00000      0.00000      0.00000
+MINI EXTERN>        1.59776     -5.15311      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        7     -3.63105      8.34917     12.79185      0.41419
+MINI INTERN>        0.00000      0.43873      0.00000      0.00000      0.00000
+MINI EXTERN>        0.93942     -5.00920      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        8     -6.60056      2.96952     34.49394      0.57712
+MINI INTERN>        0.00000      0.03263      0.00000      0.00000      0.00000
+MINI EXTERN>        1.22771     -7.86090      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        9     -6.16701     -0.43356      8.54585      0.23842
+MINI INTERN>        0.00000      0.19866      0.00000      0.00000      0.00000
+MINI EXTERN>        1.30677     -7.67244      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+ UPDECI: Nonbond update at step        10
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       13 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+        9 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+MINI>       10     -6.96731      0.80030     11.08044      0.30956
+MINI INTERN>        0.00000      0.04880      0.00000      0.00000      0.00000
+MINI EXTERN>        1.77108     -8.78718      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       11     -7.03367      0.06636      7.13745      0.19272
+MINI INTERN>        0.00000      0.15173      0.00000      0.00000      0.00000
+MINI EXTERN>        1.61854     -8.80394      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       12     -7.02877     -0.00489      0.80342      0.08295
+MINI INTERN>        0.00000      0.07660      0.00000      0.00000      0.00000
+MINI EXTERN>        1.62239     -8.72776      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       13     -7.16898      0.14021      2.92348      0.13708
+MINI INTERN>        0.00000      0.09912      0.00000      0.00000      0.00000
+MINI EXTERN>        1.63629     -8.90439      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       14     -7.11922     -0.04976      0.20368      0.04245
+MINI INTERN>        0.00000      0.07825      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64184     -8.83931      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       15     -7.12746      0.00824      0.97508      0.07938
+MINI INTERN>        0.00000      0.07990      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64416     -8.85153      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       16     -7.12556     -0.00190      0.02000      0.01051
+MINI INTERN>        0.00000      0.07768      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64492     -8.84817      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       17     -7.12639      0.00082      0.13250      0.02706
+MINI INTERN>        0.00000      0.07850      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64450     -8.84938      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       18     -7.12765      0.00126      0.27662      0.04062
+MINI INTERN>        0.00000      0.07994      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64361     -8.85120      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       19     -7.12669     -0.00096      0.00044      0.00169
+MINI INTERN>        0.00000      0.07759      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64518     -8.84946      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       20     -7.12670      0.00000      0.00080      0.00212
+MINI INTERN>        0.00000      0.07758      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64519     -8.84947      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       21     -7.12670      0.00000      0.00000      0.00001
+MINI INTERN>        0.00000      0.07757      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64519     -8.84946      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       22     -7.12670      0.00000      0.00000      0.00000
+MINI INTERN>        0.00000      0.07757      0.00000      0.00000      0.00000
+MINI EXTERN>        1.64519     -8.84946      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ NRAPH> Minimization exiting with gradient tolerance ( 0.0001000) satisfied.
+
+NRAP MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+NRAP INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+NRAP EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+NRAP>       22     -7.12670      0.00000      0.00000      0.02000
+NRAP INTERN>        0.00000      0.07757      0.00000      0.00000      0.00000
+NRAP EXTERN>        1.64519     -8.84946      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    open write card unit 11 name water_mini_100_NRAP.pdb
+ VOPEN> Attempting to open::water_mini_100_nrap.pdb::
+ OPNLGU> Unit 11 opened for WRITE access to water_mini_100_nrap.pdb
+  
+ CHARMM>    write coor pdb unit 11
+ RDTITL> CLOSE UNIT 11
+ RDTITL> No title read.
+  
+ CHARMM>    close unit 11
+ VCLOSE: Closing unit   11 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    stop
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    MAXIMUM STACK SPACE USED IS   17526
+                    STACK CURRENTLY IN USE IS         0
+                    NO WARNINGS WERE ISSUED
+                    HEAP PRINTOUT-  HEAP SIZE   2048000
+                    SPACE CURRENTLY IN USE IS         0
+                    MAXIMUM SPACE USED IS          2412
+                    FREE LIST
+            PRINHP> ADDRESS:         1 LENGTH:   2048000 NEXT:         0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.97  SECONDS 
+                         CPU TIME:     0.90  SECONDS 
