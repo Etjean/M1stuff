@@ -1,0 +1,27 @@
+
+public class B2 {
+	public static void main(String[] args) {
+		
+	}
+	
+	private int valeur;
+	
+	public B2(int valeur) {
+		this.valeur = valeur;
+	}
+	
+}
+
+
+
+class A2 extends B2 {
+	private String proprietaire;
+	
+	public A2 (String proprio, int valeur) {
+		this.proprietaire = proprio;
+		super(valeur, 0)
+		
+	}
+	
+}
+

@@ -1,0 +1,23 @@
+
+public class B1 {
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	
+	double valeur;
+	
+	
+	
+	
+	
+	public class A1 extends B1 {
+		double proprietaire;
+		
+		
+		
+	}
+	
+
+}

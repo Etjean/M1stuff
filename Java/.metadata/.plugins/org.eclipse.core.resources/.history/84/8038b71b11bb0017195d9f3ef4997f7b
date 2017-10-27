@@ -1,0 +1,13 @@
+
+public class B1 {
+	public static void main(String[] args) {		//MAIN B1
+		
+	}
+	
+	private int valeur;										//Attributs B1
+	
+	public B1 (int valeur) {						//Constructeur B1
+		this.valeur = valeur;
+	}
+	
+}

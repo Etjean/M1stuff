@@ -1,0 +1,14 @@
+
+public class B2 {
+	public static void main(String[] args) {
+		
+	}
+	
+	private int valeur;
+	
+	public B2(int valeur) {
+		this.valeur = valeur;
+	}
+	
+}
+
