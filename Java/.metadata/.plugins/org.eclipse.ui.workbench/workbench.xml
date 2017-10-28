@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
-<window height="1026" width="808" x="872" y="24">
+<window height="725" width="1376" x="0" y="23">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="144" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="26"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="178" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="142" y="26"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="36" y="26"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="80" y="26"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="80" y="26"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="114" y="26"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="212" y="26"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -34,29 +34,64 @@
 <part id="1"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A1.java" partName="A1.java" path="/home/sdv/m1bi/ejean/Github/Java/TP4/src/A1.java" title="A1.java" tooltip="TP4/src/A1.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A1.java" partName="A1.java" path="/home/ejean/Github/Java/TP4/src/A1.java" title="A1.java" tooltip="TP4/src/A1.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4/src/A1.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="295" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A2.java" partName="A2.java" path="/home/sdv/m1bi/ejean/Github/Java/TP4/src/A2.java" title="A2.java" tooltip="TP4/src/A2.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A2.java" partName="A2.java" path="/home/ejean/Github/Java/TP4/src/A2.java" title="A2.java" tooltip="TP4/src/A2.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4/src/A2.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="280" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="B.java" partName="B.java" path="/home/sdv/m1bi/ejean/Github/Java/TP4/src/B.java" title="B.java" tooltip="TP4/src/B.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="B.java" partName="B.java" path="/home/ejean/Github/Java/TP4/src/B.java" title="B.java" tooltip="TP4/src/B.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4/src/B.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="301" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur1.java" partName="Convoyeur1.java" path="/home/sdv/m1bi/ejean/Github/Java/TP4/src/Convoyeur1.java" title="Convoyeur1.java" tooltip="TP4/src/Convoyeur1.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur1.java" partName="Convoyeur1.java" path="/home/ejean/Github/Java/TP4/src/Convoyeur1.java" title="Convoyeur1.java" tooltip="TP4/src/Convoyeur1.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4/src/Convoyeur1.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="347" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur2.java" partName="Convoyeur2.java" path="/home/sdv/m1bi/ejean/Github/Java/TP4/src/Convoyeur2.java" title="Convoyeur2.java" tooltip="TP4/src/Convoyeur2.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur2.java" partName="Convoyeur2.java" path="/home/ejean/Github/Java/TP4/src/Convoyeur2.java" title="Convoyeur2.java" tooltip="TP4/src/Convoyeur2.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4/src/Convoyeur2.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="171" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Supermarket.java" partName="Supermarket.java" path="/home/ejean/Github/Java/Supermarket/src/Supermarket.java" title="Supermarket.java" tooltip="Supermarket/src/Supermarket.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Supermarket.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="288" selectionTopPixel="46"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Produit.java" partName="Produit.java" path="/home/ejean/Github/Java/Supermarket/src/Produit.java" title="Produit.java" tooltip="Supermarket/src/Produit.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Produit.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ephemere.java" partName="Ephemere.java" path="/home/ejean/Github/Java/Supermarket/src/Ephemere.java" title="Ephemere.java" tooltip="Supermarket/src/Ephemere.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Ephemere.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="265" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Froid.java" partName="Froid.java" path="/home/ejean/Github/Java/Supermarket/src/Froid.java" title="Froid.java" tooltip="Supermarket/src/Froid.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Froid.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="98" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Glace.java" partName="Glace.java" path="/home/ejean/Github/Java/Supermarket/src/Glace.java" title="Glace.java" tooltip="Supermarket/src/Glace.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Glace.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="23" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tomate.java" partName="Tomate.java" path="/home/ejean/Github/Java/Supermarket/src/Tomate.java" title="Tomate.java" tooltip="Supermarket/src/Tomate.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Tomate.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="23" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mouchoirs.java" partName="Mouchoirs.java" path="/home/ejean/Github/Java/Supermarket/src/Mouchoirs.java" title="Mouchoirs.java" tooltip="Supermarket/src/Mouchoirs.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Supermarket/src/Mouchoirs.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -96,6 +131,7 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="652" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -278,9 +314,9 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.19003932" ratioLeft="145" ratioRight="618" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.74973714" ratioLeft="713" ratioRight="238" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.14037736" ratioLeft="186" ratioRight="1139" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.6016129" ratioLeft="373" ratioRight="247" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.jdt.ui.JavadocView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -297,7 +333,7 @@
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.80656934" ratioLeft="442" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
@@ -311,161 +347,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4/src/A1.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4/src/A2.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4/src/B.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Produit.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Ephemere.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Froid.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Glace.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Tomate.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Mouchoirs.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Supermarket.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4/src/Convoyeur1.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4/src/Convoyeur2.java"/>
 </editors>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="284" y="0"/>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="170" y="0"/>
 </item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="Froid.java" index="2">
+<position info="not_deleted" x="251" y="0"/>
 </item>
-<item historyLabel="B.java" index="2">
-<position info="not_deleted" x="62" y="0"/>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="256" y="0"/>
 </item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="Tomate.java" index="4">
+<position info="not_deleted" x="23" y="0"/>
 </item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="284" y="0"/>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="256" y="0"/>
 </item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="230" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="455" y="0"/>
 </item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="275" y="0"/>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="256" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
+<item historyLabel="Froid.java" index="2">
+<position info="not_deleted" x="98" y="0"/>
+</item>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="Produit.java" index="0">
+<position info="not_deleted" x="26" y="0"/>
+</item>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="Froid.java" index="2">
+<position info="not_deleted" x="98" y="0"/>
+</item>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="Tomate.java" index="4">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="Mouchoirs.java" index="5">
+<position info="not_deleted" x="1" y="0"/>
+</item>
+<item historyLabel="Tomate.java" index="4">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="Froid.java" index="2">
+<position info="not_deleted" x="98" y="0"/>
+</item>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="Produit.java" index="0">
+<position info="not_deleted" x="1" y="0"/>
+</item>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="439" y="0"/>
+</item>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="439" y="0"/>
+</item>
+<item historyLabel="Produit.java" index="0">
+<position info="not_deleted" x="1" y="0"/>
+</item>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="263" y="0"/>
+</item>
+<item historyLabel="Convoyeur1.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="123" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="439" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="131" y="0"/>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="286" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="398" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="439" y="0"/>
 </item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="265" y="0"/>
 </item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="275" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="439" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="398" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="286" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="379" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="416" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="143" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="316" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="379" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="485" y="0"/>
 </item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="585" y="0"/>
 </item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="275" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="546" y="0"/>
 </item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="561" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="379" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="647" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="172" y="0"/>
+<item historyLabel="Glace.java" index="3">
+<position info="not_deleted" x="23" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="186" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="647" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="265" y="0"/>
 </item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="174" y="0"/>
+<item historyLabel="Froid.java" index="2">
+<position info="not_deleted" x="98" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
+<item historyLabel="Ephemere.java" index="1">
+<position info="not_deleted" x="265" y="0"/>
 </item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="174" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="96" y="0"/>
 </item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
+<item historyLabel="Convoyeur1.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="174" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="96" y="0"/>
 </item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="122" y="0"/>
+<item historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="286" y="0"/>
 </item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="174" y="0"/>
-</item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="171" y="0"/>
-</item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="275" y="0"/>
-</item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="171" y="0"/>
-</item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
-</item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="171" y="0"/>
-</item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
-</item>
-<item historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="171" y="0"/>
-</item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="280" y="0"/>
-</item>
-<item historyLabel="B.java" index="2">
-<position info="not_deleted" x="62" y="0"/>
-</item>
-<item historyLabel="B.java" index="2">
-<position info="not_deleted" x="301" y="0"/>
-</item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
-</item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
-</item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
-</item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
-</item>
-<item historyLabel="B.java" index="2">
-<position info="not_deleted" x="301" y="0"/>
-</item>
-<item historyLabel="A1.java" index="0">
-<position info="not_deleted" x="295" y="0"/>
-</item>
-<item historyLabel="A2.java" index="1">
-<position info="not_deleted" x="280" y="0"/>
-</item>
-<item historyLabel="Convoyeur1.java" index="3">
-<position info="not_deleted" x="347" y="0"/>
-</item>
-<item active="true" historyLabel="Convoyeur2.java" index="4">
-<position info="not_deleted" x="171" y="0"/>
+<item active="true" historyLabel="Supermarket.java" index="6">
+<position info="not_deleted" x="288" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -487,6 +526,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mouchoirs.java" tooltip="Supermarket/src/Mouchoirs.java">
+<persistable path="/Supermarket/src/Mouchoirs.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tomate.java" tooltip="Supermarket/src/Tomate.java">
+<persistable path="/Supermarket/src/Tomate.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Glace.java" tooltip="Supermarket/src/Glace.java">
+<persistable path="/Supermarket/src/Glace.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Froid.java" tooltip="Supermarket/src/Froid.java">
+<persistable path="/Supermarket/src/Froid.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ephemere.java" tooltip="Supermarket/src/Ephemere.java">
+<persistable path="/Supermarket/src/Ephemere.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Produit.java" tooltip="Supermarket/src/Produit.java">
+<persistable path="/Supermarket/src/Produit.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Supermarket.java" tooltip="Supermarket/src/Supermarket.java">
+<persistable path="/Supermarket/src/Supermarket.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur2.java" tooltip="TP4/src/Convoyeur2.java">
 <persistable path="/TP4/src/Convoyeur2.java"/>
 </file>
@@ -502,9 +562,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A1.java" tooltip="TP4/src/A1.java">
 <persistable path="/TP4/src/A1.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Supermarket.java" tooltip="Supermarket/src/Supermarket.java">
-<persistable path="/Supermarket/src/Supermarket.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Promotion.java" tooltip="TP2/src/Promotion.java">
 <persistable path="/TP2/src/Promotion.java"/>
 </file>
@@ -513,18 +570,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestBanquePerso.java" tooltip="Training/src/TestBanquePerso.java">
 <persistable path="/Training/src/TestBanquePerso.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Personne.java" tooltip="TP2/src/Personne.java">
-<persistable path="/TP2/src/Personne.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Exo4.java" tooltip="TP1/src/Exo4.java">
-<persistable path="/TP1/src/Exo4.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Exo3.java" tooltip="TP1/src/Exo3.java">
-<persistable path="/TP1/src/Exo3.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Exo2.java" tooltip="TP1/src/Exo2.java">
-<persistable path="/TP1/src/Exo2.java"/>
 </file>
 </mruList>
 </workbench>

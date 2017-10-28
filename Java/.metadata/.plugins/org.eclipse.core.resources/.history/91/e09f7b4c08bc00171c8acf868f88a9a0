@@ -1,0 +1,28 @@
+import java.util.Date;
+
+
+public class Supermarket {
+
+	public static void main(String[] args) {
+			
+	}
+	
+	Glace[] glaces = new Glace[100];				//Attributs Supermarket
+	Tomate[] tomates = new Tomates[100];
+	Mouchoirs[] mouchoirs = new Mouchoir[100];
+	
+	public int countglace(){						//Methode d'instance Supermarket
+		int c = 0;
+		for ("g in the tab glaces"){
+			if (g.ok()){c++;}
+		}
+		return c;
+	}
+	"Faire les memes methodes pours tomates et mouchoirs"
+	
+	
+	
+	
+	
+	
+}
