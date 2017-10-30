@@ -1,0 +1,117 @@
+---
+title: "HERG"
+author: "Etienne JEAN"
+date: "30 octobre 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#----------------------------------------------------------------------------------------------------
+
+#1. Description des données
+
+#2. Problématique
+
+#3. Préparation des données
+##a. lecture des données
+```{r}
+dt = read.table("herg.txt", sep='\t', header=T, row.names=NULL)
+dt = na.omit(dt)
+print(dim(dt))
+dt.y = dt[,1:5]
+dt.x = dt[,6:ncol(dt)]
+```
+
+
+##b. variable de variance nulle et activité non significative
+```{r}
+dt.x.sd_of_descriptors = apply(dt.x, 2, sd)
+dt.x = dt.x[,-which(dt.sd_of_descriptors == 0)]
+dt.x = dt.x[-which(dt.y$IC50 > 500),]
+dt.y = dt.y[-which(dt.y$IC50 > 500),]
+print(dim(dt.x))
+```
+
+
+##c. la variable "activité"
+```{r}
+hist(dt.y$IC50)
+hist(scale(log(dt.y$IC50)))
+
+```
+
+
+##d. ACP
+##e. normalisation 
+```{r}
+library(FactoMineR)
+dt.x.pca = PCA(dt.x, ncp=5, axes=c(1,2), graph=T)
+
+```
+
+
+
+
+
+
+
+#4. Régression linéaire simple
+##a. coefficient de corrélation
+```{r}
+library(corrplot)
+cor(dt.y$IC50, dt.x[,1])
+cor(dt.y$IC50, dt.x[,10])
+cor(dt.y$IC50, dt.x[,92])
+#Best correlation for activity vs D10
+
+```
+
+##b. modèle Y = AX+B
+```{r}
+
+
+```
+
+
+
+
+
+#5. Régression linéaire multiple
+##a. matrice de corrélation et visualisation des données
+##b. échantillon d'apprentissage/échantillon de validation
+##c. le modèle complet
+##d. sélection des variables
+##e. prédiction et validation du modèle
+
+#6. PLS
+##a. le modèle PLS
+##b. visualisation
+##c. validation
+##d. évaluation
+
+#7. PCR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
