@@ -1,0 +1,81 @@
+---
+title: "Compte rendu 3 : Analyse en composantes principales"
+author: "Etienne JEAN"
+date: "28 octobre 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#---------------------------------------------------------------------------------------------------
+
+
+#Introduction / Contexte
+
+
+
+#Analyse en composantes pricipales du jeu de données
+##Anayse préliminaire
+Analyse des valeurs propres : Il faut considérer les composantes dont les valeurs propres associées sont élevées, avant une "chute" des valeurs propres. On détermine le nombre de composantes àanalyser en observant l'histogramme des valeurs propres, à la recherche de cette chute.
+Ici, c'est soit 2, soit 5, soit 7. Mouais..
+```{r, echo=FALSE}
+barplot(pockets.acp$eig[,1], main="Nombre de composantes à considérer pour l'ACP", names.arg=1:nrow(pockets.acp12$eig), xlab = "composantes", ylab = "valeurs propres")
+abline(v=2*1.2+0.1, col="red")
+text(2*1.2+5, 6, "2 composantes", col = "red")
+abline(v=5*1.2+0.1, col="orange")
+text(5*1.2+5, 5, "5 composantes", col = "orange")
+abline(v=7*1.2+0.1, col="purple")
+text(7*1.2+5, 4, "7 composantes", col = "purple")
+
+```
+
+
+##Graphique des variables
+Dimension 1 : représentée principalement par les catactères HYDROPHOBES+ALIPHATIC / POLAR des acides aminés présents dans les poches.
+Dimension 2 : représentée principalement par les caractères SMALL+TINY / AROMTATIC des acides aminés présents dans les poches.
+```{r, echo=FALSE}
+pockets.acp = PCA(pockets, ncp = 5, graph=F)
+colorz = rep(1,37)
+colorz[which(colnames(pockets) == "tiny")] = 2
+colorz[which(colnames(pockets) == "small")] = 2
+colorz[which(colnames(pockets) == "aromatic")] = 2
+colorz[which(colnames(pockets) == "hydrophobic")] = 4
+colorz[which(colnames(pockets) == "aliphatic")] = 4
+colorz[which(colnames(pockets) == "polar")] = 4
+plot(pockets.acp, choix="var", axes=c(1,2), title="Grahpique des variables", col.var=colorz)
+plot(pockets.acp, choix="var", axes=c(3,4), title="Grahpique des var 34")
+plot(pockets.acp, choix="ind", axes=c(3,4), title="Grahpique des indiv 34", col.ind=(pockets$drugg +1))
+
+```
+
+
+
+
+##Graphique des individus
+Les poches druggables sont plus hydrophobes et aliphatiques, alors que les poches non druggables sont plutot polaires.
+
+```{r, echo=FALSE}
+plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = (pockets[,37]+1))
+plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = pockets$hydrophobic*5)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
