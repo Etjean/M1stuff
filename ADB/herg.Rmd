@@ -61,7 +61,6 @@ dt.x.pca = PCA(dt.x, ncp=5, axes=c(1,2), graph=T)
 #4. Régression linéaire simple
 ##a. coefficient de corrélation
 ```{r}
-library(corrplot)
 cor(dt.y$IC50, dt.x[,1])
 cor(dt.y$IC50, dt.x[,10])
 cor(dt.y$IC50, dt.x[,92])
@@ -71,7 +70,9 @@ cor(dt.y$IC50, dt.x[,92])
 
 ##b. modèle Y = AX+B
 ```{r}
-
+lsfitD10 = lsfit(dt.y$IC50, dt.x[,10])
+plot(dt.y$IC50, dt.x[,10])
+abline(lsfitD10, col="red")
 
 ```
 
@@ -81,10 +82,116 @@ cor(dt.y$IC50, dt.x[,92])
 
 #5. Régression linéaire multiple
 ##a. matrice de corrélation et visualisation des données
+```{r}
+library(corrplot)
+dt.x.cor = cor(dt.x[,1:10])
+corrplot(dt.x.cor)
+
+
+```
+
+
+```{r}
+elimcor_sansY<-function(X,s=0.95) {
+	#X matrice contenant les variables à grouper
+	#Y vecteur contenant les groupes à prédire
+	#s valeur seuil de corrélation
+	correl=cor(X)
+	stop=F
+	possetap=1:ncol(X)
+	groupes=as.list(1:ncol(X))
+
+	while (stop==F)
+	    {
+		##regroupement des var pour lesquelles |corr|>0.95
+		gplist<-list(NULL)
+		possglob=1:ncol(correl)
+		for (i in 1:(ncol(correl)))
+		   {
+			poss=possglob[-i]
+			gplist[[i]]=c(i,poss[abs(correl[i,poss])>s])
+		   }
+		##on trie les groupes du plus gros au plus petit
+		gplisteff=unlist(lapply(gplist,length))
+		if (any(gplisteff>1))
+ 		    {
+			gplistfin=gplist[gplisteff>1]
+			gplistuniq=unlist(gplist[gplisteff==1])
+			gpsel=NULL
+			##on sélectionne dans chaque groupe une variable au hasard
+			for (i in 1:length(gplistfin))
+			    {
+				selloc=min(gplistfin[[i]])
+				gploc=groupes[[possetap[selloc]]]
+				for (j in 1:length(gplistfin[[i]]))
+				    {
+					gploc=c(gploc,groupes[[possetap[gplistfin[[i]][j]]]])				    }
+				groupes[[possetap[selloc]]]=unique(gploc)
+				gpsel=c(gpsel,selloc)
+  			    }
+			possetap=possetap[c(gplistuniq,unique(gpsel))]
+			correl=cor(X[,possetap])
+		    }
+		else stop=T	
+ 	   }
+	#groupeseff=unlist(lapply(groupes,length))
+	#groupes=groupes[groupeseff>1]
+	return(list(possetap=possetap,groupes=groupes))
+}
+
+elimcor_sansY(dt.x, s=0.8)$possetap
+dt.x = dt.x[,elimcor_sansY(dt.x, s=0.8)$possetap]
+dim(dt.x)
+
+```
+
 ##b. échantillon d'apprentissage/échantillon de validation
+```{r}
+index = sample(nrow(dt.y), round(2/3*nrow(dt.y)), replace=F)
+dt.x.lrn = dt.x[index,]
+dt.x.tst = dt.x[-index,]
+dt.y.lrn = dt.y[index,]
+dt.y.tst = dt.y[-index,]
+
+```
+
+
 ##c. le modèle complet
+```{r}
+lm.lrn = lm(dt.y.lrn$IC50 ~ ., data = dt.x.lrn)
+lm.lrn
+
+```
+
+
 ##d. sélection des variables
+```{r}
+#step.lrn <- step(lm.lrn)
+length(step.lrn)
+#Le step a gardé 13 variables
+
+```
+
+
 ##e. prédiction et validation du modèle
+```{r}
+pred.lm = predict(lm.lrn, dt.x.tst)
+pred.step = predict(step.lrn, dt.x.tst)
+
+
+mean(dt.y.tst$IC50 - pred.lm)
+sd(dt.y.tst$IC50 - pred.lm)
+mean(dt.y.tst$IC50 - pred.step)
+sd(dt.y.tst$IC50 - pred.step)
+
+hist(dt.y.tst$IC50 - pred.lm)
+hist(dt.y.tst$IC50 - pred.step)
+
+
+
+```
+
+
 
 #6. PLS
 ##a. le modèle PLS
