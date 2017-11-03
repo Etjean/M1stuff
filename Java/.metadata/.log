@@ -150,3 +150,12 @@ Contains: File already exists on disk: /home/sdv/m1bi/ejean/Github/Java/TP4/src/
 !MESSAGE Problems encountered while moving resources.
 !SUBENTRY 3 org.eclipse.core.filesystem 4 268 2017-10-27 14:20:51.962
 !MESSAGE File already exists on disk: /home/sdv/m1bi/ejean/Github/Java/TP4/src/B.java.
+!SESSION 2017-11-03 16:12:25.289 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-11-03 16:12:27.700
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

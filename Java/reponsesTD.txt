@@ -1,0 +1,97 @@
+TD, seance 5
+
+REGLES
+2 phases:
+- A la compilation, on détermine la signature qui garanti que l'exécution est possible
+- A l'exécution, on exécute la méthode la plus proche de l'objet, compatible avec la signature
+
+Liaison dynamique ne se fait:
+- qu'à gauche du point
+- sur un objet à gauche (pas ds classe)
+- sur un méthode à droite du point (pas un attribut)
+
+
+Exercice1
+A
+B
+B
+La liaison du f() est dynamique, c'est à dire s'adapte à l'objet réel.
+
+Exercice2
+AA
+AA
+BA
+BA
+BB
+BA
+
+Exercice3
+2
+-2
+B
+B
+2
+-2
+B
+B
+
+Exercice4
+AA
+AA
+AD
+BA
+BA
+AD
+BB
+BB
+AD
+
+
+REGLES:
+
+A a = new B()
+
+a.i : 
+Classe déclarée qui compte (donc attribut i de la classe A)
+
+a.g() avec g une méthode statique :
+Classe déclarée qui compte (donc methode g() de la classe A)
+
+a.f() avec f une methode d'objet/d'instance :
+Le f() de la classe B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

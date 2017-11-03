@@ -1,0 +1,12 @@
+
+public class CB extends MP {
+	private double plafond;
+	private double sommePayee;
+	private MP compteAssocie;
+	
+	public CB(String c, String b, double p, MP cA) {
+		super(c, b);
+		plafond=p;
+		
+	}
+}

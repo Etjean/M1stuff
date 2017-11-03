@@ -1,0 +1,17 @@
+
+public class CER extends MP{
+	
+	//Attributs
+	private static double taux = 0.01;
+	private double solde;
+	
+	//Constructeur
+	public CER(String c, String b) {
+		super(c, b);
+		solde=0;
+	}
+	
+	//Methodes
+	
+	
+}
