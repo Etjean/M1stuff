@@ -9,19 +9,42 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#---------------------------------------------------------------------------------------------------
+
+
+```{r, echo=FALSE}
+# Chargement et prÃ©paration du dataframe Pockets.
+pockets = read.table("descriptor_pocket.mat")
+pockets = na.omit(pockets)
+aromatic = apply(cbind(pockets$F, pockets$Y, pockets$H, pockets$W), 1, sum)
+polar = apply(cbind(pockets$C, pockets$D, pockets$E, pockets$H, pockets$K, pockets$N, pockets$Q, pockets$R, pockets$S, pockets$T, pockets$W, pockets$Y), 1, sum)
+aliphatic = apply(cbind(pockets$I, pockets$L, pockets$V), 1, sum)
+charged = apply(cbind(pockets$D, pockets$E, pockets$R, pockets$K, pockets$H), 1, sum)
+negative = apply(cbind(pockets$D, pockets$E), 1, sum)
+positive = apply(cbind(pockets$R, pockets$K, pockets$H), 1, sum)
+hydrophobic = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$L, pockets$I, pockets$M, pockets$F, pockets$W, pockets$H, pockets$Y, pockets$K), 1, sum)
+small = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$S, pockets$D, pockets$N, pockets$P), 1, sum)
+tiny = apply(cbind(pockets$A, pockets$C, pockets$G, pockets$S), 1, sum)
+pockets = cbind(pockets, aromatic, polar, aliphatic, charged, negative, positive, hydrophobic, small, tiny)
+#mise de "drugg" Ã  la fin du tableau
+noms = names(pockets)
+pockets = cbind(pockets[,1:27], pockets[,29:37], pockets[,28])
+colnames(pockets)[37] = noms[28]
+```
+
 
 
 #Introduction / Contexte
 
 
 
-#Analyse en composantes pricipales du jeu de données
-##Anayse préliminaire
-Analyse des valeurs propres : Il faut considérer les composantes dont les valeurs propres associées sont élevées, avant une "chute" des valeurs propres. On détermine le nombre de composantes àanalyser en observant l'histogramme des valeurs propres, à la recherche de cette chute.
+#Analyse en composantes pricipales du jeu de donn?es
+##Anayse pr?liminaire
+Analyse des valeurs propres : Il faut consid?rer les composantes dont les valeurs propres associ?es sont ?lev?es, avant une "chute" des valeurs propres. On d?termine le nombre de composantes ?analyser en observant l'histogramme des valeurs propres, ? la recherche de cette chute.
 Ici, c'est soit 2, soit 5, soit 7. Mouais..
 ```{r, echo=FALSE}
-barplot(pockets.acp$eig[,1], main="Nombre de composantes à considérer pour l'ACP", names.arg=1:nrow(pockets.acp12$eig), xlab = "composantes", ylab = "valeurs propres")
+library(FactoMineR)
+pockets.acp = PCA(pockets, ncp = 5, axes=c(1, 2), graph=F)
+barplot(pockets.acp$eig[,1], main="Nombre de composantes ? consid?rer pour l'ACP", names.arg=1:nrow(pockets.acp$eig), xlab = "composantes", ylab = "valeurs propres")
 abline(v=2*1.2+0.1, col="red")
 text(2*1.2+5, 6, "2 composantes", col = "red")
 abline(v=5*1.2+0.1, col="orange")
@@ -33,10 +56,9 @@ text(7*1.2+5, 4, "7 composantes", col = "purple")
 
 
 ##Graphique des variables
-Dimension 1 : représentée principalement par les catactères HYDROPHOBES+ALIPHATIC / POLAR des acides aminés présents dans les poches.
-Dimension 2 : représentée principalement par les caractères SMALL+TINY / AROMTATIC des acides aminés présents dans les poches.
+Dimension 1 : repr?sent?e principalement par les catact?res HYDROPHOBES+ALIPHATIC / POLAR des acides amin?s pr?sents dans les poches.
+Dimension 2 : repr?sent?e principalement par les caract?res SMALL+TINY / AROMTATIC des acides amin?s pr?sents dans les poches.
 ```{r, echo=FALSE}
-pockets.acp = PCA(pockets, ncp = 5, graph=F)
 colorz = rep(1,37)
 colorz[which(colnames(pockets) == "tiny")] = 2
 colorz[which(colnames(pockets) == "small")] = 2
@@ -46,7 +68,7 @@ colorz[which(colnames(pockets) == "aliphatic")] = 4
 colorz[which(colnames(pockets) == "polar")] = 4
 plot(pockets.acp, choix="var", axes=c(1,2), title="Grahpique des variables", col.var=colorz)
 plot(pockets.acp, choix="var", axes=c(3,4), title="Grahpique des var 34")
-plot(pockets.acp, choix="ind", axes=c(3,4), title="Grahpique des indiv 34", col.ind=(pockets$drugg +1))
+plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des indiv 34", col.ind=(pockets$drugg +1))
 
 ```
 
