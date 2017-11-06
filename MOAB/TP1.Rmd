@@ -1,0 +1,143 @@
+---
+title: "TP1 de MOAB"
+author: "Etienne JEAN"
+date: "6 novembre 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+#Exercice 1
+
+library(rgl)
+f <- function(x){return((2*x-3)**2)}
+curve(f,col="orange", from=-10, to=10)
+
+g1 <- function(x){return(f(x[1])+(x[2]-1)**2)}
+g2 <- function(x, y){return(f(x)+(y-1)**2)}
+x = seq(-30, 30, 0.1)
+y = seq(-30, 30, 0.1)
+z = outer(x, y, g2)
+persp3d(z, col="orange")
+
+
+h1 <- function(x){return(-exp(-0.5*((x[1]+3)**2+(x[2]+3)**2)) - exp(-0.5*(x[1]**2+x[2]**2)) - exp(-0.5*((x[1]-5)**2+(x[2]-5)**2)))}
+h2 <- function(x, y){return(-exp(-0.5*((x+3)**2+(y+3)**2)) - exp(-0.5*(x**2+y**2)) - exp(-0.5*((x-5)**2+(y-5)**2)))}
+x = seq(-10, 10, 0.1)
+y = seq(-10, 10, 0.1)
+z = outer(x, y, h2)
+persp3d(x, y, z, col="orange")
+
+
+
+optim(1800, f)
+optim(c(100, 100), g1)
+optim(c(0, 0), h1)
+optim(c(50, 50), h1)
+
+```
+
+
+
+```{r}
+# Exercise 2
+x=0:20
+ytrue=3*x+10
+yobs=ytrue+rnorm(21, mean=0, sd=3)
+
+moindreCarre <- function(y){
+  s = 0
+  for (i in 1:length(yobs)){
+    s = s + (y[1]+x[i]*y[2]-yobs[i])**2
+  }
+  return(s)
+}
+
+opt = optim(c(1, 1), moindreCarre)
+
+
+plot(x, yobs)
+par(new=T)
+plot(x, ytrue, "o", col="grey")
+abline(a=opt$par[1], b=opt$par[2], col="orange")
+
+```
+
+
+```{r}
+
+data(ChickWeight)
+chick.1 <- ChickWeight[ChickWeight$Chick == 1,]
+
+# a = poids final/maximum
+# tmoy = temps de demi-poids
+# sigma = ...
+
+
+w <- function(t) {return (a/(1+exp(-(t-tmoy)/s)))}
+
+# w(tmoy) = a/2
+# w'(tmoy) = a/2s
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

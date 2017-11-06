@@ -166,7 +166,7 @@ lm.lrn
 
 ##d. sélection des variables
 ```{r}
-#step.lrn <- step(lm.lrn)
+step.lrn <- step(lm.lrn)
 length(step.lrn)
 #Le step a gardé 13 variables
 
@@ -178,19 +178,14 @@ length(step.lrn)
 pred.lm = predict(lm.lrn, dt.x.tst)
 pred.step = predict(step.lrn, dt.x.tst)
 
-plot(dt.y.tst$pIC50, pred.lm)
-abline(lsfit(dt.y.tst$pIC50, pred.lm), col="red")
 
-plot(dt.y.tst$pIC50, pred.step)
-abline(lsfit(dt.y.tst$pIC50, pred.step), col="blue")
+mean(dt.y.tst$IC50 - pred.lm)
+sd(dt.y.tst$IC50 - pred.lm)
+mean(dt.y.tst$IC50 - pred.step)
+sd(dt.y.tst$IC50 - pred.step)
 
-# mean(dt.y.tst$IC50 - pred.lm)
-# sd(dt.y.tst$IC50 - pred.lm)
-# mean(dt.y.tst$IC50 - pred.step)
-# sd(dt.y.tst$IC50 - pred.step)
-# 
-# hist(dt.y.tst$IC50 - pred.lm)
-# hist(dt.y.tst$IC50 - pred.step)
+hist(dt.y.tst$IC50 - pred.lm)
+hist(dt.y.tst$IC50 - pred.step)
 
 
 
@@ -200,41 +195,9 @@ abline(lsfit(dt.y.tst$pIC50, pred.step), col="blue")
 
 #6. PLS
 ##a. le modèle PLS
-```{r}
-library(pls)
-pls.lrn = plsr(dt.y.lrn$pIC50 ~ ., data = dt.x.lrn, ncomp=6)
-summary(pls.lrn)
-
-```
-
 ##b. visualisation
-```{r}
-plot(RMSEP(pls.lrn))
-
-```
-
 ##c. validation
-```{r}
-pls.lrn.loo = plsr(dt.y.lrn$pIC50 ~ ., data = dt.x.lrn, ncomp=15, validation="LOO")
-plot(RMSEP(pls.lrn.loo))
-
-```
-
 ##d. évaluation
-```{r}
-pred.pls = predict(pls.lrn, dt.x.tst, ncomp=4)
-
-plot(dt.y.tst$pIC50, pred.pls)
-abline(lsfit(dt.y.tst$pIC50, pred.pls), col="green")
-
-RMSEP(pls.lrn, newdata)
-
-R2(pls.lrn)
-
-
-```
-
-
 
 #7. PCR
 
