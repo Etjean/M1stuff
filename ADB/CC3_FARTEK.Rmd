@@ -1,0 +1,76 @@
+---
+output: pdf_document
+fontsize : 8pt
+geometry: margin=1cm
+---
+## L'analyse en composante principale - Sandrine FARTEK
+L'ACP est une méthode descriptive permettant de représenter les données dans l'espace lorsque cela n'est normalement pas possible (nombreuses dimensions).
+L'ACP permet également de supprimer la redondance des données (variables corrélées), les nouveaux axes ou composantes principales, sont alors des combinaisons linéaires de toutes les variables.
+```{r echo=FALSE}
+pockets.dat = read.table("descriptor_pocket.mat",head=T)
+pockets.dat = na.omit(pockets.dat)
+
+aromatic = c("F","Y","W")
+polar = c("C","D","E","H","K","N","Q","R","S","T","W","Y")
+aliphatic = c("I","L","V")
+charged = c("D","E","R","K","H")
+negative = c("D","E")
+positive = c("H","K","R")
+hydrophobic = c("C","G","A","T","V","L","I","M","F","W","Y","H","K")
+small = c("C","V","T","G","A","S","D","N","P")
+tiny = c("A","C","G","S")
+
+aromatic = apply(pockets.dat[,aromatic],1,sum)
+polar = apply(pockets.dat[,polar],1,sum)
+aliphatic = apply(pockets.dat[,aliphatic],1,sum)
+charged = apply(pockets.dat[,charged],1,sum)
+negative = apply(pockets.dat[,negative],1,sum)
+positive = apply(pockets.dat[,positive],1,sum)
+hydrophobic = apply(pockets.dat[,hydrophobic],1,sum)
+small = apply(pockets.dat[,small],1,sum)
+tiny = apply(pockets.dat[,tiny],1,sum)
+
+pockets.dat = cbind(pockets.dat,aromatic,polar,aliphatic,charged,negative,positive,hydrophobic,small,tiny)
+
+drug = pockets.dat$drugg
+pockets.dat = pockets.dat[,-28]
+pockets.dat = cbind(pockets.dat,drugg=drug)
+pockets.dat$drugg = as.factor(pockets.dat$drugg)
+```
+
+```{r echo=FALSE, fig.align="center", fig.height=3, fig.width=4}
+par(mar=c(3, 3, 1.2, 1), mgp=c(2, 1, 0))
+
+library(explor)
+library(FactoMineR)
+
+dat.pca = PCA(pockets.dat, scale.unit = T, quali.sup=37, graph = F)
+
+plot(dat.pca, choix="var", title="Graphe des variables de l'ACP", cex.main=0.8, cex.axis=0.8, cex.lab=0.8)
+```
+### Analyse du graphe des variables
+Le graphique des variables de la PCA permet de comprendre quelles sont les variables principales le long des axes et par la suite comprendre les propriétés des individus sur le graphe des individus : vers la gauche hydrophobic et aliphatic, vers la droite polar et charged, en bas aromatic, en haut tiny et small.\newline
+
+```{r echo=FALSE, fig.align="center", fig.height=2.5}
+par(mfrow=c(1,2), mar=c(3, 3, 1.2, 1), mgp=c(2, 1, 0))
+
+plot(dat.pca, choix="ind",habillage=37, col.hab=c("firebrick","lightblue"), legend=list(x="topright", legend=c("less druggable","druggable")), title="Graphe des individus de l'ACP", cex.main=0.8, cex.axis=0.8, cex.lab=0.8)
+
+dat.norm = scale(pockets.dat[,1:36])
+km3 = kmeans(dat.norm, centers=3, iter.max= 100000, , nstart=100)
+plot(dat.pca, choix="ind", col.ind=km3$cluster, title="Graphe des individus de l'ACP", axes=c(1,2), cex.main=0.8, cex.axis=0.8, cex.lab=0.8)
+
+#barplot(dat.pca$eig[1:27,1], main = "valeurs propres", names.arg = 1:27)
+#abline(a=1, b=0, col="red")
+
+```
+
+### Analyse du graphe des individus
+Si l'on décide de colorer les individus en fonction de leur druggability, on remarque une tendance des poches druggables à posséder des résidus hydrophobes et aliphatiques, tandis que les poches less druggable ont tendance à avoir des résidus polaires et chargés. Il y a cependant une zone où les 2 types de poches sont mélangés, en colorant en fonction des groupes identifiés par la méthode des kmeans (avec k=3), ce groupe est à part.
+
+### Conclusion
+Cependant la variabilité expliquée cumulée des 2 premières composantes principales est de 28%, ce qui est un peu faible. Il serait alors intéressant de regarder plus d'axes pour mieux comprendre les variables importantes de notre jeu de données (prendre un nombre CP où l'on onbserve un saut important des valeurs propres).
+
+
+
+

@@ -37,41 +37,44 @@ colnames(pockets)[37] = noms[28]
 
 
 
-#Analyse en composantes pricipales du jeu de donn?es
-##Anayse pr?liminaire
-Analyse des valeurs propres : Il faut consid?rer les composantes dont les valeurs propres associ?es sont ?lev?es, avant une "chute" des valeurs propres. On d?termine le nombre de composantes ?analyser en observant l'histogramme des valeurs propres, ? la recherche de cette chute.
-Ici, c'est soit 2, soit 5, soit 7. Mouais..
+#Analyse en composantes principales du jeu de données
+##Anayse préliminaire
+Afin de déterminer le nombre de composantes qu'il faudra considérer lors de l'ACP, il est judicieux de regarder les valeurs propres du jeu de données. Plus une valeur propre est grande, plus la composante qui lui est associée représente une grande dispersion du jeu de données, et donc plus elle permet de discriminer les différentes poches. Ainsi, dans l'optique de limiter le nombre de composantes à analyser, l'histogramme des valeurs propres met en évidence les "chutes" de valeurs propres. Il est donc intéressant de ne considérer que les composantes qui correspondent aux valeur propres qui précèdent ces chutes (fig. 1).
+
 ```{r, echo=FALSE}
 library(FactoMineR)
 pockets.acp = PCA(pockets, ncp = 5, axes=c(1, 2), graph=F)
-barplot(pockets.acp$eig[,1], main="Nombre de composantes ? consid?rer pour l'ACP", names.arg=1:nrow(pockets.acp$eig), xlab = "composantes", ylab = "valeurs propres")
-abline(v=2*1.2+0.1, col="red")
-text(2*1.2+5, 6, "2 composantes", col = "red")
-abline(v=5*1.2+0.1, col="orange")
-text(5*1.2+5, 5, "5 composantes", col = "orange")
-abline(v=7*1.2+0.1, col="purple")
-text(7*1.2+5, 4, "7 composantes", col = "purple")
+barplot(pockets.acp$eig[,1], main="Nombre de composantes à considérer pour l'ACP", names.arg=1:nrow(pockets.acp$eig), xlab = "composantes", ylab = "valeurs propres")
+abline(v=2*1.2+0.1, col="orange")
+text(2*1.2+5, 6, "2 composantes", col = "orange")
+abline(v=5*1.2+0.1, col=8)
+text(5*1.2+5, 5, "5 composantes", col = 8)
+abline(v=7*1.2+0.1, col=21)
+text(7*1.2+5, 4, "7 composantes", col = 21)
 
 ```
+
+On peut au mieux distinguer trois sauts ici, après la 2ème composante, après la 5ème, et après la 7ème. Le saut le plus significatif se trouve après la 2ème composante, c'est pourquoi nous ne considèreront dans notre ACP que les composantes 1 et 2, qui à elles deux représentent près de 30% de la variabilité du jeu de données. 
+
+
 
 
 ##Graphique des variables
-Dimension 1 : repr?sent?e principalement par les catact?res HYDROPHOBES+ALIPHATIC / POLAR des acides amin?s pr?sents dans les poches.
-Dimension 2 : repr?sent?e principalement par les caract?res SMALL+TINY / AROMTATIC des acides amin?s pr?sents dans les poches.
+L'ACP permet de réduire le nombre de descripteurs, en effectuant des combinaisons linéaires de ceux-ci.
 ```{r, echo=FALSE}
 colorz = rep(1,37)
-colorz[which(colnames(pockets) == "tiny")] = 2
-colorz[which(colnames(pockets) == "small")] = 2
-colorz[which(colnames(pockets) == "aromatic")] = 2
-colorz[which(colnames(pockets) == "hydrophobic")] = 4
-colorz[which(colnames(pockets) == "aliphatic")] = 4
-colorz[which(colnames(pockets) == "polar")] = 4
+colorz[which(colnames(pockets) == "tiny")] = "orange"
+colorz[which(colnames(pockets) == "small")] = "orange"
+colorz[which(colnames(pockets) == "aromatic")] = "orange"
+colorz[which(colnames(pockets) == "hydrophobic")] = "purple"
+colorz[which(colnames(pockets) == "aliphatic")] = "purple"
+colorz[which(colnames(pockets) == "polar")] = "purple"
 plot(pockets.acp, choix="var", axes=c(1,2), title="Grahpique des variables", col.var=colorz)
-plot(pockets.acp, choix="var", axes=c(3,4), title="Grahpique des var 34")
-plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des indiv 34", col.ind=(pockets$drugg +1))
+# plot(pockets.acp, choix="var", axes=c(3,4), title="Grahpique des var 34")
 
 ```
-
+La première composante représente plus de 17% de la variabilité du jeu de données. Elle correspond aux fortes proportions dans le poches d'acides aminés polaires, à gauche du graphe, ou hydrophobes et aliphatiques, à droite du graphe. Le caractère polaire d'un acide aminé étant opposé aux caractères hydrophobe et aliphatique, il est normal d'observer que ce descripteur est anti-corrélé avec les deux autres.
+La deuxième composante représente plus de 11% de la variabilité. On retrouve une forte proportion d'acides aminés petits (*small* et *tiny*) dans les poches en haut du graphe, et les acides aminés aromatiques en bas du graphe.
 
 
 
@@ -79,8 +82,11 @@ plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des indiv 34", col.
 Les poches druggables sont plus hydrophobes et aliphatiques, alors que les poches non druggables sont plutot polaires.
 
 ```{r, echo=FALSE}
-plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = (pockets[,37]+1))
-plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = pockets$hydrophobic*5)
+plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = (pockets$drugg*2)+2)
+text(-10, 5, "Poches druggables        ", col = "blue")
+text(-10, 6, "Poches non druggables", col = "red")
+# plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = pockets$hydrophobic*5)
+
 ```
 
 
