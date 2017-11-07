@@ -1,14 +1,11 @@
 ---
 title: "Compte rendu 3 : Analyse en composantes principales"
 author: "Etienne JEAN"
-date: "28 octobre 2017"
+# date: "28 octobre 2017"
 output: pdf_document
+fontsize : 8pt
+geometry: margin=2cm
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 
 
 ```{r, echo=FALSE}
@@ -33,15 +30,14 @@ colnames(pockets)[37] = noms[28]
 
 
 
-#Introduction / Contexte
 
+Notre étude porte sur le caractère "druggable" ou "non-druggable" des poches de différentes protéines. Dans le but de déterminer les descipteurs les plus discriminants du jeu de données décrivant ces poches, nous allons effectuer une **analyse en composantes principales** (ACP).
 
-
-#Analyse en composantes principales du jeu de données
-##Anayse préliminaire
+#Analyse préliminaire
 Afin de déterminer le nombre de composantes qu'il faudra considérer lors de l'ACP, il est judicieux de regarder les valeurs propres du jeu de données. Plus une valeur propre est grande, plus la composante qui lui est associée représente une grande dispersion du jeu de données, et donc plus elle permet de discriminer les différentes poches. Ainsi, dans l'optique de limiter le nombre de composantes à analyser, l'histogramme des valeurs propres met en évidence les "chutes" de valeurs propres. Il est donc intéressant de ne considérer que les composantes qui correspondent aux valeur propres qui précèdent ces chutes (fig. 1).
 
-```{r, echo=FALSE}
+
+```{r, echo=FALSE, fig.align="center", fig.height=3, fig.width=4}
 library(FactoMineR)
 pockets.acp = PCA(pockets, ncp = 5, axes=c(1, 2), graph=F)
 barplot(pockets.acp$eig[,1], main="Nombre de composantes à considérer pour l'ACP", names.arg=1:nrow(pockets.acp$eig), xlab = "composantes", ylab = "valeurs propres")
@@ -58,7 +54,7 @@ On peut au mieux distinguer trois sauts ici, après la 2ème composante, après 
 
 
 
-
+#Analyse en composantes principales du jeu de données
 ##Graphique des variables
 L'ACP permet de réduire le nombre de descripteurs, en effectuant des combinaisons linéaires de ceux-ci.
 ```{r, echo=FALSE}
@@ -79,7 +75,7 @@ La deuxième composante représente plus de 11% de la variabilité. On retrouve 
 
 
 ##Graphique des individus
-Les poches druggables sont plus hydrophobes et aliphatiques, alors que les poches non druggables sont plutot polaires.
+Le grpahie des individus nous permet de d'observer la répartition des poches suivant les deux composantes. On remarque que les poches druggables sont plus hydrophobes et aliphatiques, alors que les poches non druggables sont plutot polaires (fig. 3). La deuxième dimension cependant ne permet pas de discriminer les poches druggables des poches non-druggables.
 
 ```{r, echo=FALSE}
 plot(pockets.acp, choix="ind", axes=c(1,2), title="Grahpique des individus", col.ind = (pockets$drugg*2)+2)
