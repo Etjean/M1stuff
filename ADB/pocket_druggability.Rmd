@@ -368,11 +368,6 @@ plot(pockets.acp12, choix = "ind", col.ind = pockets.kmeans$cluster)
 
 
 
-
-
-
-
-
 Supplementary questions
 The PCA analysis is often used as to reduce the dimensionality of data, and for producing
 insight as to structure of latent variables (cf. Velicer & Jackson, 1990). Instead of working with
@@ -415,8 +410,6 @@ according to their druggability. What do you observe?
 4. Compare the MDS and PCA results.
 5. Color pockets projected into the MDS plane according to clusters obtained by the mixed
 procedure. What do you observe?
-
-
 
 #Chapter 4 : Prediction of the pocket druggability
 The aim of this part is to develop statistical models to predict the pocket druggability. It is
@@ -494,10 +487,78 @@ involved in the model?
 8. Compute a new LDA-model using only these important variables? Compute the perfor-
 mances of this model on training and test sets, and in 4-fold cross-validation.
 9. Compare the performance of the two LDA-models.
+
+
+
 #4.3 Logistic regression
 functions: glm(), predict(), step()
 1. Justify the logistic model use to compute a druggability model.
 2. Compute a logistic model using all descriptors on the training set.
+
+```{r}
+#Elimination des variables corrélées
+elimcor_sansY<-function(X,s=0.95){
+	#X matrice contenant les variables à grouper
+	#Y vecteur contenant les groupes à prédire
+	#s valeur seuil de corrélation
+	correl=cor(X)
+	stop=F
+	possetap=1:ncol(X)
+	groupes=as.list(1:ncol(X))
+
+	while (stop==F)
+	    {
+		##regroupement des var pour lesquelles |corr|>0.95
+		gplist<-list(NULL)
+		possglob=1:ncol(correl)
+		for (i in 1:(ncol(correl)))
+		   {
+			poss=possglob[-i]
+			gplist[[i]]=c(i,poss[abs(correl[i,poss])>s])
+		   }
+		##on trie les groupes du plus gros au plus petit
+		gplisteff=unlist(lapply(gplist,length))
+		if (any(gplisteff>1))
+ 		    {
+			gplistfin=gplist[gplisteff>1]
+			gplistuniq=unlist(gplist[gplisteff==1])
+			gpsel=NULL
+			##on sélectionne dans chaque groupe une variable au hasard
+			for (i in 1:length(gplistfin))
+			    {
+				selloc=min(gplistfin[[i]])
+				gploc=groupes[[possetap[selloc]]]
+				for (j in 1:length(gplistfin[[i]]))
+				    {
+					gploc=c(gploc,groupes[[possetap[gplistfin[[i]][j]]]])				    }
+				groupes[[possetap[selloc]]]=unique(gploc)
+				gpsel=c(gpsel,selloc)
+  			    }
+			possetap=possetap[c(gplistuniq,unique(gpsel))]
+			correl=cor(X[,possetap])
+		    }
+		else stop=T	
+ 	   }
+	#groupeseff=unlist(lapply(groupes,length))
+	#groupes=groupes[groupeseff>1]
+	return(list(possetap=possetap,groupes=groupes))
+}
+
+pockets = pockets[,c(elimcor_sansY(pockets[,-37], 0.6)$possetap, 37)]
+dim(pockets)
+
+
+```
+
+```{r}
+pockets.glm = glm(pockets[,27] ~ ., data= pockets[,-27], family="binomial")
+#p-value du premier descripteur (descripteur A)
+summary(pockets.glm)$coefficients[2,4]
+
+
+```
+
+
 3. Compute the performance of this model using the training set and a probability threshold
 of 0.5.
 4. Compute the performance of this model using the test set and a 4-fold cross-validation
