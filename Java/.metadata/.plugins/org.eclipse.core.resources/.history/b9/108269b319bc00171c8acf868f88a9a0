@@ -1,7 +1,0 @@
-
-public class Froid {
-	final int temperature;							//Attributs Froid
-	public Froid(int temperature){					//Constructeur Froid
-		this.temperature = temperature;
-	}
-}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="725" maximized="true" width="1376" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -29,29 +29,39 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
 <part id="1"/>
-<part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="2"/>
+<part id="0"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CER.java" partName="CER.java" path="/home/sdv/m1bi/ejean/Github/Java/TP6/src/CER.java" title="CER.java" tooltip="TP6/src/CER.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP6/src/CER.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="291" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mult.java" partName="Mult.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Mult.java" title="Mult.java" tooltip="Polynomes/src/Mult.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Mult.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="203" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MP.java" partName="MP.java" path="/home/sdv/m1bi/ejean/Github/Java/TP6/src/MP.java" title="MP.java" tooltip="TP6/src/MP.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP6/src/MP.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="44" selectionOffset="200" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Poly.java" partName="Poly.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Poly.java" title="Poly.java" tooltip="Polynomes/src/Poly.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Poly.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="385" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CB.java" partName="CB.java" path="/home/sdv/m1bi/ejean/Github/Java/TP6/src/CB.java" title="CB.java" tooltip="TP6/src/CB.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP6/src/CB.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="343" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Add.java" partName="Add.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Add.java" title="Add.java" tooltip="Polynomes/src/Add.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Add.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="205" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CC.java" partName="CC.java" path="/home/sdv/m1bi/ejean/Github/Java/TP6/src/CC.java" title="CC.java" tooltip="TP6/src/CC.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP6/src/CC.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="214" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Var.java" partName="Var.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Var.java" title="Var.java" tooltip="Polynomes/src/Var.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Var.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="91" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Const.java" partName="Const.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Const.java" title="Const.java" tooltip="Polynomes/src/Const.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Const.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="240" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dev.java" partName="Dev.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Dev.java" title="Dev.java" tooltip="Polynomes/src/Dev.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Dev.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="462" selectionTopPixel="56"/>
 </editor>
 </editors>
 <views>
@@ -281,161 +291,161 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Supermarket/src/Mouchoirs.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP6/src/CER.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP6/src/MP.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP6/src/CB.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP6/src/CC.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Mult.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Add.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Var.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Const.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Dev.java"/>
 </editors>
-<item historyLabel="Mouchoirs.java" index="0">
-<position info="not_deleted" x="1" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Var.java" index="2">
+<position info="not_deleted" x="123" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Const.java" index="3">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Var.java" index="2">
+<position info="not_deleted" x="123" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Var.java" index="2">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="385" y="0"/>
+<item historyLabel="Var.java" index="2">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="283" y="0"/>
+<item historyLabel="Var.java" index="2">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="385" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="298" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="298" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position info="not_deleted" x="229" y="0"/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="152" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="298" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="291" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="291" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="102" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="102" y="0"/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="377" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="462" y="0"/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="377" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="147" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="187" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="268" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="205" y="0"/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="239" y="0"/>
 </item>
-<item historyLabel="CB.java" index="3">
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="294" y="0"/>
+</item>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="434" y="0"/>
+</item>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="306" y="0"/>
+</item>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="337" y="0"/>
+</item>
+<item historyLabel="Dev.java" index="4">
 <position info="not_deleted" x="335" y="0"/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="258" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="434" y="0"/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="377" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="384" y="0"/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="311" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="400" y="0"/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="270" y="103"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="419" y="0"/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="291" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="432" y="0"/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="459" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="268" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position info="not_deleted" x="227" y="0"/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="381" y="0"/>
+<item historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="462" y="0"/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="291" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position info="not_deleted" x="231" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="381" y="0"/>
+<item historyLabel="Add.java" index="1">
+<position info="not_deleted" x="230" y="0"/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="292" y="0"/>
+<item historyLabel="Const.java" index="3">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="200" y="44"/>
+<item historyLabel="Var.java" index="2">
+<position info="not_deleted" x="91" y="0"/>
 </item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="291" y="0"/>
+<item historyLabel="Const.java" index="3">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="200" y="44"/>
+<item historyLabel="Add.java" index="1">
+<position info="not_deleted" x="205" y="6"/>
 </item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
+<item historyLabel="Mult.java" index="0">
+<position info="not_deleted" x="203" y="6"/>
 </item>
-<item historyLabel="CC.java" index="4">
-<position info="not_deleted" x="214" y="0"/>
-</item>
-<item historyLabel="CER.java" index="1">
-<position info="not_deleted" x="291" y="0"/>
-</item>
-<item historyLabel="MP.java" index="2">
-<position info="not_deleted" x="200" y="44"/>
-</item>
-<item historyLabel="CB.java" index="3">
-<position info="not_deleted" x="343" y="0"/>
-</item>
-<item active="true" historyLabel="CC.java" index="4">
-<position info="not_deleted" x="214" y="0"/>
+<item active="true" historyLabel="Dev.java" index="4">
+<position info="not_deleted" x="462" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -443,6 +453,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="right"/>
 </trimArea>
@@ -453,10 +466,29 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dev.java" tooltip="Polynomes/src/Dev.java">
+<persistable path="/Polynomes/src/Dev.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Const.java" tooltip="Polynomes/src/Const.java">
+<persistable path="/Polynomes/src/Const.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Var.java" tooltip="Polynomes/src/Var.java">
+<persistable path="/Polynomes/src/Var.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Add.java" tooltip="Polynomes/src/Add.java">
+<persistable path="/Polynomes/src/Add.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Poly.java" tooltip="Polynomes/src/Poly.java">
+<persistable path="/Polynomes/src/Poly.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mult.java" tooltip="Polynomes/src/Mult.java">
+<persistable path="/Polynomes/src/Mult.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CC.java" tooltip="TP6/src/CC.java">
 <persistable path="/TP6/src/CC.java"/>
 </file>
@@ -483,24 +515,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ephemere.java" tooltip="Supermarket/src/Ephemere.java">
 <persistable path="/Supermarket/src/Ephemere.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Produit.java" tooltip="Supermarket/src/Produit.java">
-<persistable path="/Supermarket/src/Produit.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Supermarket.java" tooltip="Supermarket/src/Supermarket.java">
-<persistable path="/Supermarket/src/Supermarket.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur2.java" tooltip="TP4/src/Convoyeur2.java">
-<persistable path="/TP4/src/Convoyeur2.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Convoyeur1.java" tooltip="TP4/src/Convoyeur1.java">
-<persistable path="/TP4/src/Convoyeur1.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="B.java" tooltip="TP4/src/B.java">
-<persistable path="/TP4/src/B.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A2.java" tooltip="TP4/src/A2.java">
-<persistable path="/TP4/src/A2.java"/>
 </file>
 </mruList>
 </workbench>

@@ -1,0 +1,13 @@
+
+public class Var {
+	
+	
+	
+	//Methodes
+	int eval(int x){
+		return x;
+	}
+	
+	
+	
+}

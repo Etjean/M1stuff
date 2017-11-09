@@ -1,0 +1,32 @@
+
+public abstract class Poly {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+	
+	
+	
+	//Méthodes
+	Poly add (Poly P){
+		
+	}
+	
+	Poly mult (Poly P){
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,8 +1,0 @@
-
-public class Glace extends Froid {
-	static double prix;								//Attributs Glace
-	Glace (double prix) {
-		super(int temperature, Date date, double cout);
-		
-	}
-}

@@ -1,5 +1,0 @@
-
-public class Glace {
-	static double prix;								//Attributs Glace
-
-}

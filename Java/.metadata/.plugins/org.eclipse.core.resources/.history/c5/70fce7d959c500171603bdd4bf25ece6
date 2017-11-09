@@ -1,0 +1,15 @@
+
+public class Mult {
+	
+	//Attributs
+	Poly u;
+	Poly v;
+	
+	//Constructeur
+	Mult(Poly u, Poly v){
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+
+public class Const {
+	
+	//Attributs
+	int value;
+	
+	
+	//Constructeur
+	Const(int value) {
+		this.value = value;
+	}
+	
+	
+	
+	//Méthodes
+	int eval(int x) {
+		return value;
+	}
+	
+	
+	
+}
