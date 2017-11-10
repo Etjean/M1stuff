@@ -16,6 +16,9 @@ public class Mult extends Poly {
 	
 	public String toString() {};
 	
+	Dev dev() {return null;}
+
+	
 
 	
 }

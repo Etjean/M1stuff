@@ -15,7 +15,9 @@ public class Const extends Poly {
 	//Méthodes
 	int eval(int x) {return value;}
 	
-	String toString() {return (new Integer(value)).toString();}
+	public String toString() {return (new Integer(value)).toString();}
+
+	Dev dev() {return null;}
 	
 	
 	

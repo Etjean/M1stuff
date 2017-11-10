@@ -1,0 +1,22 @@
+;
+;	File '1BTA.top' was generated
+;	By user: unknown (5106)
+;	On host: lk-521a-wle.ens.sdv.univ-paris-diderot.fr
+;	At date: Fri Nov 10 10:40:06 2017
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                 :-) GROMACS - gmx pdb2gmx, VERSION 5.1.4 (-:
+;	
+;	Executable:   /opt/sdv/gromacs-5.1.4/bin/gmx
+;	Data prefix:  /opt/sdv/gromacs-5.1.4
+;	Command line:
+;	  gmx pdb2gmx -f 1BTA.pdb -o 1BTA.gro -p 1BTA.top -i 1BTA.itp
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "oplsaa.ff/forcefield.itp"
+

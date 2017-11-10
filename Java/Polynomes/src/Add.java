@@ -17,6 +17,7 @@ public class Add extends Poly {
 	
 	public String toString() {};
 	
-	
+	Dev dev() {return null;}
+
 	
 }

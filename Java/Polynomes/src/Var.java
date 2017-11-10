@@ -8,5 +8,8 @@ public class Var extends Poly {
 	
 	public String toString() {return "x";}
 	
+	Dev dev() {return null;}
+
+	
 	
 }

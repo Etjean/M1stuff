@@ -1,0 +1,61 @@
+TP3 : Notes de cours
+
+
+
+Etapes d'une étude de MD:
+
+1 - Mise au point du système
+-Récupération du PDB
+-Détermination du/des champ(s) de force à utiliser
+-Minimisation initiale (protéine seule)
+-Minimisation avec le solvant
+-Minimisation avec les ions
+
+2 - Phase d'équilibrage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+import java.awt.Polygon;
+
+public class Carre extends Figure {
+	
+	//Attributs
+	private int largeur;
+	
+	
+	//Constructeurs
+	public Carre(int x, int y, int l) {
+		super(x, y);
+		largeur = l;
+	}
+	
+	//Accesseurs
+	public int getLargeur() {return largeur;}
+	
+	
+	
+	//Methodes
+	public abstract Polygon creePolygon();
+	
+	
+	
+	
+	
+	
+}

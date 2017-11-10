@@ -6,7 +6,7 @@ public class Dev {
 	
 	//Constructeur
 	Dev(int[] t) {
-		coeff = t.clone();
+		coeff = (int[]) t.clone();
 	}
 	
 	

@@ -1,0 +1,45 @@
+define              =  -DPOSRES ; position restraints
+; voir dans le fichier de topologie la section DPOSRES qui renvoie au fichier itp
+constraints         =  all-bonds ; contraintes sur les longueur de liaison
+                                 ; rappel constraints != restraints
+integrator          =  md        ; algorithme utilise : dynamique moleculaire
+tinit               =  0.0       ; temps de depart = 0 ps   
+dt                  =  0.002     ; pas d'integration en ps
+                                 ; valeur liee a "constraints = all-bonds"
+nsteps              =  5000      ; total 10 ps
+nstcomm             =  1         ; retrait du mouvement du centre de masse du systeme
+nstxout             =  50000     ; freq d'ecriture des positions des atomes dans le .trr
+nstvout             =  50000     ; freq d'ecriture des vitesses des atomes dans le .trr
+nstfout             =  0         ; freq d'ecriture des forces (ici jamais)
+nstxtcout           =  500       ; freq d'ecriture des positions des atomes dans le .xtc 
+xtc_precision       =  1000      ; niveau de precision pour l'ecriture dans les .xtc
+nstlog              =  500       ; freq d'ecriture dans le .log
+nstenergy           =  500       ; freq d'ecriture des energies dans le .edr
+; non bonded stuff
+cutoff_scheme 	       = Verlet
+nstlist                =  10     ; voir minimisation 2
+coulombtype            = PME
+rlist                  = 1.0
+rcoulomb               = 1.0
+rvdw                   = 1.0
+fourierspacing         = 0.12
+pme_order              = 4
+; Temperature coupling is on in 2 groups
+Tcoupl              =  Berendsen          ; algo complage a la temperature
+tc-grps             =  Protein  Water_and_ions   ; groupes pour les thermostats
+tau_t               =  0.1      0.1       ; temps de couplage a la temperature (en ps)
+ref_t               =  300      300       ; temperature de reference 
+                                          ; pour chaque groupe (en K)
+; Energy monitoring
+energygrps          =  Protein  SOL  NA  ; groupes pour les calculs d'energies
+; Pressure coupling is on
+Pcoupl              =  Berendsen          ; algo complage a la pression
+tau_p               =  1.0                ; temps de couplage a la pression (en ps)
+compressibility     =  4.5e-5             ; compressibilite du milieu (ici l'eau) (en bar-1)
+ref_p               =  1.0                ; pression de reference (en bar)
+; Generate velocites is on at 300 K.
+gen_vel             =  yes                ; initialisation des vitesses 
+                                          ; (suivant une distrib de Maxwell Boltzmann)
+gen_temp            =  300.0              ; temperature de la distribution
+gen_seed            =  231077             ; graine aleatoire pour initialiser les vitesses
+

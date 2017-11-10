@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
-<window height="725" maximized="true" width="1376" x="65" y="24">
+<window height="1026" width="955" x="725" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="237" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -30,38 +30,38 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="1"/>
-<part id="3"/>
-<part id="4"/>
 <part id="2"/>
 <part id="0"/>
+<part id="3"/>
+<part id="4"/>
 <part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mult.java" partName="Mult.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Mult.java" title="Mult.java" tooltip="Polynomes/src/Mult.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Mult.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="203" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Figure.java" partName="Figure.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Figure.java" title="Figure.java" tooltip="TP7/src/Figure.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Figure.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="341" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Poly.java" partName="Poly.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Poly.java" title="Poly.java" tooltip="Polynomes/src/Poly.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Poly.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="385" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dessin.java" partName="Dessin.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Dessin.java" title="Dessin.java" tooltip="TP7/src/Dessin.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Dessin.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Add.java" partName="Add.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Add.java" title="Add.java" tooltip="Polynomes/src/Add.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Add.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="205" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestDessin.java" partName="TestDessin.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/TestDessin.java" title="TestDessin.java" tooltip="TP7/src/TestDessin.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/TestDessin.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="416" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Var.java" partName="Var.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Var.java" title="Var.java" tooltip="Polynomes/src/Var.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Var.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="91" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Rectangle.java" partName="Rectangle.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Rectangle.java" title="Rectangle.java" tooltip="TP7/src/Rectangle.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Rectangle.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="269" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Const.java" partName="Const.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Const.java" title="Const.java" tooltip="Polynomes/src/Const.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Const.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="240" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Carre.java" partName="Carre.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Carre.java" title="Carre.java" tooltip="TP7/src/Carre.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Carre.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="611" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dev.java" partName="Dev.java" path="/home/sdv/m1bi/ejean/Github/Java/Polynomes/src/Dev.java" title="Dev.java" tooltip="Polynomes/src/Dev.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Polynomes/src/Dev.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="462" selectionTopPixel="56"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Triangle.java" partName="Triangle.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Triangle.java" title="Triangle.java" tooltip="TP7/src/Triangle.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Triangle.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="528" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -261,7 +261,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.14037736" ratioLeft="186" ratioRight="1139" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.1730013" ratioLeft="132" ratioRight="631" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.6016129" ratioLeft="373" ratioRight="247" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -291,161 +291,161 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Mult.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Add.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Var.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Const.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Polynomes/src/Dev.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Figure.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Rectangle.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Carre.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Triangle.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/TestDessin.java"/>
 </editors>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="472" y="0"/>
 </item>
-<item historyLabel="Var.java" index="2">
-<position info="not_deleted" x="123" y="0"/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="672" y="0"/>
 </item>
-<item historyLabel="Const.java" index="3">
-<position info="not_deleted" x="240" y="0"/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="25" y="0"/>
 </item>
-<item historyLabel="Var.java" index="2">
-<position info="not_deleted" x="123" y="0"/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="0" y="25"/>
 </item>
-<item historyLabel="Var.java" index="2">
-<position/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="692" y="0"/>
 </item>
-<item historyLabel="Var.java" index="2">
-<position/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="472" y="0"/>
 </item>
-<item historyLabel="Var.java" index="2">
-<position/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="64" y="608"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="163" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="317" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position info="not_deleted" x="229" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="472" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="288" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="317" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="288" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="523" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="317" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="317" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="102" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="523" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="464" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="102" y="0"/>
+<item historyLabel="Triangle.java" index="3">
+<position info="not_deleted" x="528" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="462" y="0"/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="147" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="464" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="187" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="729" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="205" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="472" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="239" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="556" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="294" y="0"/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="611" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="434" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="447" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="306" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="65" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="337" y="0"/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="611" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="335" y="0"/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="434" y="0"/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="341" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="384" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="65" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="400" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="299" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="419" y="0"/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="611" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="432" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="228" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="459" y="0"/>
+<item historyLabel="Carre.java" index="2">
+<position info="not_deleted" x="611" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position info="not_deleted" x="227" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="150" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="447" y="0"/>
 </item>
-<item historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="462" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="670" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position info="not_deleted" x="231" y="0"/>
+<item historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="743" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position info="not_deleted" x="230" y="0"/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="328" y="0"/>
 </item>
-<item historyLabel="Const.java" index="3">
-<position info="not_deleted" x="240" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="150" y="0"/>
 </item>
-<item historyLabel="Var.java" index="2">
-<position info="not_deleted" x="91" y="0"/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="316" y="0"/>
 </item>
-<item historyLabel="Const.java" index="3">
-<position info="not_deleted" x="240" y="0"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="150" y="0"/>
 </item>
-<item historyLabel="Add.java" index="1">
-<position info="not_deleted" x="205" y="6"/>
+<item historyLabel="Figure.java" index="0">
+<position info="not_deleted" x="341" y="0"/>
 </item>
-<item historyLabel="Mult.java" index="0">
-<position info="not_deleted" x="203" y="6"/>
+<item historyLabel="Rectangle.java" index="1">
+<position info="not_deleted" x="269" y="0"/>
 </item>
-<item active="true" historyLabel="Dev.java" index="4">
-<position info="not_deleted" x="462" y="0"/>
+<item active="true" historyLabel="TestDessin.java" index="4">
+<position info="not_deleted" x="743" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -453,9 +453,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="right"/>
 </trimArea>
@@ -466,11 +463,31 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Triangle.java" tooltip="TP7/src/Triangle.java">
+<persistable path="/TP7/src/Triangle.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Carre.java" tooltip="TP7/src/Carre.java">
+<persistable path="/TP7/src/Carre.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Rectangle.java" tooltip="TP7/src/Rectangle.java">
+<persistable path="/TP7/src/Rectangle.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestDessin.java" tooltip="TP7/src/TestDessin.java">
+<persistable path="/TP7/src/TestDessin.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dessin.java" tooltip="TP7/src/Dessin.java">
+<persistable path="/TP7/src/Dessin.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Figure.java" tooltip="TP7/src/Figure.java">
+<persistable path="/TP7/src/Figure.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Figure.java" tooltip="TP7/Figure.java">
+<persistable path="/TP7/Figure.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dev.java" tooltip="Polynomes/src/Dev.java">
 <persistable path="/Polynomes/src/Dev.java"/>
 </file>
@@ -494,27 +511,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CB.java" tooltip="TP6/src/CB.java">
 <persistable path="/TP6/src/CB.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MP.java" tooltip="TP6/src/MP.java">
-<persistable path="/TP6/src/MP.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CER.java" tooltip="TP6/src/CER.java">
-<persistable path="/TP6/src/CER.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mouchoirs.java" tooltip="Supermarket/src/Mouchoirs.java">
-<persistable path="/Supermarket/src/Mouchoirs.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tomate.java" tooltip="Supermarket/src/Tomate.java">
-<persistable path="/Supermarket/src/Tomate.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Glace.java" tooltip="Supermarket/src/Glace.java">
-<persistable path="/Supermarket/src/Glace.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Froid.java" tooltip="Supermarket/src/Froid.java">
-<persistable path="/Supermarket/src/Froid.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ephemere.java" tooltip="Supermarket/src/Ephemere.java">
-<persistable path="/Supermarket/src/Ephemere.java"/>
 </file>
 </mruList>
 </workbench>

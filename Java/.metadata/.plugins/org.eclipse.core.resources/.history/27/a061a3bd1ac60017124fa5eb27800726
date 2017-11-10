@@ -1,0 +1,51 @@
+import java.awt.Polygon;
+
+
+public class Rectangle extends Figure {
+	
+	
+	//Attributs
+	private int largeur;
+	private int hauteur;
+	
+	
+	//Constructeur
+	public Rectangle(int x, int y, int l, int h) {
+		super(x, y);
+		largeur=l;
+		hauteur=h;
+	}
+	
+	//Methodes
+	public Polygon creePolygon() {
+		int x1, x2;
+		int y1, y2;
+		x1 = this.getPosX() - largeur/2;
+		x2 = this.getPosX() + largeur/2;
+		y1 = this.getPosY() - hauteur/2;
+		y2 = this.getPosY() + hauteur/2;
+		int[] abs = {x1, x1, x2, x2};
+		int[] ord = {y1, y2, y1, y2};
+		Polygon p = new Polygon(abs, ord, 4);
+		return p;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
