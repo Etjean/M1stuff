@@ -213,12 +213,3 @@ hist(dt.y.tst$IC50 - pred.step)
 
 
 
-
-
-
-
-
-
-
-
-

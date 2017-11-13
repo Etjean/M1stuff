@@ -551,12 +551,77 @@ dim(pockets)
 ```
 
 ```{r}
-pockets.glm = glm(pockets[,27] ~ ., data= pockets[,-27], family="binomial")
-#p-value du premier descripteur (descripteur A)
-summary(pockets.glm)$coefficients[2,4]
+#création du modèle GLM variable par variable
+#récupération des p-values
+pockets.glm.pvalues = c()
+for (i in 1:26) {
+  pockets.glm = glm(pockets[,27] ~ pockets[,i], family="binomial")
+  pockets.glm.pvalues = c(pockets.glm.pvalues, summary(pockets.glm)$coefficients[2, 4])
+}
 
+pockets.glm.pvalues
+```
+
+
+```{r}
+pockets = pockets[,c(which(pockets.glm.pvalues < 0.3), 27)]
+dim(pockets)
+#Il ne reste que 21 variables
 
 ```
+
+
+```{r}
+#Splitting into Learning sample and Test sample
+index = sample(nrow(pockets), round(2/3*nrow(pockets)), replace=F)
+pockets.lrn = pockets[index,]
+pockets.tst = pockets[-index,]
+
+```
+
+
+```{r}
+#Fabrication du modèle GLM global, sur echantillon apprentissage
+glm.lrn = glm(pockets.lrn[,21] ~ ., pockets.lrn[,-21], family="binomial")
+pred.glm.tst = predict(glm.lrn, pockets.tst[,-21], type="response")
+
+```
+
+```{r}
+#prédictions avec glm
+plot(pred.glm, col = "red")
+lines(pockets.tst[,21], col="black")
+
+```
+
+
+
+
+```{r}
+pred.glm.lrn=predict(glm.lrn, pockets.lrn[,-21], type="response")
+plot(pred.glm.lrn, col="red")
+points(pockets.lrn[,21], col="blue")
+
+```
+
+
+
+
+```{r}
+# Courbe ROC
+library(ROCR)
+prediction = prediction(pred.glm.lrn, pockets.lrn[,21])
+performance = performance(prediction, 'tpr', 'fpr')
+plot(performance)
+auc = performance(prediction, 'auc')
+attr(auc, 'y.values')
+
+prediction = prediction(pred.glm.tst, pocket.tst[,21])
+performance = performance(p)
+
+```
+
+
 
 
 3. Compute the performance of this model using the training set and a probability threshold
