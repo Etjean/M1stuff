@@ -1,0 +1,118 @@
+---
+title: "TP2"
+author: "Etienne JEAN"
+date: "13 novembre 2017"
+output: pdf_document
+---
+
+```{r}
+#Lecture des donn??es
+dt = as.matrix(read.table("PROFIL.FICH1"))
+dim(dt)
+
+```
+
+```{r}
+#Visualisation des donn??es
+par(mfrow=c(2, 3))
+plot(dt[1,])
+plot(dt[2,])
+plot(dt[3,])
+plot(dt[4,])
+plot(dt[5,])
+plot(dt[6,])
+
+dt.scl = cmdscale(dist(dt), k=2)
+plot(dt.scl)
+
+```
+
+
+```{r}
+#D??termination du nombre de clusters
+I.intra = rep(0, 10)
+for (i in 1:length(I.intra)){
+  if (i==1){I.intra[i] = kmeans(dt.scl, centers=i)$tot.withinss}
+  else {I.intra[i] = I.intra[i-1] + kmeans(dt.scl, centers=i)$tot.withinss}
+}
+plot(I.intra, type = "l", xlab = "Nombre de clusters", ylab = "Inertie intra-classe", main = "D??termination du nombre de cluster id??al par la m??thode des kmeans")
+abline(v=3, col = "red")
+text(3.7, 14000, "3 clusters", col = "red")
+
+
+#Classification k-means
+dt.km = kmeans(dt.scl, 3)
+plot(dt.scl, col=dt.km$cluster+1)
+
+
+```
+
+
+
+```{r}
+############
+dt.hclust = hclust(dist(dt.scl), method="ward.D2")
+plot(dt.hclust, hang=-1, labels=as.factor(dt.km$cluster), main = "Dendrogramme par la m??thode de Ward")
+rect.hclust(dt.hclust, k=3, border=c(2, 3, 4))
+
+
+############
+library(dendextend)
+dend <- as.dendrogram(dt.hclust)
+# Assigning the labels of dendrogram object with new colors:
+labels_colors(dend) <- dt.km$cluster+1
+# Plotting the new dendrogram
+plot(dend)
+
+```
+
+
+
+
+
+
+
+```{r}
+#Plot de tous les profils appartenant au meme groupe
+
+for(j in 1:3) {
+  w=which(dt.km$cluster == j)
+  n=length(w)
+  
+  plot(dt[1,], type='l')
+  for (i in 2:n) {
+    lines(dt[w[i],], type='l')
+  }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

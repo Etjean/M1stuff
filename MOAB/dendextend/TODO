@@ -1,0 +1,220 @@
+TODO for future releases:
+=========================
+
+* Remove DendSer.dendrogram - I don't think it adds any value (but DO add examples for using seriation to rotate the dendrogram...)
+
+
+Interactive tanglegrams using plotly?!
+
+
+Maybe add this function:
+http://stackoverflow.com/questions/33567508/how-to-color-the-same-labels-on-dendorgram-in-one-colour-in-r/33580763#33580763
+
+
+
+add Bk class, and plot.Bk method (this makes more sense
+than having a plot_Bk function)
+
+
+Help make:
+aheatmap(NMF pkg)
+pheatmap
+compatible with dendextend
+
+
+
+Next action
+--------------
+
+
+add to vignette:
+0) get_leaves_branches_col - Get the colors of the branches of a dendrogram's leaves. This function is actually the point of the two other functions. It is meant to help match the color of the labels with that of the branches - after running color_branches.
+
+
+לתקן את המשפט על דנדאקסטנד שמופיע כאן:
+http://cran.r-project.org/web/views/Phylogenetics.html
+
+
+להוסיף ל installr
+עוד תפריט של "להתקין חבילת ZIP מ URL" - שיקפיץ חלון טקסט, ואז יריץ את 
+install.packages.zip("http://www.christophheibl.de/phyloch_1.5-5.zip")
+
+
+* Make a cheat sheet!
+
+* tanglegram - add a default color to the lines, so that streight lines will be green, and the red ones will be red. (like in the vignette)
+
+
+* fix the following case!
+
+
+
+dend_flat <- structure(list(structure(88L, members = 1L, height = 0, label = "mel Ch   m pe", leaf = TRUE, value = 83), 
+                            structure(list(structure(92L, members = 1L, height = 0, label = "mel Ch   f fo", leaf = TRUE, value = 84), 
+                                           structure(list(structure(90L, members = 1L, height = 0, label = "mel Ch   f he", leaf = TRUE, value = 85), 
+                                                          structure(list(structure(84L, label = "mel Ch   m he", members = 1L, height = 0, leaf = TRUE, value = 86), 
+                                                                         structure(86L, label = "mel Ch   m fo", members = 1L, height = 0, leaf = TRUE, value = 87)), members = 2L, midpoint = 0.5, height = 0, value = 86.5)), members = 3L, midpoint = 0.75, height = 0, value = 85.75)), members = 4L, midpoint = 0.875, height = 0, value = 84.875)), members = 5L, midpoint = 0.9375, height = 0.0697674418604651, value = 83.9375, class = "dendrogram")
+
+dend_flat %>% color_labels %>% plot # doesn't work in 0.17.2, but it is fixed in 0.17.3
+dend_flat %>% color_labels(col = 1:2) %>% plot # doesn't work in 0.17.2, but it is fixed in 0.17.3
+# And this is because of:
+nleaves(dend_flat) # 5
+# fix the following two!
+cutree(dend_flat, k = 5) # results in a vector of 0's.
+heights_per_k.dendrogram(tree)
+get_nodes_attr(dend_flat, "height")
+
+
+# debug(cutree)
+
+# nice example:
+dend1 <- 1:5 %>% dist %>% hclust %>% as.dendrogram
+dend1 %>% plot
+get_nodes_attr(dend1, "height")
+dend2 <- dend1 %>% raise.dendrogram(-1)
+dend2 %>% plot
+cutree(dend2, k = 5)
+dend2 %>% color_labels %>% plot # works
+dend2 %>% color_labels %>% plot # works
+
+
+
+
+
+
+
+* add:
+randomForest 4.6-10
+Type rfNews() to see new features/changes/bug fixes.
+> rfNews()
+> rfNews
+function () 
+{
+    newsfile <- file.path(system.file(package = "randomForest"), 
+        "NEWS")
+    file.show(newsfile)
+}
+<environment: namespace:randomForest>
+
+
+* maybe add?
+http://stackoverflow.com/questions/22749634/how-to-append-bootstrapped-values-of-clusters-tree-nodes-in-newick-format-in
+
+
+* in hang.dendrogram, check if hang_height can accept a vector (and recycle)
+
+* a tanglegram with different labels. (via J. Aravind)
+As far as I have understood, it can compare only dendrograms from the same dataset with the same labels. Is there a way to create tanglegrams with dissimilar data? Right now I am resorting to using the same labels in both the dendrograms and finally manually editing the labels in one of the dendrograms in Inkscape. However such an exercise in large dendrograms is difficult. So a feature to use dissimilar labels will be great.
+
+* a tanglegram for multiple cases. (via J. Aravind)
+Further is there any way to extend the one-to-one comparison to comparison of multiple cases like in these tanglegrams [ http://www.biomedcentral.com/content/figures/1471-2148-12-1-1-l.jpg , http://origin-ars.els-cdn.com/content/image/1-s2.0-S0966842X14000900-gr2.jpg]. Will such comparisons mess up the entanglement? Right now what I am doing is repeating the elements in one dendrogram wherever multiple comparisons occur. I have tried to merge the repeated elements later in the dendrogram, but not getting the desired results. A feature to do such comparisons in a dendrogram will be useful for creating tanglegrams for cophylogenies.
+
+
+
+* a mini Vignette (like: http://cran.r-project.org/package=caret)
+* Adjust the Vignette to be a website (like http://caret.r-forge.r-project.org/)
+
+* announce the package on r-packages@r-project.org
+* create a relevant tag wiki in SO, just like: http://stackoverflow.com/tags/rcpp/info (do only after intro vignettes is done)
+* get added here: http://bioinfo.unice.fr/biodiv/Tree_editors.html
+* go through this: http://stackoverflow.com/questions/tagged/dendrogram
+
+* intersect_trees  - add intersect_trees.dendlist method.
+
+* vignette: mention options warn = FALSE
+
+* add tests to nodes_with_condition.
+
+* ask the maintainer of "ape" to have rotate S3ed
+
+* Invite other package authors to use dendextend and add it to their "suggests" (including pvclut, dynamicTreeCut, gplots, ape, who else?)
+
+* Maybe add a global package option for printing debugging information, and have many of the logical warn and print stuff be related to these...
+
+* maybe use "abs" in min(-diff(our_dend_heights))/2 in dendextend_options("heights_per_k.dendrogram") ?
+
+New functions
+--------------
+   * add a print/warn parameter to intersect_trees
+   * intersect_trees.dendlist
+   * Mention I've used this rect.hclust.nice code for implementation on my verison of the function. http://stackoverflow.com/questions/4720307/change-dendrogram-leaves 
+   * Give this a thought: http://stackoverflow.com/questions/10088117/exporting-dendrogram-as-table-in-r?rq=1
+   * create rect.dendrogram (and make rect generic). http://stackoverflow.com/questions/717747/how-do-i-color-edges-or-draw-rects-correctly-in-an-r-dendrogram
+http://stackoverflow.com/questions/4720307/change-dendrogram-leaves
+   * hide some function's doc (labels<-.stuff)
+
+   * manipulate tanglegram using click_rotate
+
+   * maybe allow pruning of labels based on their location (since if we get a tree with two identical labels, we may wish to fix it). maybe unique.dendrogram? It can be done by finding duplicate(labels), giving these a new name, and then prune it.
+
+
+New GUIs
+---------
+	* GUI for Rcmdr
+	* GUI for Deducer
+	* GUI with Shiny
+	
+
+More DOCS
+---------
+	* Fix the demo / or work on a nice vignette
+	* cross-ref untangle functions docs
+
+Questions to answer
+------------------
+	* reply here: http://stackoverflow.com/questions/10571266/colouring-branches-in-a-dendrogram-in-r?rq=1
+      
+Places to publish?!
+------------------
+	* http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software?mpw
+	* http://www.statsci.org/compjour.html
+   
+General ideas
+------------------
+   * An algorithm to find subtrees that are topologically identical between the two trees - and color them accordingly.
+   * Get stats::midcache.dendrogram to work for non-binary trees...
+   * cut_replace - make it in Rcpp - to make cutree_1h.dendrogram faster...
+   * See this code: https://github.com/andrie/ggdendro/blob/master/R/dendro_rpart.R
+   for creating an rpart plotting machanism using dendrograms!
+   This will enable hilighting one branch/rule.
+   Note that more "attr" will need to be added to the tree in order to
+   include all of the rpart information. This could also allow the merging of plots from rpart/party etc. 
+   
+   * Add as.dendrogram.ctree . Example code for further work:
+require(party)
+set.seed(290875)
+### regression
+airq <- subset(airquality, !is.na(Ozone))
+airct <- ctree(Ozone ~ ., data = airq, 
+                   controls = ctree_control(maxsurrogate = 3))
+airct
+plot(airct)
+str(airct@tree)
+# as.dendrogram.ctree will need to work with the above object
+# to extract the elements needed for detecting the tree's parameters...
+
+	* Create: as.dendrogram.randomForest (a template is available in the R folder)	
+	* Check if I need to implement something from here: http://r.789695.n4.nabble.com/dendrogram-plot-does-not-draw-long-labels-td3235843.html
+	* Also good: get the conditions in a tree: http://stats.stackexchange.com/questions/41443/how-to-actually-plot-a-sample-tree-from-randomforestgettree
+	* Look into the proximity matrix produced from a randomForest:
+data(iris)
+require(randomForest)
+mod.rf <- randomForest(Species ~ ., data=iris,  proximity=TRUE)
+hc <- hclust(as.dist(mod.rf$proximity))
+plot(as.dendrogram(hc))
+MDSplot(mod.rf, iris$Species)
+	
+	* Combine with gridBase to include sub plots like in {party: ?plot.BinaryTree}	
+	Sources:
+		http://cran.r-project.org/web/packages/party/vignettes/party.pdf
+		http://sublogo.r-forge.r-project.org/
+		http://casoilresource.lawr.ucdavis.edu/drupal/node/1007
+		http://cran.r-project.org/web/packages/gridBase/vignettes/gridBase.pdf
+	* give examples with http://cran.r-project.org/web/packages/treemap/index.html
+	
+
+	* Ideas for improving the package: http://robjhyndman.com/hyndsight/jss-rpackages/ - DONE
+
+   * Improve the visualization of Pvclust results
+      http://bioinformatics.oxfordjournals.org/content/22/12/1540.full
+   * and compare it on two clustering algorithms using tanglegram 

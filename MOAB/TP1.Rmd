@@ -61,8 +61,7 @@ opt = optim(c(1, 1), moindreCarre)
 
 
 plot(x, yobs)
-par(new=T)
-plot(x, ytrue, "o", col="grey")
+points(x, ytrue, "o", col="grey")
 abline(a=opt$par[1], b=opt$par[2], col="orange")
 
 ```
@@ -72,11 +71,15 @@ abline(a=opt$par[1], b=opt$par[2], col="orange")
 
 data(ChickWeight)
 chick.1 <- ChickWeight[ChickWeight$Chick == 1,]
+chick.1
 
 # a = poids final/maximum
 # tmoy = temps de demi-poids
-# sigma = ...
+# sigma = parametre de la fonction logistique
 
+a=205
+tmoy=11
+s=1
 
 w <- function(t) {return (a/(1+exp(-(t-tmoy)/s)))}
 
@@ -84,10 +87,7 @@ w <- function(t) {return (a/(1+exp(-(t-tmoy)/s)))}
 # w'(tmoy) = a/2s
 
 
-
-
-
-
+curve(w, from=0, to=30)
 
 
 
