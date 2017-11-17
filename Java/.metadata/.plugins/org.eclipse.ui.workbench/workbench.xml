@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1026" width="955" x="725" y="24">
+<window height="1026" width="1014" x="666" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,11 +15,11 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="237" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="296" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,41 +28,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="1"/>
-<part id="2"/>
-<part id="0"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Figure.java" partName="Figure.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Figure.java" title="Figure.java" tooltip="TP7/src/Figure.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Figure.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="341" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dessin.java" partName="Dessin.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Dessin.java" title="Dessin.java" tooltip="TP7/src/Dessin.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Dessin.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestDessin.java" partName="TestDessin.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/TestDessin.java" title="TestDessin.java" tooltip="TP7/src/TestDessin.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/TestDessin.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="416" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Rectangle.java" partName="Rectangle.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Rectangle.java" title="Rectangle.java" tooltip="TP7/src/Rectangle.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Rectangle.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="269" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Carre.java" partName="Carre.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Carre.java" title="Carre.java" tooltip="TP7/src/Carre.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Carre.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="611" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Triangle.java" partName="Triangle.java" path="/home/sdv/m1bi/ejean/Github/Java/TP7/src/Triangle.java" title="Triangle.java" tooltip="TP7/src/Triangle.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7/src/Triangle.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="528" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
@@ -116,7 +85,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -261,7 +230,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.1730013" ratioLeft="132" ratioRight="631" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.1991744" ratioLeft="193" ratioRight="776" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.6016129" ratioLeft="373" ratioRight="247" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -289,165 +258,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Figure.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Rectangle.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Carre.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/Triangle.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7/src/TestDessin.java"/>
-</editors>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="472" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="672" y="0"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="25" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="0" y="25"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="692" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="472" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="64" y="608"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="163" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="472" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="288" y="0"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="288" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="523" y="0"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="523" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item historyLabel="Triangle.java" index="3">
-<position info="not_deleted" x="528" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="729" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="472" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="556" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="611" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="447" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="65" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="611" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="65" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="299" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="611" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="228" y="0"/>
-</item>
-<item historyLabel="Carre.java" index="2">
-<position info="not_deleted" x="611" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="447" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="670" y="0"/>
-</item>
-<item historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="743" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="328" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="316" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="Figure.java" index="0">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="Rectangle.java" index="1">
-<position info="not_deleted" x="269" y="0"/>
-</item>
-<item active="true" historyLabel="TestDessin.java" index="4">
-<position info="not_deleted" x="743" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -467,6 +278,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Oups.java" tooltip="TP7/src/Oups.java">
+<persistable path="/TP7/src/Oups.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Exceptions.java" tooltip="TP7/src/Exceptions.java">
+<persistable path="/TP7/src/Exceptions.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Triangle.java" tooltip="TP7/src/Triangle.java">
 <persistable path="/TP7/src/Triangle.java"/>
 </file>
@@ -505,12 +322,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mult.java" tooltip="Polynomes/src/Mult.java">
 <persistable path="/Polynomes/src/Mult.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CC.java" tooltip="TP6/src/CC.java">
-<persistable path="/TP6/src/CC.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CB.java" tooltip="TP6/src/CB.java">
-<persistable path="/TP6/src/CB.java"/>
 </file>
 </mruList>
 </workbench>

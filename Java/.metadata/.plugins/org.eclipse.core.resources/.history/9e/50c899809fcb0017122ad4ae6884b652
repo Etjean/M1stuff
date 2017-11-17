@@ -1,0 +1,49 @@
+import java.util.Random;
+
+
+public class Exceptions {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static int divise(int a, int b) {
+		return a/b;
+	}
+	
+	public static int[] tab_aleatoire(int n) {
+		int[] tab = new int[n];
+		Random rd = new Random();
+		for (int i; i=0; i<=n){
+			
+		}
+		return tab
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
