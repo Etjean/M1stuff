@@ -26,6 +26,7 @@ git push                                 #modifie définitivemet github depuis l
 sudo                        #execute en tant que root
 sudo apt-cache update
 sudo apt-cache search [mots clés]
+sudo apt-cache show [nom paquet]
 sudo apt-get install [nom paquet]
 
 
@@ -46,6 +47,8 @@ ls
 ls -a  #fichiers cachés = fichiers ".qqchose"
 ls -l
 ls -al
+ls -lh     #affiche la taille des fichiers
+du -h      #affiche la taille des fichiers et sous-dossiers
 
 cd
 cd ..

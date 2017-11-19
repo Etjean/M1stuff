@@ -4,11 +4,6 @@ author: "Etienne JEAN"
 date: "30 octobre 2017"
 output: pdf_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 #----------------------------------------------------------------------------------------------------
 
 #1. Description des données
@@ -33,6 +28,8 @@ dt.x = dt.x[,-which(dt.x.sd_of_descriptors == 0)]
 dt.x = dt.x[-which(dt.y$IC50 > 500),]
 dt.y = dt.y[-which(dt.y$IC50 > 500),]
 print(dim(dt.x))
+#2 variables éliminées
+#189 variables restantes
 ```
 
 
@@ -40,41 +37,80 @@ print(dim(dt.x))
 ```{r}
 hist(dt.y$IC50)
 hist(scale(log(dt.y$IC50)))
+hist(scale(dt.y$pIC50))
+#pIC50 = -log(IC50)
 
 ```
 
 
 ##d. ACP
-##e. normalisation 
 ```{r}
 library(FactoMineR)
-dt.x.pca = PCA(dt.x, ncp=5, axes=c(1,2), graph=T)
+dt.x.pca = PCA(dt.x, ncp=5, axes=c(1,2), graph=F)
+#Nombre de composantes
+barplot(dt.x.pca$eig[,1], main="Nombre de composantes à considérer pour l'ACP", names.arg=1:nrow(dt.x.pca$eig), xlab = "composantes", ylab = "valeurs propres")
+abline(v=4*1.2+0.1, col="orange")
+text(4*1.2+12, 6, "4 composantes", col = "orange")
+#Grapique des variables
+plot(dt.x.pca, choix="var", axes=c(1,2), title="Grahpique des variables")
+plot(dt.x.pca, choix="var", axes=c(3,4), title="Grahpique des variables")
+#Grapique des individus
+plot(dt.x.pca, choix="ind", axes=c(1,2), title="Grahpique des individus")
+plot(dt.x.pca, choix="ind", axes=c(3,4), title="Grahpique des individus")
+
+```
+
+##e. normalisation 
+```{r}
+print(cbind(dt.y[1:10,], dt.x[1:10,92]))
+dtsc.x = scale(dt.x)
+print(cbind(dt.y[1:10,], dtsc.x[1:10,]))
 
 ```
 
 
 
 
+#------------------------------------------------------------------------------------------
 
 
 
 #4. Régression linéaire simple
 ##a. coefficient de corrélation
 ```{r}
+#Best correlation for activity vs D10
 cor(dt.y$IC50, dt.x[,1])
 cor(dt.y$IC50, dt.x[,10])
 cor(dt.y$IC50, dt.x[,92])
-#Best correlation for activity vs D10
+#Best correlation for -log(activity) vs D92
+#Mais Attention : D92 est une variable qualitative !
+cor(dt.y$pIC50, dt.x[,1])
+cor(dt.y$pIC50, dt.x[,10])
+cor(dt.y$pIC50, dt.x[,92])
 
 ```
 
 ##b. modèle Y = AX+B
 ```{r}
-lsfitD10 = lsfit(dt.y$IC50, dt.x[,10])
-plot(dt.y$IC50, dt.x[,10])
-abline(lsfitD10, col="red")
+#A PARTIR DE MAINTENANT, JE N'UTILISE QUE !! pIC5O !!
+#RL pIC50 / D1
+lsfit.D1 = lsfit(dt.y$pIC50, dt.x[,1])
+plot(dt.y$pIC50, dt.x[,1])
+abline(lsfit.D1, col="red")
+
+#RL pIC50 / D10
+lsfit.D10 = lsfit(dt.y$pIC50, dt.x[,10])
+plot(dt.y$pIC50, dt.x[,10])
+abline(lsfit.D10, col="red")
 
 ```
+
+
+
+
+
+
+#------------------------------------------------------------------------------------------
 
 
 
@@ -84,10 +120,8 @@ abline(lsfitD10, col="red")
 ##a. matrice de corrélation et visualisation des données
 ```{r}
 library(corrplot)
-dt.x.cor = cor(dt.x[,1:10])
+dt.x.cor = cor(dt.x[,1:30])
 corrplot(dt.x.cor)
-
-
 ```
 
 
@@ -142,8 +176,11 @@ elimcor_sansY<-function(X,s=0.95) {
 elimcor_sansY(dt.x, s=0.8)$possetap
 dt.x = dt.x[,elimcor_sansY(dt.x, s=0.8)$possetap]
 dim(dt.x)
+#102 variables éliminées
+#87 variables restantes
 
 ```
+
 
 ##b. échantillon d'apprentissage/échantillon de validation
 ```{r}
@@ -152,24 +189,21 @@ dt.x.lrn = dt.x[index,]
 dt.x.tst = dt.x[-index,]
 dt.y.lrn = dt.y[index,]
 dt.y.tst = dt.y[-index,]
-
 ```
 
 
 ##c. le modèle complet
 ```{r}
-lm.lrn = lm(dt.y.lrn$IC50 ~ ., data = dt.x.lrn)
-lm.lrn
-
+lm.lrn = lm(dt.y.lrn$pIC50 ~ ., data = dt.x.lrn)
+length(lm.lrn$coefficients)
 ```
 
 
 ##d. sélection des variables
 ```{r}
-step.lrn <- step(lm.lrn)
-length(step.lrn)
-#Le step a gardé 13 variables
-
+#step.lrn = step(lm.lrn)  #Lancer le step dans la console, sinon ca tue tout.
+length(step.lrn$coefficients)
+#60 variables gardées par le Step
 ```
 
 
@@ -178,28 +212,100 @@ length(step.lrn)
 pred.lm = predict(lm.lrn, dt.x.tst)
 pred.step = predict(step.lrn, dt.x.tst)
 
+mean(dt.y.tst$pIC50 - pred.lm)
+sd(dt.y.tst$pIC50 - pred.lm)
+mean(dt.y.tst$pIC50 - pred.step)
+sd(dt.y.tst$pIC50 - pred.step)
 
-mean(dt.y.tst$IC50 - pred.lm)
-sd(dt.y.tst$IC50 - pred.lm)
-mean(dt.y.tst$IC50 - pred.step)
-sd(dt.y.tst$IC50 - pred.step)
+# hist(dt.y.tst$pIC50 - pred.lm)
+# hist(dt.y.tst$pIC50 - pred.step)
 
-hist(dt.y.tst$IC50 - pred.lm)
-hist(dt.y.tst$IC50 - pred.step)
+plot(abs(dt.y.tst$pIC50 - pred.lm), col='grey', ylim=c(0, 12), main="LM prediction", type='l')
+lines(pred.lm, col='blue')
+lines(dt.y.tst$pIC50, col="red")
+abline(h=0)
+text(60, 12, "Valeurs réelles", col = "red")
+text(60, 11, "Valeurs prédites", col = "blue")
+text(60, 10, "Ecart", col = "grey")
 
-
-
+plot(abs(dt.y.tst$pIC50 - pred.step), col='grey', ylim=c(0, 12), main="STEP prediction", type='l')
+lines(pred.step, col='blue')
+lines(dt.y.tst$pIC50, col="red")
+abline(h=0)
+text(60, 12, "Valeurs réelles", col = "red")
+text(60, 11, "Valeurs prédites", col = "blue")
+text(60, 10, "Ecart", col = "grey")
 ```
+
+
+
+
+
+#------------------------------------------------------------------------------------------
+
+
+
 
 
 
 #6. PLS
 ##a. le modèle PLS
 ##b. visualisation
+```{r}
+#Ajout de pIC50 avec les X pour éviter les problèmes de "fomula" lors du plot RMSEP du jeu test.
+dt.x.lrn$pIC50 = dt.y.lrn$pIC50
+dt.x.tst$pIC50 = dt.y.tst$pIC50
+
+library(pls)
+plsr.lrn = plsr(pIC50 ~ ., data=dt.x.lrn, ncomp=87)
+# summary(plsr.lrn)
+plot(RMSEP(plsr.lrn))
+
+```
+
+
+
 ##c. validation
+```{r}
+plsr.lrn.loo = plsr(pIC50 ~ ., data=dt.x.lrn, ncomp=87, validation="LOO")
+# summary(plsr.lrn.loo)
+plot(RMSEP(plsr.lrn.loo))
+```
+
+
 ##d. évaluation
+```{r}
+plot(RMSEP(plsr.lrn, newdata=dt.x.tst))
+plot(R2(plsr.lrn, newdata=dt.x.tst))
+```
+
 
 #7. PCR
+##a. le modèle PCR
+##b. visualisation
+```{r}
+library(pls)
+pcr.lrn = pcr(pIC50 ~ ., data=dt.x.lrn, ncomp=80)
+# summary(pcr.lrn)
+plot(RMSEP(pcr.lrn))
+
+```
+
+
+
+##c. validation
+```{r}
+pcr.lrn.loo = pcr(pIC50 ~ ., data=dt.x.lrn, ncomp=80, validation="LOO")
+# summary(pcr.lrn)
+plot(RMSEP(pcr.lrn.loo))
+```
+
+
+##d. évaluation
+```{r}
+plot(RMSEP(pcr.lrn, newdata=dt.x.tst))
+plot(R2(pcr.lrn, newdata=dt.x.tst))
+```
 
 
 
