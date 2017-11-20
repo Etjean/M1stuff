@@ -2,13 +2,7 @@
 title: "Prediction of protein pocket druggability"
 output: html_notebook
 ---
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-```{r}
-plot(cars)
-```
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -467,17 +461,66 @@ less druggable FN TN
 Table 4.1: Computation of counts to quantify the performance of a statistical model. TP: true
 positives, TN: true negatives, FP: false positives, FN: false negatives.
 1. Create functions that compute these parameters
+
+
+
+
+
+
+
+
+
 #4.2 Linear Discriminant Analysis (LDA)
 library: MASS
-functions: lda() M ASS , predict()
+functions: lda() MASS , predict()
 LDA is a machine learning method to find linear combinations of features, which characterizes
 or separates two or more classes of objects or events. The resulting combinations may be used as
 a linear classifier, or, more commonly, for dimensionality reduction before later classification.
 1. Justify the LDA model use to compute a druggability model.
 2. Compute a complete LDA model ((model with all variables) to predict pocket druggability
 using the training set.
+```{r}
+#Splitting into Learning sample and Test sample
+index = sample(nrow(pockets), round(2/3*nrow(pockets)), replace=F)
+pockets.lrn = pockets[index,]
+pockets.tst = pockets[-index,]
+
+```
+
+```{r}
+library(MASS)
+lda.lrn = lda(drugg ~ ., data=pockets.lrn)
+plot(lda.lrn)
+```
+
+
+
 3. Compute the different parameters quantifying the quality of the model (accuracy, sensi-
 tivity, specificity, ...) on training set.
+```{r}
+
+pred.lda = predict(lda.lrn, pockets.tst[,-37], type="response")
+length(pred.lda$class)
+
+lda.table = table(pockets.tst[,37], pred.lda$class, dnn=c("obs", "pred"))
+lda.table
+tp = lda.table[2, 2]
+tn = lda.table[1, 1]
+fp = lda.table[1, 2]
+fn = lda.table[2, 1]
+
+
+lda.accu = (tp+tn) / (tp+fp+tn+fn)
+lda.sens = tp / (tp+fn)
+lda.spec = tn / (tn+fp)
+lda.accu
+lda.sens
+lda.spec
+  
+```
+
+
+
 4. Test the model using the test set.
 5. Test the robustness of the model by computing the model performence using a 4-fold
 cross-validation
@@ -487,6 +530,11 @@ involved in the model?
 8. Compute a new LDA-model using only these important variables? Compute the perfor-
 mances of this model on training and test sets, and in 4-fold cross-validation.
 9. Compare the performance of the two LDA-models.
+
+
+
+
+
 
 
 
@@ -590,7 +638,7 @@ pred.glm.tst = predict(glm.lrn, pockets.tst[,-21], type="response")
 ```{r}
 #prédictions avec glm
 plot(pred.glm, col = "red")
-lines(pockets.tst[,21], col="black")
+lines(pockets.tst[,21], col="blacplot(pockets.lda)k")
 
 ```
 
@@ -662,12 +710,12 @@ CART analysis are a set of rules for:
 • splitting each node in a tree;
 • deciding when a tree is complete;
 • and assigning each terminal node to a class outcome (or predicted value for regression).
-1. Compute a CART model on the training set. Extract all variables implied in the tree.
-2. Plot the obtained tree.
-3. Compute the performance of this model using the training set. The more node the tree
+##1. Compute a CART model on the training set. Extract all variables implied in the tree.
+##2. Plot the obtained tree.
+##3. Compute the performance of this model using the training set. The more node the tree
 have, the best its performances in resubstitution are and the worse its performances in
 generalization are.
-4. Compute the performance of this model using the test set.
+##4. Compute the performance of this model using the test set.
 You must decrease the number of leaves by pruning the tree using the approach based on
 the complexity parameter. Typically, one selects a tree size that minimizes the cross-validated
 error, the xerror column printed by the function printcp(). The cross-validation results can be
@@ -675,32 +723,30 @@ visualized using the function plotcp(): it plots the decrease of the relative er
 by the variance of the predictive variable) in function of the complexity parameter. This repre-
 sentation gives a good choice of complexity for pruning: leftmost value for which the mean lies
 below the horizontal line.
-4. Select the complexity value to prune the tree using printcp() function.
-5. Prune the tree using the function prune() and plot the pruned tree.
-6. Compare the variable involved in the pruned and complete trees.
-7. Compute the performance of the pruned tree using the training and test sets and a 4-fold
+##4. Select the complexity value to prune the tree using printcp() function.
+##5. Prune the tree using the function prune() and plot the pruned tree.
+##6. Compare the variable involved in the pruned and complete trees.
+##7. Compute the performance of the pruned tree using the training and test sets and a 4-fold
 cross-validation.
-8. Sum up the model performance on a table.
-4.5
-Random Forest
+##8. Sum up the model performance on a table.
+
+#4.5 Random Forest
 library: randomForest
 functions: randomForest() randomF orest , prune(), plotcp(), , printcp()
 To compute a random forest (RF) model, you will use the function randomForest() available
 in the library randomForest.
-154.5 Random Forest
-4.5.1
 Step 1: Determination of the optimized parameters of RF model
 The first step of the computation of RF model is the determination of optimized parameters:
 • ntree: Number of trees to grow.
 • mtry: Number of variables randomly sampled as candidates at each split.
 To optimize these parameters, we will use a grid approach by testing different values of ntree
 and mtry values: ntree = {10, 50, 100, 200} and mtry = {5, 10, 20, p}.
-1. Compute the accuracy value of each model using the differents (ntree, mtree) pairs and
+##1. Compute the accuracy value of each model using the differents (ntree, mtree) pairs and
 fill in Table 4.2 with the accuracy values.
-2. Determine the optimized value of ntree and mtree defined as the pair (ntree, mtry)
+##2. Determine the optimized value of ntree and mtree defined as the pair (ntree, mtry)
 maximizing the accuracy during the grid approach.
-3. Visualize the obtained matrix. Which (ntree, mtree) pairs do you retain?
-4. Compute performances of the model using the optimal ntree and mtree parameters on
+##3. Visualize the obtained matrix. Which (ntree, mtree) pairs do you retain?
+##4. Compute performances of the model using the optimal ntree and mtree parameters on
 training and test sets and 4-fold cross-validation.
 ntree
 10
@@ -714,7 +760,7 @@ mtry
 20
 p
 Table 4.2: Grid of ntree and mtry pairs
-4.5.2
+##4.5.2
 Step 2: Selection of the most informative variables
 As CART method, RF method allows the selection of most informative variables. This selection
 is based on the computation of the "Importance" of each variable. RF variable importance,
@@ -728,30 +774,31 @@ I(X j ) =
 1 X
 (errOOB t j∗ − errOOB t )
 ntree t
-164. Prediction of the pocket druggability
+4. Prediction of the pocket druggability
 where the sum is over all trees t of the RF using the variable X j .
-1. Using the optimized parameters compute a RF on the training set and extract the impor-
+##1. Using the optimized parameters compute a RF on the training set and extract the impor-
 tant variables. Store these values of variable importance in a vector.
-2. As RF method is based on random, re-run this procedure 100 times.
-3. Plot the average importance for all variables. Select the most informative variables.
-4. Re-compute a RF model, using the optimal parameters and the most informative vari-
+##2. As RF method is based on random, re-run this procedure 100 times.
+##3. Plot the average importance for all variables. Select the most informative variables.
+##4. Re-compute a RF model, using the optimal parameters and the most informative vari-
 ables. Compute the performance parameters on the training and test sets and using a
 4-fold cross-validation.
-4.6
-Comparison of different models and selection of the best model
+
+
+# 4.6 Comparison of different models and selection of the best model
 to predict pocket druggability
-1. Compare the performance parameters of all build models. Which model does allow the
+##1. Compare the performance parameters of all build models. Which model does allow the
 best separation of druggable and less druggable pockets?
-2. Compare the significant descriptors for each model.
+##2. Compare the significant descriptors for each model.
 A second method to compare different models is the plot of the ROC (Receiver Operating
 Characteristic) curve. This curve is a graphical plot, which illustrates the performance of a
 binary classifier system as its discrimination threshold is varied. It is created by plotting the
 sensitivity of the model versus (1-specificity) at various threshold settings. The best model
 corresponds to the model with the highest Area Under the Curve (AUC).
-1. For models obtained by LDA, CART, RF and logistic regression compute the sensitivity
+##1. For models obtained by LDA, CART, RF and logistic regression compute the sensitivity
 and specificity values for a probability threshold varying between 0 and 1. Be careful, the
 function predict() must return the probability to belong to a class.
-2. Plot the ROC curve for these models. Which model allows the best separating between
+##2. Plot the ROC curve for these models. Which model allows the best separating between
 the druggable and less druggable pockets?
 
 
