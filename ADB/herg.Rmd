@@ -257,7 +257,7 @@ dt.x.lrn$pIC50 = dt.y.lrn$pIC50
 dt.x.tst$pIC50 = dt.y.tst$pIC50
 
 library(pls)
-plsr.lrn = plsr(pIC50 ~ ., data=dt.x.lrn, ncomp=87)
+plsr.lrn = plsr(pIC50 ~ ., data=dt.x.lrn, ncomp=80)
 # summary(plsr.lrn)
 plot(RMSEP(plsr.lrn))
 
@@ -267,15 +267,17 @@ plot(RMSEP(plsr.lrn))
 
 ##c. validation
 ```{r}
-plsr.lrn.loo = plsr(pIC50 ~ ., data=dt.x.lrn, ncomp=87, validation="LOO")
+plsr.lrn.loo = plsr(pIC50 ~ ., data=dt.x.lrn, ncomp=80, validation="LOO")
 # summary(plsr.lrn.loo)
-plot(RMSEP(plsr.lrn.loo))
+plot(RMSEP(plsr.lrn.loo), xlab="Nombre de CP", main="Determination du nombre de CP a considérer")
+abline(v=6, col="orange")
+text(18, 1.4, "6 composantes", col="orange")
 ```
 
 
 ##d. évaluation
 ```{r}
-plot(RMSEP(plsr.lrn, newdata=dt.x.tst))
+plot(RMSEP(plsr.lrn.loo, newdata=dt.x.tst))
 plot(R2(plsr.lrn, newdata=dt.x.tst))
 ```
 
@@ -303,7 +305,7 @@ plot(RMSEP(pcr.lrn.loo))
 
 ##d. évaluation
 ```{r}
-plot(RMSEP(pcr.lrn, newdata=dt.x.tst))
+plot(RMSEP(pcr.lrn.loo, newdata=dt.x.tst))
 plot(R2(pcr.lrn, newdata=dt.x.tst))
 ```
 
