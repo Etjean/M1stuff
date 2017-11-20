@@ -1,0 +1,79 @@
+---
+title: "TP3"
+author: "Etienne JEAN"
+date: "20 novembre 2017"
+output: pdf_document
+---
+
+#Exercice 1
+```{r}
+library(nnet)
+x = runif(1000, -1, 1)
+y = 0.2 * x**2 - x**3 + 0.1*rnorm(x)
+plot(y, x, pch=21, bg=rainbow(100), col=rainbow(100))
+mynet = nnet(x, y, size=3, decay=0, maxit=100, linout=T)
+
+pred = predict(mynet, data=x)
+plot(x, y, col="blue")
+points(x, pred, col = "red")
+
+```
+
+
+
+
+#Exercice 2
+```{r}
+data("iris3")
+iris3
+```
+
+```{r}
+plot(iris3[,3,1], iris3[,4,1], main="Petals", col="blue", xlim=c(0,8), ylim=c(0,3), xlab="Width", ylab="Length")
+points(iris3[,3,2], iris3[,4,2], col="red")
+points(iris3[,3,3], iris3[,4,3], col="orange")
+text(7, 1, "Setosa", col="blue")
+text(7, 0.8, "Versicolor", col="red")
+text(7, 0.6, "Virginica", col="orange")
+plot(iris3[,1,1], iris3[,2,1], main="Sepals", col="blue", xlim=c(4,9), ylim=c(1,5), xlab="Width", ylab="Length")
+points(iris3[,1,2], iris3[,2,2], col="red")
+points(iris3[,1,3], iris3[,2,3], col="orange")
+text(8.5, 4.6, "Setosa", col="blue")
+text(8.5, 4.3, "Versicolor", col="red")
+text(8.5, 4.0, "Virginica", col="orange")
+```
+
+```{r}
+x.app = rbind(iris3[1:25,,1], iris3[1:25,,2], iris3[1:25,,3])
+x.tst = rbind(iris3[26:50,,1], iris3[26:50,,2], iris3[26:50,,3])
+y.app = rbind(matrix(c(1,0,0), nrow=25, ncol=3, byrow=T), matrix(c(0,1,0), nrow=25, ncol=3, byrow=T), matrix(c(0,0,1), nrow=25, ncol=3, byrow=T))
+y.tst = y.app
+thenet = nnet(x=x.app, y=y.app, size=5, decay=0, maxit=100, linout=T)
+thepred = round(predict(thenet, data=x.tst))
+thetable = table(y.tst, thepred, dnn=c("obs", "pred"))
+thetable
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
