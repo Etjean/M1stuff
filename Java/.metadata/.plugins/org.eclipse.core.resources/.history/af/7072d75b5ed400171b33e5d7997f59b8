@@ -1,0 +1,11 @@
+import java.io.IOException;
+
+
+public class Test {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("voila");
+		Matrice mat = new Matrice("/home/sdv/m1bi/ejean/Github/Java/Projet/ExempleFichierGrapheVilles.tex");
+		System.out.println(mat.L);
+	}
+}

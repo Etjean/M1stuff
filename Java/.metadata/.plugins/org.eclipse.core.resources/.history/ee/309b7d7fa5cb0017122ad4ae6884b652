@@ -1,6 +1,0 @@
-
-public class Oups extends Exception {
-	public Oups() {
-		System.out.println("Division par zéro !!!!")
-	}
-}
