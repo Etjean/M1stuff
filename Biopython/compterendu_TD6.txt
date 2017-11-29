@@ -1,0 +1,76 @@
+
+
+
+
+
+Partie I
+
+La base de données ne comprend que des séquences de la même famille (des alpha et beta globines)
+
+
+STAT1
+Score observé = 18020.5
+MOD 1
+Mean      =    11354.260
+Variance  =    30709.612
+Std       =      175.242
+P-value   =        0.000
+Z-score   =       38.040
+MOD 2
+Mean      =    11280.210
+Variance  =  1605029.406
+Std       =     1266.898
+P-value   =        0.000
+Z-score   =        5.320
+MOD 3
+Mean      =    11706.700
+Variance  =    13446.190
+Std       =      115.958
+P-value   =        0.000
+Z-score   =       54.449
+
+Les résulats sont très significatifs car la base de données correspond aux globines, que l'on sait similaires à la LegHG.
+
+
+
+STAT2
+Score observé = 44934.5
+MOD 1
+Mean      =    36271.670
+Variance  =   271547.501
+Std       =      521.102
+P-value   =        0.000
+Z-score   =       16.624
+
+
+STAT3
+Score observé = 30760.5
+MOD 1
+Mean      =    22814.380
+Variance  =   148227.416
+Std       =      385.003
+P-value   =        0.000
+Z-score   =       20.639
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
