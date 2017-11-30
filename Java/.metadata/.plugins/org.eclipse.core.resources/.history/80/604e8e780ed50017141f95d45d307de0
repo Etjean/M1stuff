@@ -37,8 +37,6 @@ public class Matrice implements Graphe{
     		Matcher m = p.matcher(line);
     		
     		int no = i+1;
-    		City[] cities;
-    		int[][] matrix;
     		m.find();
 			String cityname = m.group(1).trim();
 			m.find();
@@ -53,9 +51,6 @@ public class Matrice implements Graphe{
     	
     	//Creation de la matrice d'adjacence
     	while ((line = br.readLine()) != null) {
-    		String[] words = line.split("##");
-    		int no1 = nameToId(words[0].trim());
-    		int no2 = nameToId(words[0].trim());
     	}
     	br.close();
     	
@@ -80,7 +75,7 @@ public class Matrice implements Graphe{
 	//Accesseurs
 	@Override
 	public int getNbNoeud() {
-		return nbN;
+		return 0;
 	}
 
 	@Override

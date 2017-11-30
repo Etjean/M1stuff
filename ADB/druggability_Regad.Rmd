@@ -1,0 +1,143 @@
+---
+title: "druggability_Regad"
+author: "Etienne JEAN"
+date: "30 novembre 2017"
+output: pdf_document
+---
+
+
+##########################################################################################################
+CART & REGRESSION TREE
+
+
+```{r}
+library(rpart)
+library(ROCR)
+pockets = read.table("descriptor_pocket.mat")
+names(pockets)
+```
+
+2. Remove all pockets with missing values. Use the function na.omit(). How many pockets
+did you remove?  
+```{r}
+dim(pockets)
+#is.na(pockets)
+pockets = na.omit(pockets)
+dim(pockets)
+```
+
+```{r}
+aromatic = apply(cbind(pockets$F, pockets$Y, pockets$H, pockets$W), 1, sum)
+polar = apply(cbind(pockets$C, pockets$D, pockets$E, pockets$H, pockets$K, pockets$N, pockets$Q, pockets$R, pockets$S, pockets$T, pockets$W, pockets$Y), 1, sum)
+aliphatic = apply(cbind(pockets$I, pockets$L, pockets$V), 1, sum)
+charged = apply(cbind(pockets$D, pockets$E, pockets$R, pockets$K, pockets$H), 1, sum)
+negative = apply(cbind(pockets$D, pockets$E), 1, sum)
+positive = apply(cbind(pockets$R, pockets$K, pockets$H), 1, sum)
+hydrophobic = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$L, pockets$I, pockets$M, pockets$F, pockets$W, pockets$H, pockets$Y, pockets$K), 1, sum)
+small = apply(cbind(pockets$C, pockets$G, pockets$A, pockets$T, pockets$V, pockets$S, pockets$D, pockets$N, pockets$P), 1, sum)
+tiny = apply(cbind(pockets$A, pockets$C, pockets$G, pockets$S), 1, sum)
+pockets = cbind(pockets, aromatic, polar, aliphatic, charged, negative, positive, hydrophobic, small, tiny)
+#mise de "drugg" à la fin du tableau
+noms = names(pockets)
+pockets = cbind(pockets[,1:27], pockets[,29:37], pockets[,28])
+colnames(pockets)[37] = noms[28]
+
+names(pockets)   #37 descriptors
+```
+```{r}
+#Splitting into Learning sample and Test sample
+index = sample(nrow(pockets), round(2/3*nrow(pockets)), replace=F)
+lrn = pockets[index,]
+tst = pockets[-index,]
+```
+
+
+
+```{r}
+#rpart sur pockets brut
+p.rpart = rpart(drugg~., data=lrn, method="class", minsplit=3)
+plot(p.rpart, mar=0.1)
+text(p.rpart, use.n=T)
+printcp(p.rpart)
+
+pred = predict(p.rpart, newdata=tst, type="class")
+table(pred, tst$drugg)
+
+
+p.prune = prune(p.rpart, cp=0.05)
+plot(p.prune, mar=0.1)
+text(p.prune, use.n=T)
+printcp(p.prune)
+
+```
+
+```{r}
+#rpart sur pockets non corrélé
+pockets.nocorr = pockets[,c(elimcor_sansY(pockets[,-37], 0.6)$possetap, 37)]
+lrn.nocorr = pockets.nocorr[index,]
+tst.nocorr = pockets.nocorr[-index,]
+
+p.nocorr.rpart = rpart(drugg~., data=lrn.nocorr, method="class")
+plot(p.nocorr.rpart, mar=0.1)
+text(p.nocorr.rpart, use.n=T)
+
+pred.nocorr = predict(p.nocorr.rpart, newdata=tst.nocorr, type="class")
+table(pred.nocorr, tst.nocorr$drugg)
+```
+
+
+```{r}
+#rpart sur pockets non corrélé et scalé
+pockets.sc.nocorr = as.data.frame(cbind(scale(pockets.nocorr[,-27]), pockets.nocorr$drugg))
+colnames(pockets.sc.nocorr)[27]="drugg"
+lrn.sc.nocorr = pockets.sc.nocorr[index,]
+tst.sc.nocorr = pockets.sc.nocorr[-index,]
+
+p.sc.nocorr.rpart = rpart(drugg~., data=lrn.sc.nocorr, method="class")
+plot(p.sc.nocorr.rpart, mar=0.1)
+text(p.sc.nocorr.rpart, use.n=T)
+
+pred.sc.nocorr = predict(p.sc.nocorr.rpart, newdata=tst.sc.nocorr, type="class")
+table(pred.sc.nocorr, tst.sc.nocorr$drugg)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
