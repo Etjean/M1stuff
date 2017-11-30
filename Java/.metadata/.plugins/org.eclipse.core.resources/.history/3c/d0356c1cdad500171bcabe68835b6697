@@ -107,17 +107,18 @@ public class Matrice implements Graphe{
 	@Override
 	public void putEtiquette(String nomVille, int num) {
 		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void addVoisins(int num1, int num2) {
-		//ajoute un lien entre les villes no1 et no2
-		matrix[num1-1][num2-1] = 1;
-		matrix[num2-1][num1-1] = 1;
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public int getNumNoeud(String nomVille) {
+		// TODO Auto-generated method stub
 		//Retourne le nombre de noeuds voisins de la ville
 		int no = nameToId(nomVille);
 		int numNoeud = 0;

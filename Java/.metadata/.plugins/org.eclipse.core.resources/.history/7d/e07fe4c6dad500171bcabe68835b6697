@@ -107,6 +107,7 @@ public class Matrice implements Graphe{
 	@Override
 	public void putEtiquette(String nomVille, int num) {
 		// TODO Auto-generated method stub
+		
 	}
 
 	@Override

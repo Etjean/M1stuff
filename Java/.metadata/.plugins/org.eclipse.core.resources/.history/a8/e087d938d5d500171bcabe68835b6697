@@ -45,17 +45,20 @@ public class Matrice implements Graphe{
 			int posX = Integer.parseInt(m.group(2));
 			m.find();
 			int posY = Integer.parseInt(m.group(2));
+			
     		cities[i] = new City(no, cityname, color, posX, posY);
     	}
     	
     	//Creation de la matrice d'adjacence
     	matrix = new int[nbN][nbN];
     	while ((line = br.readLine()) != null) {
+    		System.out.println(line);
     		String[] names = line.split("##");
     		int no1 = nameToId(names[0].trim());
     		int no2 = nameToId(names[1].trim());
     		matrix[no1-1][no2-1] = 1;
-    		matrix[no2-1][no1-1] = 1;
+    		System.out.println(names[0].trim());
+    		System.out.println(names[1].trim());
     	}
     	br.close();
     	
@@ -107,23 +110,20 @@ public class Matrice implements Graphe{
 	@Override
 	public void putEtiquette(String nomVille, int num) {
 		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void addVoisins(int num1, int num2) {
-		//ajoute un lien entre les villes no1 et no2
-		matrix[num1-1][num2-1] = 1;
-		matrix[num2-1][num1-1] = 1;
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public int getNumNoeud(String nomVille) {
+		// TODO Auto-generated method stub
 		//Retourne le nombre de noeuds voisins de la ville
-		int no = nameToId(nomVille);
-		int numNoeud = 0;
-		for (int k : matrix[no-1])
-			numNoeud += k;
-		return numNoeud;
+		return 0;
 	}
 	
 	

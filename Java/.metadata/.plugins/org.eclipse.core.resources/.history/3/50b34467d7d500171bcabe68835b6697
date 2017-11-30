@@ -14,16 +14,18 @@ public class Test {
 		System.out.println(mat.cities[47].posY);
 		
 		System.out.println("");
-		System.out.println(mat.cities[3].name + " " + mat.cities[6].name);
+		System.out.print(mat.cities[3].name);
+		System.out.println(mat.cities[6].name);
 		System.out.println(mat.matrix[3][6]);
-		System.out.println("");
-		System.out.println(mat.cities[13].name + " " + mat.cities[16].name);
-		System.out.println(mat.matrix[13][16]);
-		System.out.println("");
-		System.out.println(mat.cities[13].name + " " + mat.cities[36].name);
-		System.out.println(mat.matrix[13][36]);
 		
 		System.out.println("");
-		System.out.println(mat.getNumNoeud("Los Angeles"));
+		System.out.print(mat.cities[13].name);
+		System.out.println(mat.cities[16].name);
+		System.out.println(mat.matrix[13][16]);
+		
+		System.out.println("");
+		System.out.print(mat.cities[13].name);
+		System.out.println(mat.cities[36].name);
+		System.out.println(mat.matrix[13][36]);
 	}
 }
