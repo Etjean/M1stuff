@@ -1,0 +1,17 @@
+1- Recuperer l'executable sur le lien ci-dessous et placer le dans votre HOME :
+http://swift.cmbi.kun.nl/gv/dssp/
+
+2- Renommer le fichier dssp-2.0.4-linux-i386 en dssp
+
+3- Rendre le fichier dssp executable :
+chmod 777 dssp
+
+3- Ajouter dans le fichier .bashrc un export vers l'executable
+export DSSP=~/dssp
+
+4- Executer le fichier .bashrc
+. .bashrc
+
+
+
+

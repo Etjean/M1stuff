@@ -1,0 +1,41 @@
+
+Lancer l'alias 'loadgromacs' avant d'utiliser gromacs.
+
+
+1-Préparation : Topologie, Solvatation, Minimisation
+
+
+gmx trjconv -fit rot+trans -s mini2.tpr -f mini2.trr -o mini2_center.trr
+---> Commande pour corriger les molécules d'eau déformées sur VMD
+
+
+
+
+
+
+
+
+
+
+
+2 - Dynamique moléculaire d'équilibrage
+gmx make_ndx -f mini2.gro -o 1BTA.ndx
+
+gmx grompp -f md_eq.mdp -po md_eq_out.mdp -p 1BTA.top -c mini2.gro -n 1BTA.ndx -o md_eq.tpr -maxwarn 1
+---> Il me dit qu'il y a 1 warning, donc on rajoute '-maxwarn 1' pour lui dire que c'est pas grave, on en est conscient, et on s'en fout.
+
+gmx trjconv -fit rot+trans -s md_eq.tpr -f md_eq.xtc -o md_eq_center.xtc
+vmd md_eq.gro md_eq_center.xtc
+---> pour corriger les molécules d'eau relou
+
+
+
+
+
+
+
+
+
+
+
+
