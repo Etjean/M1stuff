@@ -7,21 +7,42 @@ Partie I
 
 La base de données ne comprend que des séquences de la même famille (des alpha et beta globines)
 
-
+#################################################
 STAT1
 Score observé = 18020.5
+
 MOD 1
-Mean      =    11354.260
-Variance  =    30709.612
-Std       =      175.242
+Mean      =    11358.370
+Variance  =    51585.773
+Std       =      227.125
 P-value   =        0.000
-Z-score   =       38.040
+Z-score   =       29.332
+
+intercept = 58.566 = b
+coeff     = -0.0052054 = a
+or ax+b = -(1/beta)*x + mu/beta
+donc a = -1/beta
+     b = mu/beta
+donc beta = -1/a = 192.108
+     mu = b*beta = -b/a = 11251.0
+Ainsi, je trouve une p-value = 1.998e-15
+
+-------------------------------------------------
 MOD 2
 Mean      =    11280.210
 Variance  =  1605029.406
 Std       =     1266.898
 P-value   =        0.000
 Z-score   =        5.320
+
+Grosse variance : 
+-On randomise la query
+-cas 1 : la query a un bon score avec une sequence de la db => elle aura aussi un bon score avec toutes les autres séquences de la db car celles-ci n'ont pas été randomisées, et on sait qu'elles sont semblables car ce sont toutes des globines. En faisant la somme des scores, on va atteindre un grand score total.
+-cas 2 = cas inverse : La query ne resemble pas du tout aux séquences de la db => on ne somme que des petits scores
+-Ainsi, cela explique qu'on ai un très grande variance, mais en moyenne, le score total est proche des autres modèles. Ca explique également que le z-score est plus petit, car la distribution est plus étalée.
+
+
+------------------------------------------------
 MOD 3
 Mean      =    11706.700
 Variance  =    13446.190
@@ -29,33 +50,50 @@ Std       =      115.958
 P-value   =        0.000
 Z-score   =       54.449
 
+-On randomise la db, mais pas la query.
+-On observe un variance légèrement plus faible que pour le modèle 1, car on ne randomise que la db.
+
+------------------------------------------------
 Les résulats sont très significatifs car la base de données correspond aux globines, que l'on sait similaires à la LegHG.
 
 
-
+#################################################
 STAT2
 Score observé = 148456.412
 MOD 1
-Mean      =   143583.279
-Variance  =  1598788.467
-Std       =     1264.432
+Mean      =   143387.716
+Variance  =  1207048.601
+Std       =     1098.658
 P-value   =        0.000
-Z-score   =        3.854
+Z-score   =        4.614
 
+intercept = 155.1
+coeff     = -0.001085
+or ax+b = -(1/beta)*x + mu/beta
+a = -1/beta
+b = mu/beta
+mu   = 142871.7
+beta = 921.4238
+Ainsi, je trouve une p-value = 0.00233
 
+#################################################
 STAT3
-Score observé = 11065.0
+Score observé = 14566.0
 MOD 1
-Mean      =    12194.710
-Variance  =    11419.446
-Std       =      106.862
-P-value   =        1.000
-Z-score   =      -10.572
+Mean      =    12206.580
+Variance  =    10709.184
+Std       =      103.485
+P-value   =        0.000
+Z-score   =       22.800
 
-intercept = 134.833
-coeff     = -0.0111
-
-
+intercept = 137.8
+coeff     = -0.01133
+or ax+b = -(1/beta)*x + mu/beta
+a = -1/beta
+b = mu/beta
+mu   = 12157.17
+beta = 88.23409
+Ainsi, je trouve une p-value = 1.392e-12
 
 
 

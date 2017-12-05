@@ -5,39 +5,11 @@ date: "29 novembre 2017"
 output: pdf_document
 ---
 
-```{r}
-#p-value associated with the z-score
-pnorm(12, lower.tail=F)
-```
-
-
-
-```{r}
-ms = read.table("random_max_scores_TP6.txt")
-ms=as.numeric(ms[,1])
-library(ggplot2)
-cdf = (1:1000)/(1000+1)
-df = data.frame(ms, cdf)
-df
-ggplot(data=df, aes(x=ms, y=cdf))
-
-```
-
-
-```{r}
-ms=sort(ms)
-ms.lm = lm(log(-log(cdf))~ms)
-summary(ms.lm)
-plot(y=log(-log(cdf)), x=ms)
-abline(ms.lm, col='red')
-
-```
-
 ######################################################################
 
 ```{r}
 #p-value associated with the z-score
-pnorm(3.854, lower.tail=F)
+pnorm(22.8, lower.tail=F)
 ```
 
 
@@ -47,7 +19,7 @@ pnorm(3.854, lower.tail=F)
 #cdf
 cdf = 1:100/101
 #ms
-ms = read.table("mod1.tab")
+ms = read.table("mod1_bl50.tab")
 ms=as.numeric(ms[,1])
 ms = sort(ms)
 #fit
@@ -55,10 +27,18 @@ my_fit = lm(log(-log(cdf))~ms)
 summary(my_fit)
 plot(y=log(-log(cdf)), x=ms)
 abline(my_fit, col='red')
-
 ```
 
 
+```{r}
+#p-value
+library(evd)
+print(mu <- -summary(my_fit)$coefficients[1,1]/summary(my_fit)$coefficients[2,1])
+print(beta <- -1/summary(my_fit)$coefficients[2,1])
+
+
+pgumbel(14566,mu, beta, lower.tail = F)
+```
 
 
 
