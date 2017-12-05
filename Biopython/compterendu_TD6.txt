@@ -34,24 +34,26 @@ Les résulats sont très significatifs car la base de données correspond aux gl
 
 
 STAT2
-Score observé = 44934.5
+Score observé = 148456.412
 MOD 1
-Mean      =    36271.670
-Variance  =   271547.501
-Std       =      521.102
+Mean      =   143583.279
+Variance  =  1598788.467
+Std       =     1264.432
 P-value   =        0.000
-Z-score   =       16.624
+Z-score   =        3.854
 
 
 STAT3
-Score observé = 30760.5
+Score observé = 11065.0
 MOD 1
-Mean      =    22814.380
-Variance  =   148227.416
-Std       =      385.003
-P-value   =        0.000
-Z-score   =       20.639
+Mean      =    12194.710
+Variance  =    11419.446
+Std       =      106.862
+P-value   =        1.000
+Z-score   =      -10.572
 
+intercept = 134.833
+coeff     = -0.0111
 
 
 

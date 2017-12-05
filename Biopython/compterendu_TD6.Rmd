@@ -36,6 +36,25 @@ abline(ms.lm, col='red')
 ######################################################################
 
 ```{r}
+#p-value associated with the z-score
+pnorm(3.854, lower.tail=F)
+```
+
+
+
+
+```{r}
+#cdf
+cdf = 1:100/101
+#ms
+ms = read.table("mod1.tab")
+ms=as.numeric(ms[,1])
+ms = sort(ms)
+#fit
+my_fit = lm(log(-log(cdf))~ms)
+summary(my_fit)
+plot(y=log(-log(cdf)), x=ms)
+abline(my_fit, col='red')
 
 ```
 
