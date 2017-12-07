@@ -9,7 +9,7 @@ output: pdf_document
 
 ```{r}
 #p-value associated with the z-score
-pnorm(22.8, lower.tail=F)
+pnorm(22.800, lower.tail=F)
 ```
 
 
@@ -25,8 +25,9 @@ ms = sort(ms)
 #fit
 my_fit = lm(log(-log(cdf))~ms)
 summary(my_fit)
-plot(y=log(-log(cdf)), x=ms)
+plot(y=log(-log(cdf)), x=ms, main="STAT 3", xlab="score", ylab="")
 abline(my_fit, col='red')
+text=()
 ```
 
 
