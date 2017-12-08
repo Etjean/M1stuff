@@ -1,0 +1,34 @@
+
+
+Parser le fichier PDB
+    Récupérer les coordonnées initiales de tous les atomes
+Calculer l'énergie potentielle 
+    Epot = Eliaison1 + Eliaison2 + Eangle
+Calculer le gradient
+    Calculer les dérivées partielles numériques (avec un dx(=delta) arbitraire)
+    Calculer les dérivées partielles pour chaque coordonnée(3 coordonnées)
+    Calculer les dérivées partielle pour chaque atome(3 atomes)
+    --> gradient à 18 coordonnées au total
+Déterminer le pas de descente
+    Pas constant dans un premier temps
+    Pas optimal dans un deuxième temps
+        minimiser la fonction Epot(X - PAS*NablaEpot(X)) en fonction de PAS (X vecteur des coordonnées)
+Calculer le nouveau X
+Calculer la nouvelle Epot
+Recommencer
+Mettre un nombre d'itérations limite et/ou stopper la boucle en dessous d'une énergie seuil.
+
+PLUUUUS : 
+Tester avec des conformations improbables (liaisons longues, angle trop petit)
+Calculer les dérivées analytiques
+Tester avec 2 molécules d'eau
+
+
+
+
+
+
+
+
+
+
