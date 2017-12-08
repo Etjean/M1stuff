@@ -25,7 +25,7 @@ ms = sort(ms)
 #fit
 my_fit = lm(log(-log(cdf))~ms)
 summary(my_fit)
-plot(y=log(-log(cdf)), x=ms, main="STAT 3", xlab="score", ylab="")
+plot(y=log(-log(cdf)), x=ms, main="Régression linéaire de la répartition de Gumbel linéarisée", xlab="score", ylab="")
 abline(my_fit, col='red')
 text=()
 ```
@@ -37,8 +37,8 @@ library(evd)
 print(mu <- -summary(my_fit)$coefficients[1,1]/summary(my_fit)$coefficients[2,1])
 print(beta <- -1/summary(my_fit)$coefficients[2,1])
 
+pgumbel(14566, mu, beta, lower.tail = F)
 
-pgumbel(14566,mu, beta, lower.tail = F)
 ```
 
 
