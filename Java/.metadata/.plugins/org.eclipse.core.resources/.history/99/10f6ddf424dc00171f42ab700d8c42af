@@ -1,0 +1,13 @@
+
+public class Joueur {
+	//Attributs
+	String nom;
+	String prenom;
+	int clss;
+	
+	//Méthodes
+	public equals(Joueur j) {
+		if nom == J.nom && prenom == j.prenom && j.clss == clss {return True;}
+		else {return False;}
+	}
+}

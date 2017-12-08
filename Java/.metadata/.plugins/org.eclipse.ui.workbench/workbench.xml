@@ -31,22 +31,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Matrice.java" partName="Matrice.java" path="/home/sdv/m1bi/ejean/Github/Java/ProjetEtienne/src/Matrice.java" title="Matrice.java" tooltip="ProjetEtienne/src/Matrice.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ProjetEtienne/src/Matrice.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2727" selectionTopPixel="1423"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Joueur.java" partName="Joueur.java" path="/home/sdv/m1bi/ejean/Github/Java/TP8/src/Joueur.java" title="Joueur.java" tooltip="TP8/src/Joueur.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP8/src/Joueur.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="227" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="/home/sdv/m1bi/ejean/Github/Java/ProjetEtienne/src/Test.java" title="Test.java" tooltip="ProjetEtienne/src/Test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ProjetEtienne/src/Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="931" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="City.java" partName="City.java" path="/home/sdv/m1bi/ejean/Github/Java/ProjetEtienne/src/City.java" title="City.java" tooltip="ProjetEtienne/src/City.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ProjetEtienne/src/City.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/sdv/m1bi/ejean/Github/Java/TP8/src/Main.java" title="Main.java" tooltip="TP8/src/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP8/src/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="66" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -277,160 +272,164 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/Matrice.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/City.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/Test.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/Matrice.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/City.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/Test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjetEtienne/src/City.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP8/src/Joueurs.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP8/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP8/src/Joueur.java"/>
 </editors>
-<item historyLabel="City.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Matrice.java" index="0">
-<position info="not_deleted" x="1735" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="492" y="0"/>
-</item>
-<item historyLabel="Matrice.java" index="0">
-<position info="not_deleted" x="1735" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="492" y="0"/>
-</item>
-<item historyLabel="Matrice.java" index="0">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="492" y="0"/>
-</item>
-<item historyLabel="Matrice.java" index="0">
-<position info="not_deleted" x="1040" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="492" y="0"/>
-</item>
-<item historyLabel="Matrice.java" index="0">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="111" y="0"/>
-</item>
 <item historyLabel="Matrice.java" index="0">
 <position info="not_deleted" x="197" y="0"/>
 </item>
 <item historyLabel="Matrice.java" index="0">
 <position/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="111" y="0"/>
 </item>
 <item historyLabel="Matrice.java" index="0">
 <position info="not_deleted" x="984" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="111" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1105" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="991" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1596" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="991" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="618" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="621" y="0"/>
 </item>
-<item historyLabel="City.java" index="4">
+<item historyLabel="City.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="761" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1596" y="0"/>
 </item>
-<item historyLabel="City.java" index="4">
+<item historyLabel="City.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="761" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="753" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1858" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="991" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1395" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="991" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1395" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="991" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1203" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="41" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1395" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="41" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1395" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="41" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1589" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="763" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1574" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="763" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="1574" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="2705" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="2685" y="0"/>
 </item>
-<item historyLabel="Matrice.java" index="3">
+<item historyLabel="Matrice.java" index="2">
 <position info="not_deleted" x="2666" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="931" y="0"/>
 </item>
-<item active="true" historyLabel="Matrice.java" index="3">
-<position info="not_deleted" x="2666" y="0"/>
+<item historyLabel="Matrice.java" index="2">
+<position info="not_deleted" x="2727" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="931" y="0"/>
+</item>
+<item historyLabel="City.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Matrice.java" index="2">
+<position info="not_deleted" x="2727" y="0"/>
+</item>
+<item historyLabel="City.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="931" y="0"/>
+</item>
+<item historyLabel="City.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Joueurs.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.java" index="7">
+<position info="not_deleted" x="66" y="0"/>
+</item>
+<item historyLabel="Joueurs.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Joueurs.java" index="6">
+<position/>
+</item>
+<item active="true" historyLabel="Joueur.java" index="8">
+<position info="not_deleted" x="35" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -452,6 +451,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="TP8/src/Main.java">
+<persistable path="/TP8/src/Main.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Joueurs.java" tooltip="TP8/src/Joueurs.java">
+<persistable path="/TP8/src/Joueurs.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="City.java" tooltip="ProjetEtienne/src/City.java">
 <persistable path="/ProjetEtienne/src/City.java"/>
 </file>
@@ -490,12 +495,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Carre.java" tooltip="TP7/src/Carre.java">
 <persistable path="/TP7/src/Carre.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Rectangle.java" tooltip="TP7/src/Rectangle.java">
-<persistable path="/TP7/src/Rectangle.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestDessin.java" tooltip="TP7/src/TestDessin.java">
-<persistable path="/TP7/src/TestDessin.java"/>
 </file>
 </mruList>
 </workbench>
