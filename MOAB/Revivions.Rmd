@@ -1,0 +1,20 @@
+---
+title: "Revisions"
+author: "Etienne JEAN"
+date: "14 décembre 2017"
+output: pdf_document
+---
+
+```{r}
+
+f <- function(A, X, b) {
+return(sum((A%*%X - b)**2))
+}
+for (i in 1:1000)
+
+```
+
+```{r}
+net=nnet(Xapp,Yapp, size=5, linout=T,decay=0.)
+```
+
