@@ -1,0 +1,135 @@
+/*Exercice 2
+BA
+CA BB
+DB DD
+
+BB
+BB
+BB
+
+
+Exercice 3 */
+
+public class Personne{
+    private String nom;
+
+    public Personne(String n){
+        this.nom = n;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof Personne)){
+            return false;
+        }
+        return this.nom.equals(((Personne)o).nom);
+    }
+
+    public int compareTo(Personne p){
+        return this.nom.compareTo(p.nom);
+    }
+}
+
+
+public class Travailleur extends Personne{
+    private int salaire;
+
+    public Travailleur(String n, int s){
+        super(n);
+        this.salaire = s;
+    }
+
+    public int compareTo(Travailleur t){
+        return this.salaire - t.salaire;
+    }
+
+    public getSalaire(){
+        return salaire;
+    }
+}
+
+public class Etudiant extends Personne{
+    private int dureeEtude;
+    private Formation formation;
+
+    public Etudiant(String n, int d, Formation f){
+        super(n);
+        dureeEtude = d;
+        formation = f;
+    }
+
+    public int compareTo(Etudiant t){
+        return this.dureeEtude - t.dureeEtude;
+    }
+}
+
+
+enum Formation{
+    SCIENCES, LETTRES, DROIT;
+};
+
+
+
+public class Universite{
+
+    Set<Personne> membres;
+    Travailleur president;
+
+
+    public int massSalariale(){
+
+        int somme = 0;
+        for(Personne p : membres){
+            if(p instanceof Travailleur)
+                somme += ((Travailleur) p).getSalaire();
+        }
+        return somme;
+    }
+
+    public List<Etudiant> listEtudiants(Formation f){
+        List<Etudiant> l = new TreeList<Etudiant>();
+        for(Personne p : membres){
+            if(p instanceof Etudiant){
+                Etudiant e = (Etudiant) p;
+                if(e.getFormation() == f){
+                    l.add(e);
+                }
+            }
+        }
+        return l;
+    }
+}
+
+
+
+
+
+
+public class Test{
+    public void main(String args[]){
+        Universite u1 = new Universite();
+        Universite u2 = new Universite();
+        u1.m.add(new Travailleur("Michele", 10000));
+        Universite u3 = new Universite();
+        try{
+            u3 = fusion(u1, u2);
+        }catch(ExceptionUni){
+            Iterator<Personne> i = u1.m.iterator();
+            Personne p = i.next();
+            while(p instanceof Etudiant){
+                p = i.next();
+            }
+        }
+    }
+
+    class ExceptionUni extends Exception{}
+
+    static public Universite fusion(Universite u1, Universite u2) throws ExceptionUni{
+        Universite u = new Universite();
+        u.membres.addAll(u2.m);
+        if(!(u.membres.addAll(u1.m)))throw new ExceptionUni();
+
+        u.president = u1.president;
+        return u;
+    }
+}

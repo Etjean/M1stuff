@@ -1,0 +1,28 @@
+
+public class Exo3 {
+	public static void main(String[] args) {
+		Personne p1 = new Personne("Gabriel");
+		Personne p2 = new Personne("Thomas");
+		Travailleur t1 = new Travailleur("Sophie", 12000);
+		Travailleur t2 = new Travailleur("Hélène", 15000);
+		
+		
+		
+		
+		
+		System.out.println(p1.nom);
+		System.out.println(p2.nom);
+		System.out.println(p1.superieurOuEquivalent(p2));
+		System.out.println(p2.superieurOuEquivalent(p1));
+		System.out.println(t1.salaire);
+		System.out.println(t2.salaire);
+		System.out.println(t2.superieurOuEquivalent(t1));
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
+
+}

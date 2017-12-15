@@ -1,0 +1,39 @@
+import java.util.HashSet;
+import java.util.Set;
+
+
+
+public class Personne {
+	//Attributs
+	String nom;
+	static Set<String> nomsUtilisés = new HashSet<String>();
+	
+	//Constructeur
+	public Personne (String nom){
+		if (nomsUtilisés.contains(nom)){
+			System.out.println("Le nom \""+nom+"\" est déjà utilisé !");
+		}
+		this.nom = nom;
+		nomsUtilisés.add(nom);
+		
+	}
+	
+	//Méthodes
+	public boolean superieurOuEquivalent(Personne p){
+		if (((int) nom.charAt(0)) <= ((int) p.nom.charAt(0))) {return true;}
+		else {return false;}
+	}
+	
+	public int supOuEq(Personne p){
+		return this.nom.compareTo(p.nom);
+	}
+	
+	@Override
+    public boolean equals(Object o){
+        if(!(o instanceof Personne)){
+            return false;
+        }
+        return this.nom.equals(((Personne)o).nom);
+    }
+	
+}

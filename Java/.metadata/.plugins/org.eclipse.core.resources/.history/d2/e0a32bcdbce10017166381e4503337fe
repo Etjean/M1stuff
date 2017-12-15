@@ -1,0 +1,55 @@
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
+public class Exo3 {
+	public static void main(String[] args) {
+		Personne p1 = new Personne("Gabriel");
+		Personne p2 = new Personne("Thomas");
+		Travailleur t1 = new Travailleur("Sophie", 12000);
+		Travailleur t2 = new Travailleur("Hélène", 15000);
+		Etudiant e1 = new Etudiant("Sandrine", 12, Formation.SCIENCES);
+		Etudiant e2 = new Etudiant("Miara", 4, Formation.DROIT);
+		Travailleur prez = new Travailleur("Moroy", 1600);
+		Set<Personne> mbs = new HashSet<Personne>();
+		mbs.add(p1); 
+		mbs.add(p2); 
+		mbs.add(t1); 
+		mbs.add(t2); 
+		mbs.add(e1); 
+		mbs.add(e2);
+		Université paris7 = new Université(mbs, prez);
+		List<Etudiant> scientists = paris7.listeEtudiants(Formation.SCIENCES);
+		
+		
+		
+		System.out.println(p1.nom);
+		System.out.println(p2.nom);
+		System.out.println(p1.superieurOuEquivalent(p2));
+		System.out.println(p2.superieurOuEquivalent(p1));
+		System.out.println(p1.supOuEq(p2));
+		System.out.println(p1.equals(t2));
+		System.out.println("");
+		System.out.println(t1.salaire);
+		System.out.println(t2.salaire);
+		System.out.println(t2.superieurOuEquivalent(t1));
+		System.out.println("");
+		System.out.println(e1.nom+" fait des études depuis "+e1.dureeDEtude+" ans.");
+		System.out.println(e2.formation);
+		System.out.println(e1.superieurOuEquivalent(e2));
+		System.out.println("");
+		System.out.println(paris7.masseSalariale());
+		System.out.println("");
+		for (Personne p : mbs){
+			System.out.println(p.nom);
+		}
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
+
+}

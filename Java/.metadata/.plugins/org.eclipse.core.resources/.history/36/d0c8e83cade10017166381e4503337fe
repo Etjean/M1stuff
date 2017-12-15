@@ -1,0 +1,42 @@
+
+public class Exo3 {
+	public static void main(String[] args) {
+		Personne p1 = new Personne("Gabriel");
+		Personne p2 = new Personne("Thomas");
+		Travailleur t1 = new Travailleur("Sophie", 12000);
+		Travailleur t2 = new Travailleur("Hélène", 15000);
+		Etudiant e1 = new Etudiant("Sandrine", 12, SCIENCES);
+		Etudiant e2 = new Etudiant("Miara", 4, "Droit");
+		Travailleur prez = new Travailleur("Moroy", 1600);
+		
+		Personne[] mbs = {p1, p2, t1, t2, e1, e2};
+		Université paris7 = new Université(mbs, prez);
+		
+		
+		
+		System.out.println(p1.nom);
+		System.out.println(p2.nom);
+		System.out.println(p1.superieurOuEquivalent(p2));
+		System.out.println(p2.superieurOuEquivalent(p1));
+		System.out.println(p1.supOuEq(p2));
+		System.out.println(p1.equals(t2));
+		System.out.println("");
+		System.out.println(t1.salaire);
+		System.out.println(t2.salaire);
+		System.out.println(t2.superieurOuEquivalent(t1));
+		System.out.println("");
+		System.out.println(e1.nom+" fait des études depuis "+e1.dureeDEtude+" ans.");
+		System.out.println(e2.formation);
+		System.out.println(e1.superieurOuEquivalent(e2));
+		System.out.println("");
+		System.out.println(paris7.masseSalariale());
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
+
+}

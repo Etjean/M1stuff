@@ -1,0 +1,13 @@
+
+public class Etudiant extends Personne{
+	//Attributs
+	int dureeDEtude;
+	String formation;
+	
+	//Constructeur
+	public Etudiant(String nom, int dde, String f){
+		super(nom);
+		dureeDEtude = dde;
+		formation = f;
+	}
+}

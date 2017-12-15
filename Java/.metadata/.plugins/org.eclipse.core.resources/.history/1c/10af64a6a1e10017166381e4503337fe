@@ -1,0 +1,11 @@
+
+public class Travailleur extends Personne {
+	//Attributs 
+	double salaire;
+	
+	//Constructeur 
+	public Travailleur(String nom, double s){
+		super(nom);
+		salaire = s;
+	}
+}
