@@ -1,6 +1,15 @@
 #! usr/bin/env python3
 import numpy as np
 
+#Paramètres définis par CHARMM :
+#distance à l'équilibre OH-H (en A)
+l_eq = 0.9572
+#constante de force de liaison (en kcal.mol-1.A-2)
+k_liaison = 450.000
+#angle à l'équilibre H-O-H (en degrés)
+th_eq = 1.81514242
+#constante de force d'angle (en kcal.mol-1.rad-2)
+k_angle = 55.000
 
 
 def extrait_coords(filepath):
@@ -17,7 +26,7 @@ def extrait_coords(filepath):
     return coords
 
 def angle(vect1, vect2):
-    """retourne l'angle theta entre les coordonnées xyz1, 2, 3"""
+    """retourne l'angle theta entre les vecteurs 1 et 2"""
     dot = np.dot(vect1, vect2)
     norm1 = np.linalg.norm(vect1)
     norm2 = np.linalg.norm(vect2)
@@ -31,27 +40,10 @@ def e_angle(th, th_eq, k_angle):
     """retourne l'énergie d'angle"""
     return (1/2)*k_angle*(th-th_eq)**2
 
-
-
-
-if __name__ == "__main__":
-    #Paramètres définis par CHARMM :
-    #distance à l'équilibre OH-H (en A)
-    l_eq = 0.9572
-    #constante de force de liaison (en kcal.mol-1.A-2)
-    k_liaison = 450.000
-    #angle à l'équilibre H-O-H (en degrés)
-    th_eq = 1.81514242
-    #constante de force d'angle (en kcal.mol-1.rad-2)
-    k_angle = 55.000
-    
-    #Parsing du pdb
-    coords = extrait_coords('water.pdb')
-    xyzO = coords[0]
-    xyzH1 = coords[1]
-    xyzH2 = coords[2]
-    vectOH1 = xyzH1 - xyzO
-    vectOH2 = xyzH2 - xyzO
+def e_potentielle(xyz):
+    """retourne l'énergie potentielle totale"""
+    vectOH1 = xyz[3:6] - xyz[0:3]
+    vectOH2 = xyz[6:9] - xyz[0:3]
     #Energies de liaison
     lOH1 = np.linalg.norm(vectOH1)
     lOH2 = np.linalg.norm(vectOH2)  
@@ -62,8 +54,38 @@ if __name__ == "__main__":
     ea = e_angle(th, th_eq, k_angle)
     #Energie totale
     epot = el1 + el2 + ea
-    print(epot)
+    return epot
 
+def deriv_partielle(xyz, i, delta):
+    """calcule de la derivée partielle en xi"""
+    dxi = np.zeros(9)
+    dxi[i] = delta
+    deriv = (e_potentielle(xyz+dxi) - e_potentielle(xyz-dxi)) / (2*delta)
+    return deriv
+
+def calc_gradient(xyz, delta):
+    """calcule le gradient d'énergie potentielle"""
+    grad = np.zeros(9)
+    for i in range(9):
+        grad[i] = deriv_partielle(xyz, i, delta)
+    return grad
+
+
+
+
+if __name__ == "__main__": 
+    #Parsing du pdb
+    coords = extrait_coords('water.pdb')
+    xyzO = coords[0]
+    xyzH1 = coords[1]
+    xyzH2 = coords[2]
+    #Vecteur des coordonnées : [xO, yO, zO, xH1, yH1, zH1, xH2, yH2, zH2]
+    xyz = np.concatenate([coords[0], coords[1], coords[2]])
+    print("Vecteur des coordonnées :\n", xyz, end='\n\n')
+    epot = e_potentielle(xyz)
+    print("Energie potentielle :\n", epot, end = '\n\n')
+    grad = calc_gradient(xyz, 0.0001)
+    print("Gradient :\n", grad, end='\n\n')
 
 
 

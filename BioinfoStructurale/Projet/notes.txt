@@ -8,7 +8,7 @@ Calculer le gradient
     Calculer les dérivées partielles numériques (avec un dx(=delta) arbitraire)
     Calculer les dérivées partielles pour chaque coordonnée(3 coordonnées)
     Calculer les dérivées partielle pour chaque atome(3 atomes)
-    --> gradient à 18 coordonnées au total
+    --> gradient à 9 coordonnées au total
 Déterminer le pas de descente
     Pas constant dans un premier temps
     Pas optimal dans un deuxième temps
@@ -22,9 +22,18 @@ PLUUUUS :
 Tester avec des conformations improbables (liaisons longues, angle trop petit)
 Calculer les dérivées analytiques
 Tester avec 2 molécules d'eau
+plotter l'energie potentielle en fonction du pas
 
 
 
+
+RAPPORT
+parsing du pdb
+calcul de l'energide potentielle
+calcul du gradient (choix du delta)
+steppest descent (grms, maxiter, choix du pas constant)
+line search
+test avec des conformations improbables
 
 
 
