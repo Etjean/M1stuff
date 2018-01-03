@@ -52,18 +52,12 @@ public class Matrice implements Graphe{
     	matrix = new int[nbN][nbN];
     	while ((line = br.readLine()) != null) {
     		String[] names = line.split("##");
-    		int no1 = nameToId(names[0].trim());
-    		int no2 = nameToId(names[1].trim());
+    		int no1 = getNumNoeud(names[0].trim());
+    		int no2 = getNumNoeud(names[1].trim());
     		matrix[no1-1][no2-1] = 1;
     		matrix[no2-1][no1-1] = 1;
     	}
     	br.close();
-    	
-    	//Lire le nombre de noeuds N
-    	//Extraire les dimensions de la fenêtre : L=1200, H=800
-    	//Créer une matrice carrée d'adjacence NxN
-    	//Lire ligne par ligne le fichier, et mettre des 1 sur les villes liées
-    	//
 	}
 	
 	
@@ -77,62 +71,44 @@ public class Matrice implements Graphe{
 	
 	
 	
-	//Accesseurs
 	@Override
 	public int getNbNoeud() {
+		//retourne le nombre de noeuds du jeu
 		return nbN;
 	}
 
 	@Override
 	public Iterator<Integer> getNoeudsVoisin(int num) {
-		// TODO Auto-generated method stub
+		//Retourne les numeros des villes voisines à la ville n°"num"
 		return null;
 	}
 
-	//Methodes
-	public int nameToId(String cityname) {
-		for(City c : cities){
-			if (c.name.equals(cityname)){
-				return c.no;
-			}
-		}
-		return 0;
-	}
-	
-	
-	
-	
-	
-	
 	@Override
 	public void putEtiquette(String nomVille, int num) {
-		// TODO Auto-generated method stub
+		//Associe un nom de ville à un numero
 	}
 
 	@Override
 	public void addVoisins(int num1, int num2) {
-		//ajoute un lien entre les villes no1 et no2
+		//ajoute un lien entre les villes n°1 et n°2
 		matrix[num1-1][num2-1] = 1;
 		matrix[num2-1][num1-1] = 1;
 	}
 
 	@Override
 	public int getNumNoeud(String nomVille) {
-		//Retourne le nombre de noeuds voisins de la ville
-		int no = nameToId(nomVille);
-		int numNoeud = 0;
-		for (int k : matrix[no-1])
-			numNoeud += k;
-		return numNoeud;
+		//Retourne le numero de la ville "nomVille"
+		for(City c : cities){
+			if (c.name.equals(nomVille)){
+				return c.no;
+			}
+		}
+		return 0;
 	}
 	
-	
-	
-	
-	
 	@Override
-	public Iterator<String> getVillesVoisines(String ville) {
-		// TODO Auto-generated method stub
+	public Iterator<String> getVillesVoisines(String nomVille) {
+		//Retourne les noms des villes voisines à la ville "nomVille"
 		return null;
 	}
 	

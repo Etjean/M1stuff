@@ -141,10 +141,10 @@ def steepest_descent(coords, step, threshold, max_iter):
 ##############
 #prendre une seule molecule d'eau et il faudra leur fournir un pdb avec une seule molecule d'eau.
 #mauvaise representaton du gradient (c'est un veceur, pas une matrice)
-#du coup, calcul du grms pas bon (c'est un scalaire, pasun vecteur)
+#du coup, calcul du grms pas bon (c'est un scalaire, pas un vecteur)
 #mettre aux normes pep8
 #soit max_iter soit grms_threshold, pas les 2.
-#utiliser linalg.norm plutot que sqrt(sum())
+#utiliser linalg.norm() plutot que sqrt(sum())
 #Généralisation = pas une bonne idée, et pas demandé => mettre des noms de variables spécifiques à H2O
 #uniformiser, soit anglais, soit français.
 #représentation matplotlib ? j'ai pas pu tester.
