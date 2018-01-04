@@ -14,7 +14,9 @@ DELTA = 0.0001
 
 
 def extract_coords(filepath):
-    """ Retourne un vecteur avec les coordonnées xyz de chaque atome d'un fichier PDB. """
+    """Retourne, sous forme d'un vecteur de taille 3*nombre_d'atomes, les coor-
+    données xyz de tous les atomes du fichier PDB passé en argument.
+    """
     coords = []
     with open(filepath, 'r') as filin:
         for line in filin:
@@ -27,7 +29,7 @@ def extract_coords(filepath):
 
 
 def angle(vect1, vect2):
-    """ Retourne l'angle theta entre les vecteurs 1 et 2. """
+    """Retourne l'angle theta entre les vecteurs 1 et 2."""
     dot = np.dot(vect1, vect2)
     norm1 = np.linalg.norm(vect1)
     norm2 = np.linalg.norm(vect2)
@@ -35,17 +37,17 @@ def angle(vect1, vect2):
 
 
 def e_bond(l):
-    """ Retourne l'énergie de liaison. """
+    """Retourne l'énergie de liaison."""
     return (1/2)*K_BOND*(l-L_EQ)**2
 
 
 def e_angle(th):
-    """ Retourne l'énergie d'angle. """
+    """Retourne l'énergie d'angle."""
     return (1/2)*K_ANGLE*(th-TH_EQ)**2
 
 
 def e_potential(coords):
-    """ Retourne l'énergie totale du champs de forces. """
+    """Retourne l'énergie potentielle du système."""
     vect_OH1 = coords[0:3] - coords[3:6]
     vect_OH2 = coords[0:3] - coords[6:9]
     # Energies d'élongation de liaison
@@ -62,50 +64,64 @@ def e_potential(coords):
 
 
 def calc_gradient(coords):
-    """ Calcul du gradient de l'énergie potentielle. """
+    """Retourne le gradient de l'énergie potentielle (dérivées numériques)."""
     gradient = []
     for i in range(len(coords)):
+        # Ajout d'un déplacement élémentaire DELTA à la coordonnée i
         coords_plus_delta = coords.copy()
         coords_plus_delta[i] += DELTA
         coords_less_delta = coords.copy()
         coords_less_delta[i] -= DELTA
-        gradient.append((e_potential(coords_plus_delta) - e_potential(coords_less_delta)) / (2*DELTA))
+        # Calcul du nombre dérivé
+        deriv = (e_potential(coords_plus_delta) - e_potential(coords_less_delta)) / (2*DELTA)
+        gradient.append(deriv)
     return np.array(gradient)
 
 
 def line_search(coords, grad):
-    """Renvoie le pas optimal pour la minimisation"""
+    """Renvoie le pas optimal pour la minimisation.
+    Le pas est optimal par la méthode du nombre d'or.
+    """
+    # Nombre d'or :
     gold = (1+np.sqrt(5))/2
+    # Initialisation : encadrement initial du minimum défini arbitrairement
     step_a = -0.1
     step_b = 0
     step_c = -gold*step_a
     epot_a = e_potential(coords - step_a*grad)
     epot_b = e_potential(coords - step_b*grad)
     epot_c = e_potential(coords - step_c*grad)
-    # initialisation de l'encadrement du minimum : recherche d'un encadrement adapté
+    # Initialisation : élargissement de l'encadrement initial si nécéssaire
     while epot_a < epot_b or epot_c < epot_b:
         step_a *= 10
         step_c *= 10
         epot_a = e_potential(coords - step_a*grad)
         epot_c = e_potential(coords - step_c*grad)
-    # réduction de l'encadrement par la méthode du nombre d'or
+    # Réduction de l'encadrement par la méthode du nombre d'or (10 itérations)
     for _ in range(10):
+        # Si l'intervalle entre b et c est le plus grand:
         if (step_c-step_b) >= (step_b-step_a):
-            step_d = (step_c+gold*step_b)/(gold+1)
-            epot_d = e_potential(coords - step_d*grad)
+            # Placement d'un quatrième point d
+            step_d = (step_c + gold * step_b) / (gold + 1)
+            epot_d = e_potential(coords - step_d * grad)
+            # Définition du nouvel encadrement
             if epot_d <= epot_b:
                 step_a = step_b
                 step_b = step_d
             else:
                 step_c = step_d
+        # Sinon, l'intervalle entre a et b et le plus grand:
         else:
+            # Placement d'un quatrième point d
             step_d = (step_a+gold*step_b)/(gold+1)
             epot_d = e_potential(coords - step_d*grad)
+            # Définition du nouvel encadrement
             if epot_d <= epot_b:
                 step_c = step_b
                 step_b = step_d
             else:
                 step_a = step_d
+        # Actualisation des énergies potentielles
         epot_a = e_potential(coords - step_a*grad)
         epot_b = e_potential(coords - step_b*grad)
         epot_c = e_potential(coords - step_c*grad)
@@ -113,30 +129,40 @@ def line_search(coords, grad):
 
 
 def steepest_descent(coords, threshold, max_iter, step=0.0002, ls=True, save=True):
-    """" Méthode de Steepest Descent. """
+    """"Méthode de Steepest Descent."""
     n_iter = 0
+    # Stockage des données de la minimisation dans des listes
     coords_all = [coords]
     grms = [np.linalg.norm(calc_gradient(coords))]
     vpot = [e_potential(coords)]
     while grms[-1] > threshold and n_iter < max_iter:
+        # Calcul des nouvelles coordonnées
         coords = coords_all[-1]
         grad = calc_gradient(coords)
         if ls:
             step = line_search(coords, grad)
         coords = coords - step*grad
-        # remplissage des listes
+        # Remplissage des listes
         coords_all.append(coords)
         grms.append(np.linalg.norm(calc_gradient(coords)))
         vpot.append(e_potential(coords))
         n_iter += 1
+    #Affichage du résultat
     print("Nombre d'itérations :", n_iter-1, "    GRMS : ", grms[-1])
     if n_iter > max_iter:
         print("L'algorithme n'a pas convergé.")
+    # Ecriture des données de la minimisation dans un fichier 'mini.txt'
     if save:
         with open('mini.txt', 'w') as filout:
             filout.write("Step\tVpot\tGRMS\txO\tyO\tzO\txH1\tyH1\tzH1\txH2\tyH2\tzH2\n")
             for step in range(n_iter):
-                filout.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(step, vpot[step], grms[step], coords_all[step][0], coords_all[step][1], coords_all[step][2], coords_all[step][3], coords_all[step][4], coords_all[step][5], coords_all[step][6], coords_all[step][7], coords_all[step][8]))
+                filout.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n"
+                             .format(step, vpot[step], grms[step],
+                                     coords_all[step][0], coords_all[step][1],
+                                     coords_all[step][2], coords_all[step][3],
+                                     coords_all[step][4], coords_all[step][5],
+                                     coords_all[step][6], coords_all[step][7],
+                                     coords_all[step][8]))
     return coords_all[-1]
 
 
