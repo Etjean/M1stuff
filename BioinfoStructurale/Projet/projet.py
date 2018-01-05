@@ -174,7 +174,21 @@ def steepest_descent(coords, threshold, max_iter, step=0.0002, ls=True, save=Tru
 
 # programme principal
 if __name__ == "__main__":
-    ainput()
+    #1
+    print('Line-search ? y/n')
+    ls = input()
+    if ls == 'y':
+        ls = True
+    else:
+        ls = False
+        print('Vous avez choisi la méthode \"Pas constant\". Veuillez entrer la valeur:')
+        step = float(input())
+    #2
+    print('')
+
+
+
+
     # Parsing des arguments
     args = sys.argv
     if len(args) == 1:
@@ -205,6 +219,6 @@ if __name__ == "__main__":
     grms = np.linalg.norm(coords)
     print("GRMS de départ :\n", grms, end='\n\n')
     # Steepest descent
-    mini = steepest_descent(coords, 0.00001, 1000, step=0.002, ls=False, save=save, filepath=filepath)
+    mini = steepest_descent(coords, 0.00001, 1000, step=0.002, ls=ls, save=save, filepath=filepath)
     print("Vecteur des coordonnées après minimisation :\n", mini, end='\n\n')
 
