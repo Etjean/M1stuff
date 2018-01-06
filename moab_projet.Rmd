@@ -1,0 +1,92 @@
+---
+title: "moab_projet"
+author: "Etienne JEAN"
+date: "6 janvier 2018"
+output: pdf_document
+---
+
+
+```{r}
+dt = as.matrix(read.table("ogawa_827.txt", header=F))
+
+```
+
+```{r}
+library(RColorBrewer)
+# bp = brewer.pal(11,"RdBu")
+# library(colourschemes)
+# cs = rampInterpolate(c(-10,10),bp)
+display.brewer.all()
+```
+
+```{r}
+image(dt, col=brewer.pal(50, "PRGn"))
+
+```
+
+```{r}
+
+N = nrow(dt)*ncol(dt)
+n = round(1*N/100)
+for (k in 1:n){
+  i = sample(nrow(dt), 1)
+  j = sample(ncol(dt), 1)
+  dt[i, j]=NA
+}
+
+
+
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+---
+title: "Projet MOAB"
+output: pdf_document
+---
+
+```{r}
+Ngroupes = 19
+percent_missing = 1
+
+donneesManquantes <- function(d, val) {
+  dm = read.table("ogawa_827.txt", header=F)
+  N = nrow(d)*ncol(d)
+  # n = round(percent_missing*N/100)
+  n = 40
+  for (k in 1:n){
+    i = sample(nrow(d), 1)
+    j = sample(ncol(d), 1)
+    dm[i, j] = val
+  }
+  return(dm)
+}
+d = read.table("ogawa_827.txt", header=F)
+hc = hclust(dist(d), method="ward.D2")
+
+groupes = cutree(hc, k=Ngroupes)
+
+CPP = c()
+for (i in 1:100) {
+  dm = donneesManquantes(d,0)
+  hc2 = hclust(dist(dm),method="ward.D2")
+  groupes2 = cutree(hc2, k = Ngroupes)
+  t = table(groupes,groupes2)
+  CPP = c(CPP,sum(apply(t, 2, max))/sum(t))
+}
+CPPmoy = sum(CPP)/length(CPP)
+
+print(CPPmoy)
+```
+
+```{r}
+dm = donneesManquantes(d,0)
+hc2 = hclust(dist(dm),method="ward.D2")
+groupes2 = cutree(hc2, k = Ngroupes)
+t = table(groupes,groupes2)
+CPP = c(CPP,(max(t[1,]) + max(t[2,]) + max(t[3,]))/sum(t))
+```
+
+
+
+
+
+
+```{r}
+dm = donneesManquantes(d, NA)
+print(anyNA(d))
+
+for (v in 1:nrow(dm)){
+  if (anyNA(dm[v,])){
+    nas = which(is.na(dm[v,])==T)
+    distances = c()
+    for (w in (1:nrow(dm))[-v,]){
+      dis = dist(dm[v, -nas], dm[w, -nas])
+      distances = c(distances, dis)
+    }
+    ws = which(distances == sort(distances)[1:k])
+    for (na in nas){
+      s = sum(1/distances[ws])
+      sw = sum((1/distances[ws])*dm[ws,na])
+      dm[v, na] = sw / s
+    }
+  }
+}
+
+print(dm)
+```
+
+
+
+
+
+
+
+
+
+
+
+
