@@ -1,0 +1,15 @@
+import java.io.IOException;
+
+
+public class TestV {
+	
+	public static void main(String[] args) throws IOException {
+		Prototype prot = new Prototype();
+		for (int tour=1; tour<10; tour++){
+			for (Joueur j : prot.players){
+			prot.tourDeJeu(j);
+			
+		}
+	}
+
+}

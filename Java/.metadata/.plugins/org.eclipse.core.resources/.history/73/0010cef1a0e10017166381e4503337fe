@@ -1,8 +1,0 @@
-
-public class Exo3 {
-	public static void main(String[] args) {
-		Personne p1 = new Personne("Thomas");
-		Personne p2 = new Personne("Gabriel");
-	}
-
-}

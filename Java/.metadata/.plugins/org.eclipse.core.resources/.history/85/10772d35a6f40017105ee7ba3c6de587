@@ -1,0 +1,59 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Prototype {
+	//Attributes
+	private VueGenerale v;
+	private Matrice g;
+	private Joueur[] players;
+	private ImageSimple[] pions;
+	
+	//Constructor
+	public Prototype() throws IOException{
+		g = new Matrice("./ExempleFichierGrapheVilles.tex");
+		v = new VueExemple("./Images/pandemicExemple.jpg", g.L/2, g.H/2);
+		//Initialisation des villes
+		for (City c : g.cities){
+			v.setCase(c.name, c.posX, c.posY);
+		}
+		Scanner Sc = new Scanner(System.in);
+		//Initialisation des joueurs
+		int nJ =0;
+		while (nJ < 2 || nJ > 4) {
+				System.out.println("Combien de joueurs ? Entrez un nombre de 2 à 4");
+				try {nJ = Sc.nextInt(); System.out.println("CACAAAAAA");}
+				catch (IOException e) {System.out.println(nJ);}
+		}
+		players = new Joueur[nJ];
+		pions = new ImageSimple[nJ];
+		for (int i=0; i<nJ; i++){
+			System.out.println("Nom du joueur "+i+" :");
+			String nameJ = Sc.next();
+			City posJ = g.cities[g.getNumNoeud("Atlanta")];
+			players[i] = new Joueur(i, nameJ, posJ);
+			ImageSimple pion = new ImageSimple("./Images/pin.png",25,25);
+			pions[i] = pion;
+	        v.positionneEnVille("Atlanta", pion);
+		}
+	}
+	
+	
+	
+	
+	//Methods
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

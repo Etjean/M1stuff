@@ -1,0 +1,10 @@
+import java.io.IOException;
+
+
+public class TestV {
+	
+	public static void main(String[] args) throws IOException {
+		Prototype prot = new Prototype();
+	}
+
+}

@@ -1,7 +1,7 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.*;
@@ -19,7 +19,7 @@ public class Matrice implements Graphe{
 	
 	//Constructeur
 	public Matrice(String filename) throws IOException {
-		//Ouverture du fichier
+		//Ouverture du fichierccccc
 		File f = new File(filename);
     	BufferedReader br = new BufferedReader(new FileReader(f));
     	//Nombre de noeuds
@@ -35,8 +35,7 @@ public class Matrice implements Graphe{
     	for (int i=0; i<48 ; i++){
     		line = br.readLine();
     		Matcher m = p.matcher(line);
-    		
-    		int no = i+1;
+    		int no = i;
     		m.find();
 			String cityname = m.group(1).trim();
 			m.find();
@@ -54,8 +53,7 @@ public class Matrice implements Graphe{
     		String[] names = line.split("##");
     		int no1 = getNumNoeud(names[0].trim());
     		int no2 = getNumNoeud(names[1].trim());
-    		matrix[no1-1][no2-1] = 1;
-    		matrix[no2-1][no1-1] = 1;
+			addVoisins(no1, no2);
     	}
     	br.close();
 	}
@@ -80,7 +78,12 @@ public class Matrice implements Graphe{
 	@Override
 	public Iterator<Integer> getNoeudsVoisin(int num) {
 		//Retourne les numeros des villes voisines à la ville n°"num"
-		return null;
+		ArrayList<Integer> voisins = new ArrayList<Integer>();
+		for (int i=0; i<nbN; i++){
+			if (matrix[num][i] == 1) voisins.add(i);
+		}
+		Iterator<Integer> it = voisins.iterator();
+		return it;
 	}
 
 	@Override
@@ -91,8 +94,8 @@ public class Matrice implements Graphe{
 	@Override
 	public void addVoisins(int num1, int num2) {
 		//ajoute un lien entre les villes n°1 et n°2
-		matrix[num1-1][num2-1] = 1;
-		matrix[num2-1][num1-1] = 1;
+		matrix[num1][num2] = 1;
+		matrix[num2][num1] = 1;
 	}
 
 	@Override
@@ -109,10 +112,23 @@ public class Matrice implements Graphe{
 	@Override
 	public Iterator<String> getVillesVoisines(String nomVille) {
 		//Retourne les noms des villes voisines à la ville "nomVille"
-		return null;
+		Iterator<Integer> it = getNoeudsVoisin(getNumNoeud(nomVille));
+		ArrayList<String> voisins = new ArrayList<String>();
+		while(it.hasNext()){
+			voisins.add(cities[it.next()].name);
+		}
+		return voisins.iterator();
 	}
 	
-	
+	public Iterator<City> getVillesVoisines(City c) {
+		//Retourne les numeros des villes voisines à la ville n°"num"
+		ArrayList<City> voisins = new ArrayList<City>();
+		for (int i=0; i<nbN; i++){
+			if (matrix[c.no][i] == 1) voisins.add(cities[i]);
+		}
+		Iterator<City> it = voisins.iterator();
+		return it;
+	}
 	
 	
 	

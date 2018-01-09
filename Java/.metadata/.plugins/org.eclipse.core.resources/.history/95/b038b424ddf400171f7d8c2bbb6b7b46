@@ -1,0 +1,148 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Prototype {
+	//Attributes
+	private VueGenerale v;
+	private Matrice g;
+	Joueur[] players;
+	private ImageSimple[] pions;
+	private Map<City, ImageSimple> diseaseImages;
+	
+	//Constructor
+	public Prototype() throws IOException{
+		g = new Matrice("./ExempleFichierGrapheVilles.tex");
+		v = new VueExemple("./Images/pandemicExemple.jpg", g.L, g.H);
+		
+		//Initialisation des villes
+		for (City c : g.cities){
+			v.setCase(c.name, c.posX, c.posY);
+		}
+		Scanner Sc = new Scanner(System.in);
+		
+		//Initialisation des joueurs
+			//Nombre de joueurs
+		int nJ =0;
+		while (nJ < 2 || nJ > 4) {
+				System.out.println("Combien de joueurs ? Entrez un nombre de 2 à 4");
+				try {nJ = Sc.nextInt();}
+				catch (Exception e) {Sc.next(); System.out.println("Entrée incorrecte");}
+		}
+		players = new Joueur[nJ];
+		pions = new ImageSimple[nJ];
+			//Noms des joueurs
+		for (int i=0; i<nJ; i++){
+			System.out.println("Nom du joueur "+(i+1)+" :");
+			String nameJ = Sc.next();
+			City posJ = g.cities[g.getNumNoeud("Atlanta")];
+			players[i] = new Joueur(i, nameJ, posJ);
+			ImageSimple pion;
+			if (i == 0){pion = new ImageSimple("./Images/pion1orange.png",25,25);}
+			else if (i == 1){pion = new ImageSimple("./Images/pion1violet.png",25,25);}
+			else if (i == 2){pion = new ImageSimple("./Images/pion1vert.png",25,25);}
+			else if (i == 3){pion = new ImageSimple("./Images/pion1jaune.png",25,25);}
+			else {pion = new ImageSimple("./Images/pion1.png",25,25);}
+			pions[i] = pion;
+	        v.positionneEnVille("Atlanta", pion);
+		}
+		
+		//Initialisation des maladies
+		System.out.println("Le monde est touché par une épidémie !! Collaborez pour éviter à tout prix sa propagation !");
+		Random rd = new Random();
+		diseaseImages = new HashMap<City, ImageSimple>();
+		for (int lvl=1; lvl<4; lvl++){
+			int i = 0;
+			while (i<3){
+				int j = rd.nextInt(g.nbN);
+				if (g.cities[j].lvlDisease == 0){
+					g.cities[j].lvlDisease = lvl;
+					ImageSimple maladie = new ImageSimple("./Images/maladie"+lvl+".png",25,25);
+					v.positionneEnVille(g.cities[j].name, maladie);
+					diseaseImages.put(g.cities[j], maladie);
+					i++;
+					
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	//Methods
+	public void tourDeJeu(Joueur j){
+		int nActions = 4;
+		while (nActions > 0){
+			System.out.println("\nJoueur "+j.name+", à toi de jouer ! : "+nActions+" actions restantes.");
+			System.out.println("\t1 : déplacement dans une ville voisine");
+			System.out.println("\t2 : recherche de remède");
+			int action;
+			if (j.pos.lvlDisease > 0) {
+				System.out.println("\t3 : soin de la maladie");
+				action = choix(1, 3);
+			}
+			else action = choix(1, 2);
+			
+			//déplacement
+			if (action == 1) {
+				System.out.println("\nJoueur "+j.name+" : Dans quelle ville voulez-vous vous déplacer ?");
+				Iterator<City> villesVoisines = this.g.getVillesVoisines(j.pos);
+				int i = 1;
+				ArrayList<City> voisines = new ArrayList<City>();
+				while (villesVoisines.hasNext()){
+					City v = villesVoisines.next();
+					voisines.add(v);
+					System.out.println("\t"+i+" : "+v.name);
+					i++;
+				}
+				int destination = choix(1, i);
+				v.deplace(pions[j.num], j.pos.name, voisines.get(destination-1).name);
+				j.pos = voisines.get(destination-1);
+				nActions--;
+			}
+			
+			//soin de la maladie
+			if (action == 3){
+				j.pos.lvlDisease--;
+				System.out.println("\nEvolution de la maladie diminuée d'une unité !");
+				if (j.pos.lvlDisease > 0) {
+					diseaseImages.replace(j.pos, new ImageSimple("./Images/maladie"+j.pos.lvlDisease+".png",25,25);
+					v.positionneEnVille(j.pos.name, diseaseImages.get(j.pos));
+				}
+			}
+		}
+	
+	}
+		
+		
+		
+	public int choix(int min, int max){
+		Scanner Sc = new Scanner(System.in);
+		int ch =-1;
+		while (ch<min || ch>max){
+			try {ch=Sc.nextInt();}
+			catch (Exception e){Sc.next(); System.out.println("Entrée incorrecte");}
+		}
+		return ch;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,16 @@
+
+public class Joueur {
+	//Attributes
+	String name;
+	City pos;
+	
+	//Consructor
+	public Joueur(String n, City p){
+		name = n;
+		pos = p;
+	}
+	
+	//Methods
+	
+	
+}

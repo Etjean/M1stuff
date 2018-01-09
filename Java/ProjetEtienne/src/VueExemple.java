@@ -1,5 +1,3 @@
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.util.HashMap;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,17 +20,6 @@ public class VueExemple implements VueGenerale{
 		fen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		fen.setLayout(null);
 		fen.setVisible(true);
-
-		// petit outil qui aide à trouver les coordonnees des cases 
-		// à supprimer ensuite
-				pan.addMouseListener(new MouseAdapter() {
-                                @Override
-				public void mousePressed(MouseEvent e) {
-					System.out.println("{ "+e.getX() + "," + e.getY()+" },");
-				}
-				});
-		// fin de l'outil 
-
 		villeCoord=new HashMap<>();
     } 
 	
@@ -49,13 +36,13 @@ public class VueExemple implements VueGenerale{
         @Override
 	public void positionneEnVille(String ville, ImageSimple p) {
 		Integer[] rep=villeCoord.get(ville);
+		pan.add(p);
 		if (rep==null){
 			System.out.println ("La ville "+ ville +" n'a pas encore ete declaree avec setCase, on considere qu'elle est en 0,0");
 			p.setBounds(0, 0, p.largeur, p.hauteur);
 		} else {
 			p.setBounds(rep[0], rep[1], p.largeur, p.hauteur);
 		}
-		pan.add(p);
 	}
 	
         @Override
@@ -75,12 +62,9 @@ public class VueExemple implements VueGenerale{
 			arr[1]=0;
 		}
 		
-		
-	
 		int x0=dep[0],y0=dep[1];
 		int x1=arr[0], y1=arr[1];
 		int nbStep=100;
-	
 		try {
 			for (int i=0;i<nbStep;i++){
 				Thread.sleep(10);
@@ -92,6 +76,8 @@ public class VueExemple implements VueGenerale{
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+    public void remove(ImageSimple p){
+    	pan.remove(p);
+    }
 }
