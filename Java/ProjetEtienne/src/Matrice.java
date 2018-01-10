@@ -19,7 +19,7 @@ public class Matrice implements Graphe{
 	
 	//Constructeur
 	public Matrice(String filename) throws IOException {
-		//Ouverture du fichierccccc
+		//Ouverture du fichier
 		File f = new File(filename);
     	BufferedReader br = new BufferedReader(new FileReader(f));
     	//Nombre de noeuds

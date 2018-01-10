@@ -2,10 +2,10 @@
 public class City {
 	
 	//Attributs
-	int no;
-	String name;
-	String color;
-	int posX, posY;
+	final int no;
+	final String name;
+	final String color;
+	final int posX, posY;
 	int lvlDisease = 0;
 	
 	//Constructeur

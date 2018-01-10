@@ -1,8 +1,8 @@
 
 public class Joueur {
 	//Attributes
-	int num;
-	String name;
+	final int num;
+	final String name;
 	City pos;
 	
 	//Consructor
