@@ -203,6 +203,7 @@ limmaRes2 <- limmaTable[row.names(dataArrays),]# sort genes according to their i
 # compare logFC values obtained with LIMMA
 plot(limmaRes2[, "logFC"], averageLog, pch = 20, xlab = "logFC calculated with LIMMA", ylab = "LogFC (average value)")
 cor.test(limmaRes2[, "logFC"], averageLog)
+abline(0, 1)
 
 # compare t of limma with tval obtained with Student regarding to FC
 plot(averageLog, tval,
