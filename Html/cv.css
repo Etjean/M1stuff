@@ -1,0 +1,19 @@
+body{
+	/* Background */
+	background-color: rgb(40, 40, 40);
+	
+	/* Texte */
+	font-family: verdana, comic sans ms, trebuchet ms, georgia, sans-serif;
+	color:white;
+	
+}
+
+
+
+mark{
+	background-color: rgb(40, 40, 40);
+	font-weight: bold;
+	color: rgb(160, 0, 0);
+}
+
+
