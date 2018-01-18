@@ -1,19 +1,66 @@
-p
-{
-margin:100px;
-color:
+body{
+	margin: 100px;
+	border: 1px solid;
+	height: 480px;
+	width: 650px;
 }
 
-
-div#lol{
-margin:100px;
-background-color:red;
-color:blue;
+body *{
+	margin: 0;
 }
 
+p{
+	text-align: center;
+}
 
+header{	
+	background-color: red;
+	height: 80px;
+	width: 650px;
+}
 
+nav{
+	background-color: green;
+	height: 400px;
+	width: 180px;
+}
 
+section{
+	background-color: magenta;
+	height: 320px;
+	width: 300px;
+	position: absolute;
+	left: 281px;
+	top: 181px;
+}
+
+aside#jaune{
+	background-color: yellow;
+	height: 100px;
+	width: 170px;
+	position: absolute;
+	left: 581px;
+	top: 181px;
+}
+
+aside#cyan{
+	background-color: cyan;
+	height: 300px;
+	width: 170px;
+	position: absolute;
+	left: 581px;
+	top: 281px;
+	
+}
+
+footer{
+	background-color: pink;
+	height: 80px;
+	width: 300px;
+	position: absolute;
+	left: 281px;
+	top: 501px;
+}
 
 
 
