@@ -1,0 +1,95 @@
+
+/* ---------------- GENERAL ------------------- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: cursive, verdana, trebuchet ms, sans-serif;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+
+/* ----------------- HEADER ------------------- */
+header{
+	min-width: 800px;
+	width: 100%;
+	background-color: rgb(81, 64, 56);
+	
+	/* Disposition avec flexbox */
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+#logo{
+	padding: 0 20px;
+	min-width: 160px;
+	max-width: 160px;
+	height: auto;
+}
+
+nav{
+	padding: 0 20px;
+	width: 100%;
+}
+
+ul{
+	list-style-type: none;
+	
+	/* Disposition avec flexbox */
+	display: flex;
+	flex-direction: row;
+}
+
+li {
+	text-align: center;
+}
+
+header ul a{
+	padding: 0 2.5%;
+ 	color: white;
+	font-size: 1.3em;
+	text-decoration: none;
+	font-weight: bold;
+	border: 1px solid black;
+}
+
+header ul a:hover{
+ 	background-color: rgb(0, 0, 70);
+ 	transition: 0.6s;
+}
+
+
+
+
+
+
+/* ----------------- FOOTER ------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
