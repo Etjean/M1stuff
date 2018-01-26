@@ -1,0 +1,55 @@
+########################################
+# Program: water
+# Rundate: Fri 26 Jan 2018 13:15:35
+# Commandline: water
+#    -auto
+#    -stdout
+#    -asequence emboss_water-I20180126-131533-0925-91080881-p1m.asequence
+#    -bsequence emboss_water-I20180126-131533-0925-91080881-p1m.bsequence
+#    -datafile EBLOSUM62
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -aformat3 pair
+#    -sprotein1
+#    -sprotein2
+# Align_format: pair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: EMBOSS_001
+# 2: EMBOSS_001
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 158
+# Identity:      36/158 (22.8%)
+# Similarity:    52/158 (32.9%)
+# Gaps:          68/158 (43.0%)
+# Score: 87.0
+# 
+#
+#=======================================
+
+EMBOSS_001        50 LSPEVFQHIWDFLEQ-----PICS-------VQPIDLN--FVDEPSEDGA     85
+                     ||.|.|..:|..|.:     |:.|       :.|.|:.  |.::|..|.|
+EMBOSS_001        14 LSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEA     63
+
+EMBOSS_001        86 TNKIEISMDCIRMQDSDLSDPMWPQYTNLGLLNSMDQQIQNGSSSTSPYN    135
+                                         |..|:                   :..|  
+EMBOSS_001        64 --------------------PRMPE-------------------AAPP--     72
+
+EMBOSS_001       136 TDHAQNSVTAPSPYAQPSSTFDALSP----SPAIPSNTDYPGPHSFDVSF    181
+                             .||:| |.|:....|.:|    |.::||...|.|.:.|.:.|
+EMBOSS_001        73 --------VAPAP-AAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGF    113
+
+EMBOSS_001       182 QQSSTAKS    189
+                     ..|.||||
+EMBOSS_001       114 LHSGTAKS    121
+
+
+#---------------------------------------
+#---------------------------------------
