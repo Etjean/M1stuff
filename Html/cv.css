@@ -1,0 +1,43 @@
+body{
+	/* Background */
+	background-color: rgb(220, 220, 220);
+	
+	/* Texte */
+	font-family: verdana, comic sans ms, trebuchet ms, georgia, sans-serif;
+	color: black;
+	
+}
+
+h1, h1+p, figure figcaption{
+	text-align: center;
+}
+
+
+figure#photo_identité {
+	font-size: 0.8em;
+	font-style: italic;
+	float: right;
+}
+
+figure#photo_identité img {
+	height: auto;
+	width: 200px;
+	max-width: 100%;
+	box-shadow: 2px 2px 4px;
+}
+
+
+h2 {
+	color: rgb(109, 78, 47);
+}
+
+p {
+	text-align: justify;
+}
+
+
+mark{
+	background-color: rgb(220, 220, 220);
+	font-weight: bold;
+	color: rgb(160, 0, 0);
+}

@@ -1,0 +1,62 @@
+body{
+	margin-left: 10%;
+	margin-right: 10%;
+	min-width: 440px;
+}
+
+a{
+	color:red;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+p{
+	text-align:justify;
+}
+
+header{
+	border:5px solid lightblue;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 5px
+}
+
+section{
+	background-color: lightblue;
+	padding: 10px;
+}
+
+article{
+	background-color: white;
+	max-width: 45%;
+	min-width: 200px;
+	padding: 10px;
+}
+
+section .articles{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+figure{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60%;
+}
+
+img{
+	max-width: 100%;
+}
+
+figcaption{
+	background-color:lightblue;
+}
+
+footer{
+	text-align: center;
+	padding: 10px;
+}
