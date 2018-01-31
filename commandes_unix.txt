@@ -5,13 +5,19 @@ evince            #pdfs sur ubuntu
 xpdf              #pdfs sur mon portable
 firefox           
 
+#Pour Windows 10
+export DISPLAY=:0                   #après avoir lancé Xming, pour pouvoir ouvrir les applis graphiques linux sur win10
+/mnt/c/Users/Etienne/Desktop        #chemin du bureau windows
 
-export DISPLAY=:0     #après avoir lancé Xming, pour pouvoir ouvrir les applis graphiques linux sur win10
+#Pour Ubuntu unity (après installation)
+sudo update-grub                                    #pour mettre à jour le dual boot ubuntu/windows
+sudo service network-manager restart                #pour relancer la wifi qd ca bug
+sudo apt-get update && sudo apt-get dist-upgrade    #pour tout mettre à jour et corriger les problèmes de wifi après installation
 
 
 git                                      #affiche l'aide générale
 git help [sketuveux]                     #affiche l'aide à propos de sketuveux
-git clone http://github.com/Etjean/ejean.git
+git clone http://github.com/Etjean/ejean
 git log                                  #montre l'historique de tous les commit
 git branch
 git pull                                 #met à jour local depuis github
@@ -76,25 +82,4 @@ rm -f        #force le remove
 ATTENTION avec la prochaine, je crois qu'il y a moyen de faire des conneries... (genre rm -rf /*)
 rm -rf dir   #remove dir et son contenu sans demander confirmation
 rm -d dir    #remove un dir (s'il est vide je crois)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
