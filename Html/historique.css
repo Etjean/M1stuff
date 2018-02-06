@@ -1,0 +1,37 @@
+/* Dans ce fichier, on fait la mise en page du corps de la page historique */
+/* ---------------- GENERAL ------------------- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------------- SECTION ------------------- */
+section {
+	border: 1px solid green;
+	background-color: rgba(50, 50, 50, 0.3);
+	min-height: 86%;
+}
+
+/* ---------------- ARTICLE ------------------- */
+article {
+	border: 1px solid red;
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 50%;
+	margin: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+article p {
+	border: 1px solid;
+	text-align: justify;
+	margin: 1em 0;
+}
+
+
+
+
+
+
+
+

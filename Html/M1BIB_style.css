@@ -1,0 +1,277 @@
+/* ========================== BODY ========================================= */
+
+body{
+    margin: 0px;
+ /*   background-image : url("img/head6.png");*/
+ 	background-image : url("img/head8.png");
+    background-repeat: no-repeat;
+    background-position:top;
+    background-color: white;
+}
+
+
+/* ========================= NAV =========================================== */
+
+nav {
+    background-color : #2b2b2b;  
+    position : fixed;  /* Permet de fixer le menu avec le scrolling */
+    width: 100%;  /* Prend toute la largeur de l ecran */
+    text-align: center;  /* Centre le menu */
+    top: 0px;
+    z-index: 100;
+}
+
+
+nav ul {
+    list-style-type : none; /* Enleve les puces */
+	position : relative; /* fixe la position des sous-menus / menu */
+	padding : 0px; /* enleve le padding automatique des ul */
+    margin : 0px;
+
+}
+
+nav ul li {
+    display : inline-block; /* Met la liste en ligne */
+    padding: 15px 25px;
+    transition : 0.5s; /* temps de changement de oculeur */
+	-webkit-transition: 0.5s; /* compatibilité chrome, safari etc. */
+	-moz-transition : 0.5s; /* compatibilité mozilla firefox */
+	-o-transition : 0.5s; /* compat. opéra */
+}
+
+nav a {
+    color : white;  /* Couleur du texte */
+    font-family : "Trebuchet MS", Arial;  /* Police d'écriture */
+    font-size : 21px;   /* Taille de la police */
+    text-decoration : none;
+}
+
+
+nav li ul {
+    height : 0px;
+    margin-left : -24px;
+    position : absolute;
+    overflow : hidden;
+    text-align : left;
+    transition : 0.5s; /* temps ouverture des sous menu */
+	-webkit-transition: 0.5s; /* compatibilité chrome, safari etc. */
+	-moz-transition : 0.5s; /* compatibilité mozilla firefox */
+	-o-transition : 0.5s; /* compat. opéra */
+}
+
+nav li ul li {
+    display : block;
+}
+
+
+nav li:hover ul {
+    
+    height: auto;
+    margin-top: 15px;
+    background-color: #2b2b2b;
+}
+
+
+/* ====================== SECTION ========================================= */
+
+.section_top {
+    margin-top: 370px;
+}
+
+section {
+    max-width: 1024px;
+    padding: 30px;
+    margin: auto;
+    color: #434343;
+}
+
+
+section hr {
+    opacity: 0.2;
+}
+
+section h1 {
+    text-align: center;
+    font-family : "Myriad Pro", Arial;
+    font-size: 37px;
+}
+
+article {
+    padding-bottom: 200px; 
+    padding-top: 70px;
+    opacity : 1;
+}
+
+
+article h2 {
+    font-family: "Trebuchet MS", Arial;
+    font-weight: bold;
+    font-style:italic;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+article p {
+    text-align : justify;
+    font-family: Arial;
+    font-size:17px;
+}
+
+article .center_p { 
+    text-align : center;   
+}
+
+
+article .m1, article .m2 {
+    width:49%;
+    float:left;
+    padding-top: 15px;
+    margin-bottom: 40px;
+}
+
+article .m2 {
+    border-left: 1px solid lightgray;
+}
+
+
+article h3 {
+    text-align: center;
+    font-family: Arial;
+    font-size:21px;
+    padding: 15px 25px;
+}
+
+
+article .m1 p,  article .m2 p {
+    padding: 0px 25px;
+}
+
+article .m2 ul, article .m1 ul{
+    padding : 0px 25px 0px 45px;
+}
+
+article .m2 li, article .m1 li {
+    text-align : justify;
+    font-family: Arial;
+    font-size:17px;
+    padding: 10px 0px 10px 10px;
+}
+
+
+.clear {
+    clear: both;
+}
+
+
+article ul li {
+    font-family : Arial;
+    font-size : 17px;
+    text-align : justify;
+    padding : 6px;
+}
+
+
+article ol li {
+    font-family : Arial;
+    font-size : 17px;
+    text-align : justify;
+    padding : 6px;
+}
+
+#equipe {
+	text-align : center;
+}
+
+/* ======================== SVG ======================= */
+
+article .center_svg{   
+    display:block;
+    margin: auto;
+	width: 130px;
+	height: 130px;
+}
+
+
+article .program_svg{   
+    display:block;
+    margin: auto;
+	width: 994px;
+	height:500px;
+}
+
+
+article svg text {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+
+/* Logo M1 et M2 */
+
+article .m1 svg text, article .m2 svg text {
+    text-anchor:middle;
+    fill: white;
+    font-size:58px;
+}
+
+
+/* Présentation du programme */ 
+
+article svg .title {
+    text-anchor: middle;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+article svg .semester {
+    text-anchor: middle;
+    font-size: 18px;
+}
+
+
+article svg a text:hover {
+    text-decoration:underline;
+    opacity: 0.8;
+}
+
+
+/* ========== GOOGLE CALENDAR RESPONSIVE =================== */
+
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.responsive-iframe iframe,  
+.vresponsive-iframer object, 
+.vresponsive-iframe embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =================== FORMULAIRE INSCRIPTION ============================== */
+
+#cursus input, #stage input{
+
+    width : 100%;
+}
+
+table td {
+	padding: 5px;
+}
+
+.logop7, .logom1bi, .master_adress, .pedago {
+	display : none;
+}
+
+
+
