@@ -1,0 +1,14 @@
+// My settings for sublime text 3
+// Settings
+{
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
+	"hot_exit": false,
+	"remember_full_screen": true,
+	"close_windows_when_empty": true,
+}
+
+// Key Bindings
+[
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+]
