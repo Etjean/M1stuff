@@ -1,0 +1,780 @@
+MODEL 1
+REMARK VINA RESULT:      -8.2      0.000      0.000
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -11.266 208.011 112.866  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -11.577 207.286 111.818  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -12.957 206.937 111.560  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -13.882 206.603 112.576  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -15.218 206.277 112.259  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.635 206.343 110.915  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -14.727 206.690 109.904  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -13.397 206.988 110.227  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -16.215 206.003 113.358  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -17.517 205.698 112.811  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -18.012 206.601 112.704  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d          -9.864 208.430 113.153  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d          -9.404 208.899 114.414  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d          -8.058 209.272 114.575  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -10.432 209.037 115.868  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d          -7.160 209.185 113.504  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d          -7.603 208.721 112.260  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d          -5.459 209.661 113.723  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d          -8.942 208.343 112.087  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -7.9      3.822      7.489
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -10.685 207.547 112.801  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -10.044 208.623 112.411  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -8.646 208.795 112.739  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -8.191 209.378 113.944  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -6.811 209.511 114.207  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -5.887 209.003 113.272  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -6.331 208.408 112.083  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -7.704 208.302 111.821  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -6.339 210.060 115.531  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -6.276 211.503 115.499  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -6.303 211.779 114.502  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -12.116 207.307 112.456  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.217 207.667 113.281  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.529 207.389 112.860  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -13.060 208.494 114.857  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.766 206.761 111.631  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -13.689 206.405 110.811  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -16.433 206.416 111.111  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -12.376 206.679 111.218  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -7.8      4.047      7.677
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -10.801 207.135 112.620  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -10.334 208.355 112.498  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -8.943 208.632 112.782  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -8.490 209.187 114.001  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -7.117 209.428 114.220  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -6.192 209.055 113.225  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -6.633 208.488 112.020  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -8.001 208.275 111.804  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -6.640 209.944 115.556  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -6.273 211.339 115.469  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -5.273 211.399 115.730  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -12.217 206.793 112.301  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -12.806 206.910 111.011  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.154 206.563 110.822  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -11.929 207.464 109.557  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.929 206.099 111.892  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -14.358 205.976 113.164  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -16.636 205.662 111.637  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -13.013 206.317 113.366  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -7.7      3.896      7.688
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -10.505 207.924 113.270  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d          -9.604 208.540 112.542  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -8.295 208.820 113.090  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -7.089 208.384 112.496  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -5.842 208.696 113.077  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -5.811 209.501 114.234  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -7.003 209.951 114.819  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -8.237 209.615 114.246  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -4.560 208.294 112.389  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -4.770 208.115 110.971  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -5.664 207.604 110.865  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -11.855 207.578 112.737  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.078 207.819 113.421  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.297 207.449 112.827  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -13.194 208.601 115.022  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.322 206.845 111.563  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -13.123 206.608 110.881  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -15.874 206.383 110.824  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -11.901 206.974 111.461  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -7.6      4.063      7.853
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -10.461 207.433 113.038  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d          -9.781 208.451 112.567  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -8.467 208.752 113.093  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -7.265 208.331 112.480  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -6.013 208.663 113.040  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -5.975 209.472 114.193  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -7.163 209.908 114.796  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -8.402 209.552 114.245  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -4.737 208.277 112.332  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -4.963 208.111 110.914  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -4.395 207.298 110.617  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -11.802 207.059 112.502  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -12.159 207.090 111.126  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -13.456 206.721 110.730  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -11.042 207.557 109.812  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.405 206.320 111.678  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -14.062 206.283 113.034  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -16.044 205.854 111.160  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -12.772 206.647 113.442  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -7.6      1.501      2.106
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -10.845 208.092 112.597  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -11.463 207.079 113.157  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -12.779 206.689 112.701  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -13.323 207.079 111.455  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -14.612 206.659 111.066  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.333 205.795 111.914  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -14.793 205.390 113.143  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -13.521 205.833 113.531  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -15.146 207.014 109.700  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -14.250 207.917 109.013  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -14.458 207.828 108.003  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d          -9.473 208.508 113.006  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d          -9.128 208.997 114.297  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d          -7.801 209.367 114.575  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -10.286 209.164 115.646  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d          -6.809 209.257 113.593  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d          -7.137 208.774 112.321  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d          -5.132 209.728 113.961  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d          -8.456 208.400 112.032  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -7.4      2.836      3.455
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -12.885 207.836 114.561  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -12.894 206.766 113.802  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -13.731 206.719 112.623  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -15.136 206.563 112.667  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -15.898 206.531 111.480  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.244 206.713 110.245  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -13.853 206.885 110.195  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -13.103 206.892 111.379  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -17.403 206.446 111.545  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -17.827 205.650 112.674  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -18.515 204.966 112.312  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -12.011 207.947 115.765  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -12.409 207.601 117.086  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -11.504 207.749 118.151  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -14.017 206.948 117.510  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -10.210 208.234 117.927  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d          -9.808 208.574 116.629  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d          -9.075 208.416 119.286  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -10.700 208.429 115.558  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -7.3      4.571      6.249
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -13.894 205.575 114.713  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -13.301 205.527 115.882  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -13.999 204.987 117.029  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -14.873 203.878 116.961  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -15.519 203.395 118.119  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.238 204.001 119.360  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -14.359 205.091 119.437  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -13.741 205.577 118.277  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -16.385 202.161 118.047  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -17.515 202.373 117.172  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -17.223 202.057 116.230  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -13.203 206.087 113.494  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.711 205.972 112.171  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -12.974 206.487 111.090  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -15.278 205.219 111.760  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -11.740 207.116 111.302  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -11.234 207.236 112.602  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -10.819 207.763 109.924  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -11.960 206.729 113.688  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -7.2      4.978      6.542
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -13.856 205.705 114.875  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -13.184 205.671 116.001  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -13.821 205.208 117.214  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -13.870 205.963 118.408  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -14.513 205.456 119.558  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.158 204.206 119.483  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -15.127 203.459 118.296  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -14.465 203.961 117.168  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -14.629 206.306 120.800  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -14.899 207.684 120.460  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -15.929 207.789 120.442  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -13.232 206.138 113.591  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.842 206.008 112.313  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -13.162 206.446 111.164  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -15.472 205.326 112.045  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -11.886 207.014 111.262  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -11.279 207.150 112.517  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -11.037 207.566 109.798  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -11.948 206.719 113.670  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 10
+REMARK VINA RESULT:      -7.0      4.432      6.646
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -14.396 205.425 115.162  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -15.314 206.135 114.551  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -15.219 206.376 113.128  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -14.001 206.636 112.459  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -13.974 206.857 111.065  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.176 206.761 110.337  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -16.386 206.487 110.991  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -16.404 206.292 112.379  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -12.658 207.051 110.352  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -12.861 207.626 109.042  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -13.293 206.887 108.458  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -14.470 205.117 116.619  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.990 205.971 117.650  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.107 205.580 118.995  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -13.243 207.568 117.362  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.695 204.355 119.334  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -15.173 203.509 118.326  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -14.836 203.873 121.042  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -15.065 203.889 116.982  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 11
+REMARK VINA RESULT:      -6.8      4.418      6.865
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -13.999 205.337 115.638  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -12.817 205.759 115.257  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -12.588 206.130 113.878  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -13.551 205.969 112.855  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -13.268 206.358 111.529  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -12.027 206.963 111.246  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -11.074 207.141 112.259  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -11.357 206.730 113.568  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -14.332 206.257 110.464  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -14.009 207.093 109.330  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -13.470 206.503 108.671  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -14.295 204.979 117.056  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.950 205.780 118.180  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.273 205.344 119.476  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -13.127 207.362 118.067  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.935 204.127 119.677  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -15.282 203.333 118.577  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -15.338 203.589 121.325  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -14.968 203.757 117.278  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 12
+REMARK VINA RESULT:      -6.6      4.792      6.579
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -14.037 205.500 115.440  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -14.033 206.570 114.680  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -13.973 206.439 113.241  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -12.908 206.937 112.455  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -12.905 206.771 111.054  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -13.955 206.050 110.450  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -15.005 205.538 111.226  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -15.010 205.730 112.614  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -11.725 207.235 110.236  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -12.158 207.805 108.981  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -11.461 207.520 108.270  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -14.137 205.583 116.926  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -14.536 204.509 117.769  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.600 204.697 119.160  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -14.957 202.876 117.180  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.273 205.934 119.729  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -13.875 206.996 118.908  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -14.358 206.157 121.494  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -13.805 206.820 117.519  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 13
+REMARK VINA RESULT:      -6.6      5.214      9.066
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d          -7.169 209.393 115.380  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d          -5.862 209.293 115.343  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -5.077 209.594 116.520  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -5.496 210.488 117.532  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -4.686 210.734 118.660  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -3.471 210.032 118.794  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -3.057 209.132 117.802  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -3.859 208.912 116.674  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -5.182 211.627 119.772  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -6.471 212.191 119.445  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -7.135 211.398 119.388  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d          -8.024 209.057 114.205  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d          -9.429 208.840 114.264  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -10.139 208.523 113.093  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -10.399 208.964 115.758  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d          -9.477 208.420 111.863  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d          -8.096 208.634 111.794  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -10.391 208.018 110.388  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d          -7.377 208.953 112.954  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 14
+REMARK VINA RESULT:      -6.5      4.990      7.118
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -13.347 205.833 116.092  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -13.159 206.967 115.460  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -12.719 206.967 114.082  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -11.558 207.636 113.632  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -11.179 207.593 112.274  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -11.946 206.824 111.376  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -13.090 206.144 111.819  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -13.470 206.213 113.166  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -9.894 208.242 111.822  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -10.014 208.740 110.471  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -9.102 208.573 110.011  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -13.836 205.780 117.500  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -14.370 204.620 118.126  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.807 204.683 119.461  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -14.513 203.028 117.330  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.722 205.879 120.185  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -14.195 207.025 119.578  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -15.279 205.942 121.875  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -13.754 206.975 118.248  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 15
+REMARK VINA RESULT:      -6.5      4.124      7.823
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -11.626 207.393 114.138  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -11.581 207.796 115.386  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -10.306 207.996 116.039  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -9.174 208.546 115.394  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -7.959 208.722 116.090  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -7.903 208.391 117.458  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -9.026 207.861 118.109  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -10.221 207.669 117.402  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -6.785 209.385 115.412  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -7.152 210.685 114.899  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -8.172 210.658 114.727  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -12.915 207.210 113.410  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.026 206.997 112.008  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.294 206.841 111.422  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -11.632 206.887 110.897  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -15.454 206.890 112.206  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -15.354 207.097 113.587  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -17.053 206.690 111.449  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -14.095 207.252 114.183  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 16
+REMARK VINA RESULT:      -6.4      4.578      7.176
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -12.403 205.704 115.909  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -12.648 206.831 115.283  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -11.763 207.286 114.233  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -11.992 207.048 112.859  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -11.093 207.525 111.882  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -9.986 208.294 112.292  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -9.761 208.549 113.653  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -10.648 208.050 114.616  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -11.393 207.334 110.415  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -10.667 208.291 109.611  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -9.680 207.980 109.600  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -13.306 205.174 116.971  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.559 205.820 118.212  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.427 205.229 119.146  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -12.853 207.391 118.686  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -15.050 204.006 118.868  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -14.810 203.364 117.647  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -16.147 203.270 120.061  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -13.948 203.944 116.706  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 17
+REMARK VINA RESULT:      -6.2      5.184      7.536
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -14.728 205.785 115.447  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -14.910 204.547 115.841  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -15.016 204.241 117.251  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -14.392 205.004 118.265  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -14.539 204.657 119.624  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -15.365 203.568 119.964  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -16.000 202.817 118.965  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -15.828 203.156 117.616  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -13.935 205.527 120.700  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -14.713 205.459 121.916  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -14.638 206.387 122.368  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -14.652 206.155 114.004  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.441 206.336 113.280  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -13.484 206.690 111.920  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -11.813 206.121 113.981  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.710 206.865 111.266  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -15.907 206.686 111.970  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -14.748 207.313 109.543  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -15.878 206.331 113.325  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 18
+REMARK VINA RESULT:      -6.2      4.842      8.778
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d          -8.057 209.141 115.103  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d          -6.883 208.572 115.242  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -5.944 209.074 116.221  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -6.331 209.771 117.389  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -5.365 210.230 118.310  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -4.007 209.934 118.078  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -3.618 209.229 116.930  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -4.584 208.798 116.010  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -5.795 210.900 119.592  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -6.437 212.167 119.323  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -6.453 212.277 118.293  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d          -9.073 208.637 114.134  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d          -8.827 208.408 112.752  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d          -9.861 207.934 111.926  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d          -7.246 208.663 111.960  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -11.135 207.682 112.449  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -11.386 207.901 113.809  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -12.433 207.081 111.390  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -10.363 208.371 114.644  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 19
+REMARK VINA RESULT:      -6.1      4.026      7.564
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -11.141 207.315 114.332  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -10.493 208.347 113.845  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d          -9.227 208.747 114.419  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d          -8.815 208.395 115.725  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d          -7.563 208.812 116.225  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d          -6.700 209.540 115.382  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d          -7.096 209.878 114.080  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d          -8.351 209.479 113.602  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d          -7.101 208.361 117.590  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d          -7.123 209.457 118.531  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d          -7.100 209.037 119.476  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -12.430 206.841 113.750  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -13.458 206.191 114.487  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.634 205.780 113.837  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -13.378 205.863 116.241  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -14.808 206.006 112.466  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -13.803 206.648 111.732  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -16.304 205.480 111.656  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -12.627 207.065 112.370  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL
+MODEL 20
+REMARK VINA RESULT:      -6.1      4.123      5.766
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C3_3 
+REMARK    2  A    between atoms: N1_4  and  C4_5 
+REMARK    3  A    between atoms: C6_7  and  C10_11 
+REMARK    4  A    between atoms: C10_11  and  O1_12 
+ROOT
+ATOM      1  C3   11 d         -13.228 206.730 115.241  0.00  0.00     0.130 C 
+ATOM      2  N1   11 d         -12.907 205.872 114.302  0.00  0.00    -0.260 NA
+ENDROOT
+BRANCH   2   3
+ATOM      3  C4   11 d         -12.845 206.296 112.921  0.00  0.00     0.057 A 
+ATOM      4  C5   11 d         -13.979 206.397 112.083  0.00  0.00     0.040 A 
+ATOM      5  C6   11 d         -13.853 206.824 110.744  0.00  0.00    -0.033 A 
+ATOM      6  C7   11 d         -12.583 207.204 110.266  0.00  0.00     0.009 A 
+ATOM      7  C8   11 d         -11.456 207.121 111.097  0.00  0.00     0.003 A 
+ATOM      8  C9   11 d         -11.589 206.674 112.418  0.00  0.00     0.031 A 
+BRANCH   5   9
+ATOM      9  C10  11 d         -15.081 207.007 109.885  0.00  0.00     0.203 C 
+BRANCH   9  10
+ATOM     10  O1   11 d         -16.280 206.689 110.626  0.00  0.00    -0.396 OA
+ATOM     11  H8   11 d         -16.133 207.035 111.590  0.00  0.00     0.209 HD
+ENDBRANCH   9  10
+ENDBRANCH   5   9
+ENDBRANCH   2   3
+BRANCH   1  12
+ATOM     12  C2   11 d         -13.267 206.350 116.683  0.00  0.00     0.003 A 
+ATOM     13  C1   11 d         -14.097 205.330 117.226  0.00  0.00     0.047 A 
+ATOM     14  C14  11 d         -14.058 205.056 118.605  0.00  0.00     0.048 A 
+ATOM     15 Cl2   11 d         -15.207 204.319 116.258  0.00  0.00    -0.083 Cl
+ATOM     16  C13  11 d         -13.208 205.776 119.453  0.00  0.00     0.035 A 
+ATOM     17  C12  11 d         -12.386 206.780 118.926  0.00  0.00     0.025 A 
+ATOM     18 Cl1   11 d         -13.170 205.417 121.196  0.00  0.00    -0.084 Cl
+ATOM     19  C11  11 d         -12.413 207.061 117.554  0.00  0.00     0.016 A 
+ENDBRANCH   1  12
+TORSDOF 4
+ENDMDL

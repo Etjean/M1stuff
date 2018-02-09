@@ -1,0 +1,15 @@
+receptor = 1fvv2.pdbqt
+ligand = ligand2.pdbqt
+
+out = docking_all.pdbqt
+
+center_x = -19.914
+center_y = 211.596
+center_z = 119.131
+
+size_x = 70
+size_y = 72
+size_z = 70
+
+num_modes = 20
+exhaustiveness = 8

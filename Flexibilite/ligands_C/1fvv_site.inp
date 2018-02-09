@@ -1,0 +1,14 @@
+receptor = ./recepteur_C.pdbqt
+
+out = ./docking_C.pdbqt
+
+center_x = 11.716
+center_y = 42.289
+center_z = 27.141
+
+size_x = 30
+size_y = 30
+size_z = 34
+
+num_modes = 10
+exhaustiveness = 8

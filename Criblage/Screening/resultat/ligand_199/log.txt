@@ -1,0 +1,46 @@
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, Journal of Computational Chemistry 31 (2010)  #
+# 455-461                                                       #
+#                                                               #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see http://vina.scripps.edu for more information.      #
+#################################################################
+
+Detected 4 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 2054928052
+Performing search ... done.
+Refining results ... done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -7.4      0.000      0.000
+   2         -7.2      1.018      4.143
+   3         -7.2      1.092      2.068
+   4         -7.1      2.022      6.019
+   5         -7.1      1.966      5.334
+   6         -7.0      2.079      5.433
+   7         -7.0      2.076      4.962
+   8         -6.9      1.841      5.849
+   9         -6.9      1.656      4.467
+  10         -6.6      1.762      4.513
+  11         -6.2      2.240      5.423
+  12         -6.2      1.302      2.235
+  13         -6.0      5.458      8.213
+  14         -5.9      5.421      8.286
+  15         -5.9      1.847      4.796
+  16         -5.8      5.488      8.399
+  17         -5.8      2.150      5.866
+  18         -5.7      2.144      5.933
+  19         -5.7      2.046      4.826
+  20         -5.5      6.190      9.117
+Writing output ... done.

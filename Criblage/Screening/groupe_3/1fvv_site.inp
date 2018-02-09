@@ -1,0 +1,13 @@
+receptor = 1fvv2.pdbqt
+
+out = docking_site.pdbqt
+
+center_x = -14.9
+center_y = 208.4
+center_z = 113.3
+
+size_x = 30
+size_y = 30
+size_z = 30
+
+num_modes = 10
