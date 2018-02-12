@@ -5,15 +5,18 @@
 	padding: 0;
 }
 
-html {
-	border: 1px solid blue;
+html, body {
 	height: 100%;
+	min-width: 800px;
 }
 
+
 body {
-	height: 100%;
-	border: 1px solid red;
-	font-family: cursive, verdana, trebuchet ms, sans-serif;
+	font-family: trebuchet ms, cursive, verdana, sans-serif;
+
+	/* pour le Sticky Footer */
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -25,53 +28,51 @@ img{
 
 /* ----------------- HEADER ------------------- */
 header{
-	min-width: 800px;
-	width: 100%;
-	height: 10%;
 	background-color: rgb(81, 64, 56);
-	
-	/* Disposition avec flexbox */
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
 }
 
-#logo{
+
+.logo{
 	padding: 0 20px;
-	min-width: 160px;
-	max-width: 160px;
+	min-width: 300px;
+	max-width: 300px;
 	height: auto;
+	display: inline-block;
+	position: relative;
+	top: 19px;
 }
+
 
 nav{
 	padding: 0 20px;
-	width: 100%;
+	display: inline-block;
 }
+
 
 ul{
 	list-style-type: none;
-	
-	/* Disposition avec flexbox */
-	display: flex;
-	flex-direction: row;
 }
+
 
 li {
 	text-align: center;
+	display: inline-block;
 }
 
+
 header ul a{
-	padding: 0 2.5%;
  	color: white;
 	font-size: 1.3em;
 	text-decoration: none;
 	font-weight: bold;
 	border: 1px solid black;
+	padding: 0px 20px;
 }
+
 
 header ul a:hover{
  	background-color: rgb(0, 0, 70);
- 	transition: 0.6s;
+ 	transition: 0.4s;
 }
 
 
@@ -81,12 +82,12 @@ header ul a:hover{
 
 /* ----------------- FOOTER ------------------ */
 footer{
-	border: 1px solid;
-	height: 4%;
+	height: 1.6em;
+	background-color: rgb(70, 70, 70);
 }
 
+
 footer p{
-	border: 1px solid blue;
 	text-align: center;
 }
 

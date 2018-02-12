@@ -5,28 +5,50 @@
 	padding: 0;
 }
 
+
+
 /* ---------------- SECTION ------------------- */
 section {
-	border: 1px solid green;
-	background-color: rgba(50, 50, 50, 0.3);
-	min-height: 86%;
+	/* pour le Sticky Footer */
+	flex: 1;
+
+	/* image de fond */
+	background-image: url("./mada1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
+
+
 
 /* ---------------- ARTICLE ------------------- */
 article {
-	border: 1px solid red;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
 	width: 50%;
-	margin: auto;
-	padding-left: 5%;
-	padding-right: 5%;
+	margin: 30px auto;
+	padding: 40px 5%;
 }
 
+
 article p {
-	border: 1px solid;
 	text-align: justify;
-	margin: 1em 0;
+	padding: 1em 0;
 }
+
+
+article figure {
+	width: 30em;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+
+article figure figcaption{
+	font-style: italic;
+}
+
 
 
 
