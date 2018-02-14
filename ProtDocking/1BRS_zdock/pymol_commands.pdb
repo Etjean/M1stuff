@@ -1,0 +1,34 @@
+// Commandes pour les fichiers zdock
+load complex5.pdb
+select chain1, rank 1-878
+select chain2, rank 879-1598
+alter chain2, chain='B'
+hide
+show lines, name ca+c+n
+color white, ///A
+color red, ///B
+load ../1BRS_AD.pdb
+hide /1BRS_AD
+show lines, /1BRS_AD and name ca+c+n
+color green, /1BRS_AD
+align /1BRS_AD//A, /complex//A
+align /1BRS_AD//D//ca, /complex//B//ca, cycles=0, transform=0, object=aln
+rms_cur /1BRS_AD//D//ca & aln, /complex//B//ca & aln, matchmaker=-1
+
+
+// Commandes pour les fichiers ftdock
+load Complex_1g.pdb
+select chain1, rank 1-878
+select chain2, rank 879-1598
+alter chain2, chain='B'
+hide
+show lines, name ca+c+n
+color white, ///A
+color red, ///B
+load ../1BRS_AD.pdb
+hide /1BRS_AD
+show lines, /1BRS_AD and name ca+c+n
+color green, /1BRS_AD
+align /1BRS_AD//A, /Complex//A
+align /1BRS_AD//D//ca, /Complex//B//ca, cycles=0, transform=0, object=aln
+rms_cur /1BRS_AD//D//ca & aln, /Complex//B//ca & aln, matchmaker=-1
