@@ -1,0 +1,11 @@
+load 2hqs.pdb
+load T26_1846.pdb
+hide
+show cartoon, /2hqs//A+H
+color green
+show cartoon, /T26_1846
+color red, /T26_1846
+align /T26_1846//R, /2hqs//A
+
+align /T26_1846//L//ca, /2hqs//H//ca, cycles=0, transform=0, object=aln
+rms_cur /T26_1846//L//ca & aln, /2hqs//H//ca & aln, matchmaker=-1

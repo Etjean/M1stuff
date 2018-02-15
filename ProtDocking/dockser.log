@@ -1,0 +1,120 @@
+
+PyDock3
+  A set of tools for protein-protein docking
+  Version 3.2.3
+
+[pyDock3] INFO: Running pyDockSER...
+[scoring] INFO: Reading pdb files...
+[scoring] INFO: Reading receptor file with hydrogens...
+[scoring] INFO: Done.
+[scoring] INFO: Reading ligand file with hydrogens...
+[scoring] INFO: Done.
+[scoring] INFO: Calculating solvation of unbound receptor.
+[scoring] INFO: Calculating solvation of unbound ligand.
+[scoring] INFO: Assigning charges...
+[scoring] INFO: Done.
+[scoring] INFO: Calculating van der Waals terms
+[scoring] INFO: Done.
+[scoring] INFO: Conformation 1801 done.
+[scoring] INFO: Conformation 1802 done.
+[scoring] INFO: Conformation 1803 done.
+[scoring] INFO: Conformation 1804 done.
+[scoring] INFO: Conformation 1805 done.
+[scoring] INFO: Conformation 1806 done.
+[scoring] INFO: Conformation 1807 done.
+[scoring] INFO: Conformation 1808 done.
+[scoring] INFO: Conformation 1809 done.
+[scoring] INFO: Conformation 1810 done.
+[scoring] INFO: Conformation 1811 done.
+[scoring] INFO: Conformation 1812 done.
+[scoring] INFO: Conformation 1813 done.
+[scoring] INFO: Conformation 1814 done.
+[scoring] INFO: Conformation 1815 done.
+[scoring] INFO: Conformation 1816 done.
+[scoring] INFO: Conformation 1817 done.
+[scoring] INFO: Conformation 1818 done.
+[scoring] INFO: Conformation 1819 done.
+[scoring] INFO: Conformation 1820 done.
+[scoring] INFO: Conformation 1821 done.
+[scoring] INFO: Conformation 1822 done.
+[scoring] INFO: Conformation 1823 done.
+[scoring] INFO: Conformation 1824 done.
+[scoring] INFO: Conformation 1825 done.
+[scoring] INFO: Conformation 1826 done.
+[scoring] INFO: Conformation 1827 done.
+[scoring] INFO: Conformation 1828 done.
+[scoring] INFO: Conformation 1829 done.
+[scoring] INFO: Conformation 1830 done.
+[scoring] INFO: Conformation 1831 done.
+[scoring] INFO: Conformation 1832 done.
+[scoring] INFO: Conformation 1833 done.
+[scoring] INFO: Conformation 1834 done.
+[scoring] INFO: Conformation 1835 done.
+[scoring] INFO: Conformation 1836 done.
+[scoring] INFO: Conformation 1837 done.
+[scoring] INFO: Conformation 1838 done.
+[scoring] INFO: Conformation 1839 done.
+[scoring] INFO: Conformation 1840 done.
+[scoring] INFO: Conformation 1841 done.
+[scoring] INFO: Conformation 1842 done.
+[scoring] INFO: Conformation 1843 done.
+[scoring] INFO: Conformation 1844 done.
+[scoring] INFO: Conformation 1845 done.
+[scoring] INFO: Conformation 1846 done.
+[scoring] INFO: Conformation 1847 done.
+[scoring] INFO: Conformation 1848 done.
+[scoring] INFO: Conformation 1849 done.
+[scoring] INFO: Conformation 1850 done.
+[scoring] INFO: Conformation 1851 done.
+[scoring] INFO: Conformation 1852 done.
+[scoring] INFO: Conformation 1853 done.
+[scoring] INFO: Conformation 1854 done.
+[scoring] INFO: Conformation 1855 done.
+[scoring] INFO: Conformation 1856 done.
+[scoring] INFO: Conformation 1857 done.
+[scoring] INFO: Conformation 1858 done.
+[scoring] INFO: Conformation 1859 done.
+[scoring] INFO: Conformation 1860 done.
+[scoring] INFO: Conformation 1861 done.
+[scoring] INFO: Conformation 1862 done.
+[scoring] INFO: Conformation 1863 done.
+[scoring] INFO: Conformation 1864 done.
+[scoring] INFO: Conformation 1865 done.
+[scoring] INFO: Conformation 1866 done.
+[scoring] INFO: Conformation 1867 done.
+[scoring] INFO: Conformation 1868 done.
+[scoring] INFO: Conformation 1869 done.
+[scoring] INFO: Conformation 1870 done.
+[scoring] INFO: Conformation 1871 done.
+[scoring] INFO: Conformation 1872 done.
+[scoring] INFO: Conformation 1873 done.
+[scoring] INFO: Conformation 1874 done.
+[scoring] INFO: Conformation 1875 done.
+[scoring] INFO: Conformation 1876 done.
+[scoring] INFO: Conformation 1877 done.
+[scoring] INFO: Conformation 1878 done.
+[scoring] INFO: Conformation 1879 done.
+[scoring] INFO: Conformation 1880 done.
+[scoring] INFO: Conformation 1881 done.
+[scoring] INFO: Conformation 1882 done.
+[scoring] INFO: Conformation 1883 done.
+[scoring] INFO: Conformation 1884 done.
+[scoring] INFO: Conformation 1885 done.
+[scoring] INFO: Conformation 1886 done.
+[scoring] INFO: Conformation 1887 done.
+[scoring] INFO: Conformation 1888 done.
+[scoring] INFO: Conformation 1889 done.
+[scoring] INFO: Conformation 1890 done.
+[scoring] INFO: Conformation 1891 done.
+[scoring] INFO: Conformation 1892 done.
+[scoring] INFO: Conformation 1893 done.
+[scoring] INFO: Conformation 1894 done.
+[scoring] INFO: Conformation 1895 done.
+[scoring] INFO: Conformation 1896 done.
+[scoring] INFO: Conformation 1897 done.
+[scoring] INFO: Conformation 1898 done.
+[scoring] INFO: Conformation 1899 done.
+[scoring] INFO: Conformation 1900 done.
+[scoring] INFO: Creating Table
+[scoring] INFO: Done.
+[pyDock3] INFO: pyDock FINISHED!
