@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Madagascar : Questionnaire</title>
+		<link rel="stylesheet" href="headfoot.css" />
+		<link rel="stylesheet" href="formulaire.css" />
+	</head>
+	
+	<body>
+		<!-- HEADER -->
+		<header>
+			<!-- Logo -->
+			<figure class="logo">
+				<a href="./accueil.html">
+					<img src="./penguins1.png" alt="Logo du site" title="Lien vers l'accueil"/>
+				</a>
+			</figure>
+			<!-- Boutons onglets -->
+			<nav>
+				<ul>
+					<li><a href="./decouverte.html">Découverte</a></li>
+					<li><a href="./historique.html">Historique</a></li>
+					<li><a href="./galerie.html">Galerie</a></li>
+					<li><a href="./formulaire.html">Questionnaire</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+
+		<!-- MAIN -->
+		<section>
+			<article>
+				<h1>Questionnaire</h1>
+
+				<!-- Identité -->
+				<table class="identite">
+					<!-- ligne 1 -->
+					<tr>
+						<td>Nom :</td><td><input type="text" name="Nom" size="10" maxlength="120" /></td>
+					</tr>	
+
+					<!-- ligne 2 -->
+					<tr>
+						<td>Prenom :</td><td><input type="text" name="Prenom" size="10" maxlength="120" /></td>
+					</tr>
+
+					<!-- ligne 3 -->
+					<tr>
+						<td>Adresse mail :</td><td><input type="text" name="Mail" size="10" maxlength="120" /></td>
+					</tr>
+
+					<!-- ligne 4 -->
+					<tr>
+						<td>Votre age :</td><td><input type="text" name="age" size="5" maxlength="120" /></td>
+					</tr>
+					
+					<!-- ligne 5 -->
+					<tr>
+						<td>Sexe :</td> 
+						<td>
+							<div><input type="radio" name="sexe" value="M" /> Homme</div>
+							<div><input type="radio" name="sexe" value="F" /> Femme</div>
+							<div><input type="radio" name="sexe" value="F" /> Les DEUX</div>
+						</td>
+					</tr>
+				</table>
+
+
+				<!-- Actrices -->
+				<table class="actrices">
+					<tr><td>Cochez le nom des gens dont vous avez déja entendu parler :</td></tr>
+					<tr>	
+						<td><input type="checkbox" name="choix1" /><label for="choix1"> August Ames</label></td>
+						<td><input type="checkbox" name="choix2" /><label for="choix2"> Mia Khalifa</label></td>
+						<td><input type="checkbox" name="choix3" /><label for="choix3"> Lisa Ann</label></td>
+						<td><input type="checkbox" name="choix3" /><label for="choix4"> Riley Reid</label></td>
+				</table>
+				
+				
+				<!-- Navigateur -->
+				<table class="navigateur">
+					<tr>
+						<td>Sélectionnez votre navigateur préféré :</td>
+						<td>
+							<select name="Navigateur" size="1">
+									<option value="Firefox" selected>Firefox</option>
+									<option value="Chrome">Chrome</option>
+									<option value="Internet Exporer">Internet Explorer</option>
+									<option value="Internet Exporer">Pornhub</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				
+				
+				<!-- Parfum de glace -->
+				<table class="glace">
+					<tr>	
+						<td>Donnez votre parfum de classe préféré parmis les suivantes :</td>
+					    <td>
+						    <SELECT name="nom" size="3" >
+							    <OPTION>Fraise
+							    <OPTION>Vanille
+							    <OPTION>Chocolat
+							    <OPTION>Pistache
+							    <OPTION>Orange
+						    </SELECT>
+					    </td>
+			    </table>
+			    
+
+			    <!-- Surnom -->
+			    <table class="surnom">
+					<tr>
+						<td>Avez vous un surnom:</td> 
+						<td>non: <input type="radio" name="surnom" value="N" /></td>
+						<td>oui, c'est :  <input type="radio" name="surnom" value="O" /></td>
+						<td><input type="text" name="surnom" size="10" maxlength="120" /></td>
+					</tr>
+				</table>
+
+
+				<!-- Devise -->
+				<table class="devise">
+					<tr><td>Entrez votre devise préférée :</td></tr>
+					<tr><td><textarea rows="5" cols="80" name="message" placeholder="Ecrivez un truc sympa ;)"></textarea></td></tr>
+				</table>
+
+
+				<!-- Envoi des réponses -->
+				<table class="envoi">
+					<td><input type="button" name="bouton"  value="Envoyer vos réponses" onclick="alert('Bonjour')" /></td>
+					<td><input type="button" name="bouton"  value="Effacer vos réponses" onclick="alert('Bonjour')" /></td>
+				</table>
+
+
+			</article>
+		</section>
+
+
+		<!-- FOOTER -->
+		<footer>
+			<p><em>Copyright 2018</em>, Miara RAKOTOMAVO & Etienne JEAN</p>
+		</footer>
+	</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+

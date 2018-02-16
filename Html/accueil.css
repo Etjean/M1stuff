@@ -1,0 +1,96 @@
+/* Mise en page de la page d'accueil */
+/* ------------------- GENERAL --------------------- */
+
+*{
+	margin : 0px; 
+	padding : 0px; 
+	font-size: 100%;	
+}
+
+em{font-style:normal;}
+
+strong{font-weight:normal;}
+
+html, body {
+	height: 100%;
+	min-width: 800px;
+}
+
+body{
+	/* texte */
+	font-family: trebuchet ms, cursive, verdana, sans-serif;
+	color : white;
+
+	/* image de fond */
+	background-image: url("./mada1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	/* pour le Sticky Footer */
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* ---------------------- NAV -------------------------*/
+nav{
+	z-index: 4;
+	margin-top: 20px;
+}
+
+ul#menu{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+ul#menu li{
+	display: inline-block;		/*met la liste en ligne*/
+	margin : 20px; 
+}
+
+ul#menu li a{
+	color: #F0FFFF;				/*texte en blanc*/
+	display: inline-block;
+	padding : 10px; 
+	text-decoration: none;		/*retire le soulignement*/
+}
+
+ul#menu li a:hover{
+	-moz-transform:scale(1.7);	/*agrandie les liens*/
+    color:#DAA520;				/*met en jaune*/
+}
+
+/*------------------------ MAIN --------------------------*/
+main {
+	flex: 1;					/*extension verticale, pour le Sticky Footer*/
+}
+
+
+article{
+ 	background-color: rgba(0, 0, 0, 0.6);
+ 	padding: 30px 40px;
+ 	margin : 40px auto;			/*centre l'article*/
+ 	width: 50%;
+}
+
+article h1{
+	text-align: center;
+	font-size: 45px;
+	margin-bottom: 20px;
+	font-family: Times;
+}
+
+article p{
+	text-align: justify;
+}
+
+/*--------------------- FOOTER ------------------------------*/
+footer{
+ 	color: #F0FFFF; 
+ 	text-align: center;
+ }
+
+
+
