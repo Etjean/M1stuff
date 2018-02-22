@@ -49,12 +49,12 @@ nav{
 }
 
 
-ul{
+header ul{
 	list-style-type: none;
 }
 
 
-li {
+header li {
 	text-align: center;
 	display: inline-block;
 }
@@ -74,6 +74,19 @@ header ul a:hover{
  	background-color: rgb(0, 0, 70);
  	transition: 0.4s;
 }
+
+
+/* ---------------- SECTION ------------------- */
+section {
+	/* pour le Sticky Footer */
+	flex: 1;
+
+	/* image de fond */
+	background-image: url("./images/mada1.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
 
 
 /* ----------- BACK TO TOP BUTTON ------------ */

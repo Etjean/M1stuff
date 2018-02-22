@@ -1,0 +1,27 @@
+/* Mise en page du corps des pages CV */
+
+/* ---------------- ARTICLE ------------------- */
+article {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	width: 50%;
+	margin: 30px auto;
+	padding: 40px 5%;
+}
+
+article h1, article h2 {
+	text-align: center;
+}
+
+article p {
+	text-align: justify;
+	padding: 1em 0;
+}
+
+
+article figure {
+	width: 20em;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+}

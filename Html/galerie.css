@@ -1,0 +1,70 @@
+/* Dans ce fichier, on fait la mise en page du corps de la page galerie */
+
+/* ---------------- ARTICLE ------------------- */
+article {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	width: 50%;
+	margin: 30px auto;
+	padding: 40px 5%;
+}
+
+
+/* -------------- Galerie -------------------*/
+
+article ul#main_photo{
+	position: relative;
+	width:90%;
+	height:500px;
+	overflow:hidden;
+	margin: 5% auto;
+}
+article li{
+	position: absolute;
+	list-style:none;
+}
+
+article ul#main_photo img{
+	opacity:0;
+	width:100%;
+	transition:opacity 0.4s ease-in-out;
+}
+
+article ul#main_photo img:target{
+	opacity:1;
+}
+
+/*---------- choix image ----------------*/
+
+div#thumb_center{
+	width:100%;
+	margin:auto;
+	text-align:center;
+}
+div#cadre{
+	margin:5px;
+	width: 99px;
+	text-align: center; 
+	display: inline-block;
+}
+div#cadre img{
+	height: 60px;
+	width: 90px;
+	opacity:0.7;
+	transition: 0.3s;
+	padding: 3px;
+}
+
+div#cadre img:hover{
+	padding: 0;
+	height: 66px;
+	width: 99px;
+	opacity:1;
+}
+
+
+
+
+
+
+

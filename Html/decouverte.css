@@ -1,0 +1,38 @@
+/* Dans ce fichier, on fait la mise en page du corps de la page decouverte */
+
+/* ---------------- ARTICLE ------------------- */
+article {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	width: 50%;
+	margin: 30px auto;
+	padding: 40px 5%;
+}
+
+
+article p {
+	text-align: justify;
+	padding: 1em 0;
+}
+
+
+article figure {
+	width: 30em;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+
+article figure figcaption{
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+

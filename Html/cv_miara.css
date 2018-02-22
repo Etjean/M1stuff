@@ -1,4 +1,4 @@
-/* Dans ce fichier, on fait la mise en page du corps de la page historique */
+/* Mise en page du corps de la page cv_etienne */
 /* ---------------- GENERAL ------------------- */
 * {
 	margin: 0;
@@ -13,8 +13,8 @@ section {
 	flex: 1;
 
 	/* image de fond */
-	background-image: url("./mada1.jpg");
-	background-repeat: no-repeat;
+	background-image: url("./images/mada1.jpg");
+	/*background-repeat: no-repeat;*/
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -30,6 +30,9 @@ article {
 	padding: 40px 5%;
 }
 
+article h1, article h2 {
+	text-align: center;
+}
 
 article p {
 	text-align: justify;
@@ -38,22 +41,8 @@ article p {
 
 
 article figure {
-	width: 30em;
+	width: 20em;
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 20px 0;
-	text-align: center;
 }
-
-article figure figcaption{
-	font-style: italic;
-}
-
-
-
-
-
-
-
-
-

@@ -22,8 +22,7 @@ body{
 	color : white;
 
 	/* image de fond */
-	background-image: url("./mada1.jpg");
-	background-repeat: no-repeat;
+	background-image: url("./images/mada1.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 

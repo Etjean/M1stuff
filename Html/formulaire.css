@@ -1,20 +1,4 @@
 /* Dans ce fichier, on fait la mise en page du corps de la page questionnaire/formulaire */
-/* ---------------- GENERAL ------------------- */
-
-
-/* ---------------- SECTION ------------------- */
-section {
-	/* pour le Sticky Footer */
-	flex: 1;
-
-	/* image de fond */
-	background-image: url("./mada1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-
 
 /* ---------------- ARTICLE ------------------- */
 article {
@@ -33,13 +17,13 @@ article h1 {
 
 
 article p {
-	/*border: 1px solid blue;*/
+	border: 1px solid blue;
 	margin: 0;
 	padding: 0;
 }
 
 table {
-	/*border: 1px solid white;*/
+	border: 1px solid white;
 	background-color: rgba(0, 0, 0, 0.4);
 	width: 100%;
 	margin: 20px 0;
@@ -48,7 +32,7 @@ table {
 
 
 td {
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 	padding: 3px;
 }
 
