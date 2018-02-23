@@ -3,13 +3,13 @@ ligand = ligand2.pdbqt
 
 out = docking_all.pdbqt
 
-center_x = -19.914
-center_y = 211.596
-center_z = 119.131
+center_x = -13.914
+center_y = 205.596
+center_z = 120.136
 
-size_x = 70
-size_y = 72
-size_z = 70
+size_x = 30
+size_y = 30
+size_z = 30
 
 num_modes = 20
 exhaustiveness = 8

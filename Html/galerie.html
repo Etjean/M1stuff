@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<title>Madagascar : Historique</title>
@@ -10,13 +10,13 @@
 	<body>
 		<!-- HEADER -->
 		<header>
-			<!-- Logo -->
+			<!-- Logo pingouins & lien vers l'accueil -->
 			<figure class="logo">
 				<a href="./accueil.html">
 					<img src="./images/penguins1.png" alt="Logo du site" title="Lien vers l'accueil"/>
 				</a>
 			</figure>
-			<!-- Boutons onglets -->
+			<!-- NAV : menu de navigation -->
 			<nav>
 				<ul>
 					<li><a href="./decouverte.html">Découverte</a></li>
@@ -28,31 +28,39 @@
 		</header>
 		
 
-		<!-- MAIN -->
+		<!-- SECTION principale -->
 		<section>
 			<article>
+				<h2>Galerie</h2>
 				<!-- Photo principale -->
 				<ul id="main_photo">
-					<li> <img  src="images/image5.jpg" id="0" /> </li>
-					<li> <img  src="images/site2.jpeg" id="1" /> </li>
-					<li> <img  src="images/site3.jpg" id="2" /> </li>
-					<!--<li> <img  src="images/site4.jpg" id="3" /> </li> -->
-					<li> <img  src="images/site5.jpg" id="4" /> </li>
-					<li> <img  src="images/site1_bis.jpg" id="5" /> </li>
+					<li> <img  src="images/image5.jpg" id="0" alt="desert"/> </li>
+					<li> <img  src="images/site2.jpeg" id="1" alt="chutes de lalily"/> </li>
+					<li> <img  src="images/site3.jpg" id="2" alt="tritriva"/> </li>
+					<li> <img  src="images/site5.jpg" id="4" alt="baobabs at night"/> </li>
+					<li> <img  src="images/site1_bis.jpg" id="5" alt="rochers"/> </li>
 			
 				</ul>
 				<!-- Photos miniatures -->
 				<div id="thumb_center">
-					<div id ="cadre"> <a href="#0"><img src="images/image5.jpg"  /> </a> </div>
-					<div id ="cadre"> <a href="#1"><img src="images/site2.jpeg"  /> </a> </div>
-					<div id ="cadre"> <a href="#2"><img src="images/site3.jpg" /> </a> </div>
-					<div id ="cadre"> <a href="#4"><img src="images/site5.jpg" /> </a> </div>
-					<div id ="cadre"> <a href="#5"><img src="images/site1_bis.jpg" /> </a> </div>
+					<div class ="cadre"> <a href="#0"><img src="images/image5.jpg" alt="desert" /> </a> </div>
+					<div class ="cadre"> <a href="#1"><img src="images/site2.jpeg" alt="lalily" /> </a> </div>
+					<div class ="cadre"> <a href="#2"><img src="images/site3.jpg" alt="tritriva" /> </a> </div>
+					<div class ="cadre"> <a href="#4"><img src="images/site5.jpg" alt="baobabs" /> </a> </div>
+					<div class ="cadre"> <a href="#5"><img src="images/site1_bis.jpg" alt="rochers" /> </a> </div>
 				</div>		
 			</article>
 		</section>
 
+		
+		<!-- Back To Top -->
+		<div class="to-top">
+			<a href="#top">
+				<img src="./images/to-top1.png" alt="back to top button" title="Back to top">
+			</a>
+		</div>
 
+		
 		<!-- FOOTER -->
 		<footer>
 			<p><em>Copyright 2018</em>, Miara RAKOTOMAVO & Etienne JEAN</p>

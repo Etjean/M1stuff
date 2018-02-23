@@ -2,25 +2,24 @@
 
 /* ---------------- ARTICLE ------------------- */
 article {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.6);	/*article en noir transparent*/
 	color: white;
 	width: 50%;
-	margin: 30px auto;
+	margin: 40px auto;
 	padding: 40px 5%;
 }
 
-article h1, article h2 {
+article h2, article h3 {
 	text-align: center;
 }
 
-article p {
-	text-align: justify;
-	padding: 1em 0;
+article ul{
+	margin-top: 1em;
+	margin-bottom: 2em;
 }
 
-
-article figure {
-	width: 20em;
+article figure.photo {
+	width: 20em;			/*taille des photos d'identité*/
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 20px 0;

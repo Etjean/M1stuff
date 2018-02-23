@@ -7,15 +7,13 @@
 
 html, body {
 	height: 100%;
-	min-width: 800px;
+	min-width: 1100px;			/*largeur minimale pour le nav*/
 }
 
 
 body {
 	font-family: trebuchet ms, cursive, verdana, sans-serif;
-
-	/* pour le Sticky Footer */
-	display: flex;
+	display: flex;				/* pour le Sticky Footer */
 	flex-direction: column;
 }
 
@@ -34,66 +32,62 @@ header{
 
 .logo{
 	padding: 0 20px;
-	min-width: 300px;
-	max-width: 300px;
+	width: 300px;
 	height: auto;
-	display: inline-block;
+	display: inline-block;		/*affiche les logo & le nav en ligne*/
 	position: relative;
-	top: 19px;
+	top: 19px;					/*décalage vers le bas*/
 }
 
 
 nav{
 	padding: 0 20px;
-	display: inline-block;
+	display: inline-block;		/*affiche le logo & le nav en ligne*/
 }
 
 
 header ul{
-	list-style-type: none;
+	list-style-type: none;		/*retire les puces*/
 }
 
 
 header li {
 	text-align: center;
-	display: inline-block;
+	display: inline-block;		/*affiche la liste en ligne*/
 }
 
 
 header ul a{
  	color: white;
 	font-size: 1.3em;
-	text-decoration: none;
+	text-decoration: none;		/*retire le soulignement par défaut des liens*/
 	font-weight: bold;
-	border: 1px solid black;
+	border: 1px solid black;	
 	padding: 0px 20px;
 }
 
 
 header ul a:hover{
- 	background-color: rgb(0, 0, 70);
- 	transition: 0.4s;
+ 	background-color: rgb(0, 0, 70);	/*affiche en bleu quand on passe la souris*/
+ 	transition: 0.4s;					/*transition du changement de couleur*/
 }
 
 
 /* ---------------- SECTION ------------------- */
 section {
-	/* pour le Sticky Footer */
-	flex: 1;
-
-	/* image de fond */
-	background-image: url("./images/mada1.jpg");
-	background-size: cover;
-	background-attachment: fixed;
+	flex: 1;						/* étend la section, pour le Sticky Footer */
+	background-image: url("./images/mada1.jpg");	/* image de fond */
+	background-size: cover;			/*ajuste l'image à la taille de l'écran*/
+	background-attachment: fixed;	/*fixe l'image pendant le scroll*/
 }
 
 
 
 /* ----------- BACK TO TOP BUTTON ------------ */
 .to-top{
-	position: fixed;
-	right: 30px;
-	bottom: 20px;
+	position: fixed;			/*fixe la position du bouton*/
+	right: 40px;
+	bottom: 30px;
 	width: 40px;
 	height: auto;
 }
@@ -105,7 +99,7 @@ section {
 /* ----------------- FOOTER ------------------ */
 footer{
 	height: 1.6em;
-	background-color: rgb(70, 70, 70);
+	background-color: rgb(70, 70, 70);	/*footer en gris*/
 }
 
 

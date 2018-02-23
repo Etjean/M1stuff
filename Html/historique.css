@@ -1,11 +1,32 @@
-/* Dans ce fichier, on fait la mise en page du corps de la page decouverte */
+/* Dans ce fichier, on fait la mise en page du corps de la page historique */
+/* ---------------- GENERAL ------------------- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* ---------------- SECTION ------------------- */
+section {
+	/* pour le Sticky Footer */
+	flex: 1;
+
+	/* image de fond */
+	background-image: url("./images/mada1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
 
 /* ---------------- ARTICLE ------------------- */
 article {
-	background-color: rgba(0, 0, 0, 0.6);	/*article en noir transparent*/
+	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 	width: 50%;
-	margin: 40px auto;
+	margin: 30px auto;
 	padding: 40px 5%;
 }
 
@@ -25,18 +46,17 @@ article figure {
 }
 
 article figure figcaption{
-	font-style: italic;				/*affiche les légendes en italique*/
+	font-style: italic;
 }
 
-
-/*----------- Couleur des hyperliens -----------*/
+/*-----------couleur des hyperliens-----------*/
 a
 {
 color: orange;
 text-decoration: none;
 }
 
-/*----------- Texte caché ----------------------*/
+/*-----------texte caché----------------------*/
 .more p.textecache{
   display: none
 }
@@ -54,11 +74,5 @@ text-decoration: none;
 .more.read a.hidebutton span.plus{
   display: none;
 }
-
-
-
-
-
-
 
 

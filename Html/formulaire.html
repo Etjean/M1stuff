@@ -1,22 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<title>Madagascar : Questionnaire</title>
 		<link rel="stylesheet" href="headfoot.css" />
 		<link rel="stylesheet" href="formulaire.css" />
+		<script language=JavaScript>
+			var fois=0
+			boutrep = new Array();
+			
+			function fradio1(bouton,reponse)
+			{
+			boutrep[bouton]=reponse
+			}
+			
+
+			function fonct_form(form) {
+				resultat='<html>\n<title>resultat du formulaire</title>\n<head>\n</head>\n<body>\n';
+				err ="";
+				
+				if (form.input1.value == "") {
+					err +="Indiquez votre nom !\n";
+				}
+				resultat +="<p align=\"center\">nom : "+form.input1.value+"";
+				
+				if (form.input3.value != "") {
+					resultat +="<p align=\"center\">Prénom : "+form.input3.value+".\n";
+				}
+				else resultat +="<p align=\"center\">Inconnue ! \n";
+				resultat +="<br>langue : "+form.input4.value+".\n";
+				
+				if (form.input5.checked) {
+					resultat +="<br>Habite en France\n";
+				}
+				else resultat +="<br>N'habite pas en France\n";
+				resultat +="<br>Age : "+boutrep[1]+".\n";
+				
+				if (err != "") {
+					alert(err);
+				}
+				else{
+					resultat +="</p>\n</body>\n</html>";
+					if (fois == 1 ) result.close();
+					result=open("","resultat","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=1, resizable=1, top=1, left=50, width=500, height=200");
+					result.document.write(resultat)
+					result.document.write('<p align="center" ><a href="javascript:window.close();">Fermer cette fenêtre</a></p>')
+					fois=1;
+				}
+			}
+
+
+
+		</script>
+
+
+
+
+
+
 	</head>
 	
 	<body>
 		<!-- HEADER -->
 		<header>
-			<!-- Logo -->
+			<!-- Logo pingouins & lien vers l'accueil -->
 			<figure class="logo">
 				<a href="./accueil.html">
 					<img src="./images/penguins1.png" alt="Logo du site" title="Lien vers l'accueil"/>
 				</a>
 			</figure>
-			<!-- Boutons onglets -->
+			<!-- NAV : Menu de navigation -->
 			<nav>
 				<ul>
 					<li><a href="./decouverte.html">Découverte</a></li>
@@ -28,215 +81,255 @@
 		</header>
 		
 
-		<!-- MAIN -->
+		<!-- SECTION principale -->
 		<section>
 			<article>
-				<h1>Questionnaire</h1>
+				<h2>Questionnaire</h2>
 
-				<!-- Identité -->
-				<table class="identite">
-					<!-- ligne 1 -->
-					<tr>
-						<td>Nom :</td><td><input type="text" name="Nom" size="10" maxlength="120" /></td>
-					</tr>	
+				<!-- FORMULAIRE -->
+				<form action="" method="post" name="monform" id="monform">
+					<div align="center">
+						<table width="560" border="0">
+							<!-- Nom -->
+							<tr bordercolor="#f3f3f3">
+								<td>Nom :</td>
+								<td><input size=40 name="input1" maxlength="100"></td>
+							</tr>
+							<!-- Prénom -->
+							<tr bordercolor="#f3f3f3">
+								<td>Prénom :</td>
+								<td><input type="text" size="40" name="input3" maxlength="200"></td>
+							</tr>
+							<!-- Langue -->
+							<tr bordercolor="#f3f3f3">
+								<td>Langue  :</td><td>
+									<select name="input4">
+										<option value="Allemand">Allemand</option>
+										<option value="Anglais">Anglais</option>
+										<option value="Espagnol">Espagnol</option>
+										<option value="Français" selected>Français</option>
+										<option value="Autre">Autre</option>
+									</select>
+								</td>
+							</tr>
+							<!-- France ? -->
+							<tr bordercolor="#f3f3f3">
+								<td>Habite en France ? </td>
+								<td><input name="input5" type=checkbox ></td>
+							</tr>
+							<!-- Age -->
+							<tr bordercolor="#f3f3f3">
+								<td>tranche d' âge: </td>
+								<td>
+									<p>
+										<input type="radio" name="r1" value="-16 ans" onClick="fradio1(1,this.value)">-16 ans <br>
+										<input type="radio" name="r1" value="17 à 21 ans" onClick="fradio1(1,this.value)">17 à 21 ans<br>
+										<input type="radio" name="r1" value="22 à 45 ans" onClick="fradio1(1,this.value)">22 à 45 ans<br>
+										<input type="radio" name="r1" value="+ 45 ans" onClick="fradio1(1,this.value)">+ 45 ans<br>
+									</p>
+								</td>
+							</tr>
 
-					<!-- ligne 2 -->
-					<tr>
-						<td>Prenom :</td><td><input type="text" name="Prenom" size="10" maxlength="120" /></td>
-					</tr>
-
-					<!-- ligne 3 -->
-					<tr>
-						<td>Adresse mail :</td><td><input type="text" name="Mail" size="10" maxlength="120" /></td>
-					</tr>
-
-					<!-- ligne 4 -->
-					<tr>
-						<td>Votre age :</td><td><input type="text" name="age" size="5" maxlength="120" /></td>
-					</tr>
-					
-					<!-- ligne 5 -->
-					<tr>
-						<td>Sexe :</td> 
-						<td>
-							<div><input type="radio" name="sexe" value="M" /> Homme</div>
-							<div><input type="radio" name="sexe" value="F" /> Femme</div>
-						</td>
-					</tr>
-				</table>
-
-
-
-
-
-				<!-- Etes-vous deja venu à Mada ? -->
-				<table class="q1">
-					<tr>
-						<td>Etes-vous déjà venu à Madagascar ? :</td> 
-						<td><input type="radio" name="q1" value="Oui" /> Oui</td>
-						<td><input type="radio" name="q1" value="Non" /> Non</td>
-					</tr>
-				</table>
-
-
-
-				<!-- Envisagez-vous de partir à Mada ? Cb de temps ?-->
-				<table class="q2">
-					<tr>
-						<td>Envisagez-vous de partir à Madagascar ? :</td> 
-						<td><input type="radio" name="q2" value="Oui" /> Oui</td>
-						<td><input type="radio" name="q2" value="Non" /> Non</td>
-					</tr>
-					<tr>
-						<td>Si oui, combien de temps ? :</td>
-						<td><select name="temps de voyage" size="1">
-									<option value="rien" selected></option>
-									<option value="< 1semaine" selected>Moins d'1 semaine</option>
-									<option value="1semaine - 1mois">Entre 1 semaine et 1 mois</option>
-									<option value="1mois - 3mois">Entre 1 mois et 3 mois</option>
-									<option value="> 3mois">Plus de 3 mois</option>
-							</select></td>
-				</table>
-
-
-				<!-- Etes-vous deja partis en afrique ? Dans quel pays ?-->
-				<table class="q3">
-					<tr>
-						<td>Etes-vous déjà parti en Afrique ? :</td> 
-						<td><input type="radio" name="q3" value="Oui" /> Oui</td>
-						<td><input type="radio" name="q3" value="Non" /> Non</td>
-					</tr>
-					<tr>	
-						<td>Si oui, dans quelle région ? :</td>
-					    <td>
-						    <Select name="région d'afrique" size="3" >
-						    	<option name="rien"selected>(aucun)</option>
-							    <option name="nord">Afrique du Nord</option>
-							    <option name="ouest">Afrique de l'Ouest</option>
-							    <option name="centrale">Afrique Centrale</option>
-							    <option name="est">Afrique de l'Est</option>
-							    <option name="australe">Afrique Australe</option>
-						    </select>
-					    </td>
-			    </table>
+						</table>
 
 
 
-
-				<!-- Qu'est- qui vous intéresse dans Mada ? -->
-				<table class="q4">
-					<tr><td>Qu'est-ce qui vous intéresse dans Madagascar ? :</td></tr>
-					<tr><td><textarea rows="5" cols="50" name="interet dans mada" placeholder="Ecrivez un truc sympa ;)"></textarea></td></tr>
-				</table>
-
-
-				<!-- Cochez les villes dont vous avez dejà entendu parler ? -->
-				<table class="q5">
-					<tr><td>Cochez les villes dont vous avez déjà entendu parler :</td></tr>
-					<tr>	
-						<td><input type="checkbox" name="antsirabe" /> Antsirabe</td>
-						<td><input type="checkbox" name="tamatave" /> Tamatave</td>
-						<td><input type="checkbox" name="antananarivo" /> Antananarivo</td>
-						<td><input type="checkbox" name="nosy be" /> Nosy Be</td>
-				</table>
-
-
-				<!-- Avez-vous aimé le film madagascar -->
-				<table class="q6">
-					<tr>
-						<td>Avez-vous aimé le film Madagascar ? :</td> 
-						<td><input type="radio" name="q6" value="beaucoup" /> Beaucoup !!</td>
-						<td><input type="radio" name="q6" value="ca va" /> Ca va.</td>
-						<td><input type="radio" name="q6" value="bof" /> Bof...</td>
-						<td><input type="radio" name="q6" value="pas du tout" /> Pas du tout !</td>
-					</tr>
-				</table>
+						<!-- Etes-vous deja venu à Mada ? -->
+						<table class="q1">
+							<tr>
+								<td>Etes-vous déjà venu à Madagascar ? :</td> 
+								<td><input type="radio" name="q1" value="Oui" /> Oui</td>
+								<td><input type="radio" name="q1" value="Non" /> Non</td>
+							</tr>
+						</table>
 
 
 
-				<!-- Quelles langues parlez vous ? -->
-				<table class="q6">
-					<tr>
-						<td>Langue n°1</td>
-						<td><input type="text" name="langue1" size="10" maxlength="30" /> </td>
-						<td><select name="niveau1" size="1">
-									<option value="Billingue" selected>Billingue</option>
-									<option value="Courant">Courant</option>
-									<option value="Intermédiaire">Intermédiaire</option>
-									<option value="Débutant">Débutant</option>
-							</select></td>
+						<!-- Envisagez-vous de partir à Mada ? Cb de temps ?-->
+						<table class="q2">
+							<tr>
+								<td>Envisagez-vous de partir à Madagascar ? :</td> 
+								<td><input type="radio" name="q2" value="Oui" /> Oui</td>
+								<td><input type="radio" name="q2" value="Non" /> Non</td>
+							</tr>
+							<tr>
+								<td>Si oui, combien de temps ? :</td>
+								<td><select name="temps de voyage" size="1">
+											<option value="rien" selected>(aucun)</option>
+											<option value="< 1semaine">Moins d'1 semaine</option>
+											<option value="1semaine - 1mois">Entre 1 semaine et 1 mois</option>
+											<option value="1mois - 3mois">Entre 1 mois et 3 mois</option>
+											<option value="> 3mois">Plus de 3 mois</option>
+									</select></td>
+						</table>
 
-					</tr>
-					<tr>
-						<td>Langue n°2</td>
-						<td><input type="text" name="langue2" size="10" maxlength="30" /> </td>
-						<td><select name="niveau2" size="1">
-									<option value="Billingue" selected>Billingue</option>
-									<option value="Courant">Courant</option>
-									<option value="Intermédiaire">Intermédiaire</option>
-									<option value="Débutant">Débutant</option>
-							</select></td>
 
-					</tr>
-					<tr>
-						<td>Langue n°3</td>
-						<td><input type="text" name="langue3" size="10" maxlength="30" /> </td>
-						<td><select name="niveau3" size="1">
-									<option value="Billingue" selected>Billingue</option>
-									<option value="Courant">Courant</option>
-									<option value="Intermédiaire">Intermédiaire</option>
-									<option value="Débutant">Débutant</option>
-							</select></td>
-
-					</tr>
-					<tr>
-						<td>Langue n°4</td>
-						<td><input type="text" name="langue4" size="10" maxlength="30" /> </td>
-						<td><select name="niveau4" size="1">
-									<option value="Billingue" selected>Billingue</option>
-									<option value="Courant">Courant</option>
-									<option value="Intermédiaire">Intermédiaire</option>
-									<option value="Débutant">Débutant</option>
-							</select></td>
-
-					</tr>
-
-				</table>
+						<!-- Etes-vous deja partis en afrique ? Dans quel pays ?-->
+						<table class="q3">
+							<tr>
+								<td>Etes-vous déjà parti en Afrique ? :</td> 
+								<td><input type="radio" name="q3" value="Oui" /> Oui</td>
+								<td><input type="radio" name="q3" value="Non" /> Non</td>
+							</tr>
+							<tr>	
+								<td>Si oui, dans quelle région ? :</td>
+							    <td>
+								    <select multiple name="région d'afrique" size="3">
+								    	<option value="rien" selected>(aucun)</option>
+									    <option value="nord">Afrique du Nord</option>
+									    <option value="ouest">Afrique de l'Ouest</option>
+									    <option value="centrale">Afrique Centrale</option>
+									    <option value="est">Afrique de l'Est</option>
+									    <option value="australe">Afrique Australe</option>
+								    </select>
+							    </td>
+					    </table>
 
 
 
 
-				<!-- Ce site vous a-t-il paru intéressant ? note sur 10 ? -->
-				<table class="q7">
-					<tr>
-						<td>Ce site vous a-t-il parut intéressant ? :</td> 
-						<td><input type="radio" name="q7" value="Oui" /> Oui</td>
-						<td><input type="radio" name="q7" value="Non" /> Non</td>
-					</tr>
-				</table>
-				Veuillez donner une note sur 10.
-				<select name="Note" size="1">
-									<option value="10" selected>10</option>
-									<option value="9">9</option>
-							</select>
+						<!-- Qu'est- qui vous intéresse dans Mada ? -->
+						<table class="q4">
+							<tr><td>Qu'est-ce qui vous intéresse dans Madagascar ? :</td></tr>
+							<tr><td><textarea rows="5" cols="50" name="interet dans mada" placeholder="Ecrivez un truc sympa ;)"></textarea></td></tr>
+						</table>
 
 
-				<!-- Avez-vous des remarques sur ce site ? -->
-				<table class="q8">
-					<tr><td>Avez-vous des remarques sur ce site ? :</td></tr>
-					<tr><td><textarea rows="5" cols="80" name="message" placeholder="Ecrivez-ici"></textarea></td></tr>
-				</table>
+						<!-- Cochez les villes dont vous avez dejà entendu parler ? -->
+						<table class="q5">
+							<tr><td>Cochez les villes dont vous avez déjà entendu parler :</td></tr>
+							<tr>	
+								<td><input type="checkbox" name="antsirabe" /> Antsirabe</td>
+								<td><input type="checkbox" name="tamatave" /> Tamatave</td>
+								<td><input type="checkbox" name="antananarivo" /> Antananarivo</td>
+								<td><input type="checkbox" name="nosy be" /> Nosy Be</td>
+						</table>
 
 
-				<!-- Envoi des réponses -->
-				<table class="envoi">
-					<td><input type="button" name="bouton"  value="Envoyer vos réponses" onclick="alert('Bonjour')" /></td>
-					<td><input type="button" name="bouton"  value="Effacer vos réponses" onclick="alert('Bonjour')" /></td>
-				</table>
+						<!-- Avez-vous aimé le film madagascar -->
+						<table class="q6">
+							<tr>
+								<td>Avez-vous aimé le film Madagascar ? :</td> 
+								<td><input type="radio" name="q6" value="beaucoup" /> Beaucoup !!</td>
+								<td><input type="radio" name="q6" value="ca va" /> Ca va.</td>
+								<td><input type="radio" name="q6" value="bof" /> Bof...</td>
+								<td><input type="radio" name="q6" value="pas du tout" /> Pas du tout !</td>
+							</tr>
+						</table>
 
 
+
+						<!-- Quelles langues parlez vous ? -->
+						<table class="q6">
+							<tr>
+								<td>Langue n°1</td>
+								<td><input type="text" name="langue1" size="10" maxlength="30" /> </td>
+								<td><select name="niveau1" size="1">
+											<option value="Billingue" selected>Billingue</option>
+											<option value="Courant">Courant</option>
+											<option value="Intermédiaire">Intermédiaire</option>
+											<option value="Débutant">Débutant</option>
+									</select></td>
+
+							</tr>
+							<tr>
+								<td>Langue n°2</td>
+								<td><input type="text" name="langue2" size="10" maxlength="30" /> </td>
+								<td><select name="niveau2" size="1">
+											<option value="Billingue" selected>Billingue</option>
+											<option value="Courant">Courant</option>
+											<option value="Intermédiaire">Intermédiaire</option>
+											<option value="Débutant">Débutant</option>
+									</select></td>
+
+							</tr>
+							<tr>
+								<td>Langue n°3</td>
+								<td><input type="text" name="langue3" size="10" maxlength="30" /> </td>
+								<td><select name="niveau3" size="1">
+											<option value="Billingue" selected>Billingue</option>
+											<option value="Courant">Courant</option>
+											<option value="Intermédiaire">Intermédiaire</option>
+											<option value="Débutant">Débutant</option>
+									</select></td>
+
+							</tr>
+							<tr>
+								<td>Langue n°4</td>
+								<td><input type="text" name="langue4" size="10" maxlength="30" /> </td>
+								<td><select name="niveau4" size="1">
+											<option value="Billingue" selected>Billingue</option>
+											<option value="Courant">Courant</option>
+											<option value="Intermédiaire">Intermédiaire</option>
+											<option value="Débutant">Débutant</option>
+									</select></td>
+
+							</tr>
+
+						</table>
+
+
+
+
+						<!-- Ce site vous a-t-il paru intéressant ? note sur 10 ? -->
+						<table class="q7">
+							<tr>
+								<td>Ce site vous a-t-il parut intéressant ? :</td> 
+								<td><input type="radio" name="q7" value="Oui" /> Oui</td>
+								<td><input type="radio" name="q7" value="Non" /> Non</td>
+							</tr>
+							<tr>
+								<td>Veuillez donner une note sur 10.</td>
+								<td>
+									<select name="Note" size="1">
+										<option value="10" selected>10</option>
+										<option value="9">9</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						
+						
+
+
+						<!-- Avez-vous des remarques sur ce site ? -->
+						<table class="q8">
+							<tr><td>Avez-vous des remarques sur ce site ? :</td></tr>
+							<tr><td><textarea rows="5" cols="80" name="message" placeholder="Ecrivez-ici"></textarea></td></tr>
+						</table>
+
+
+
+
+
+						<table width="560" border="0">
+							<tr bordercolor="#f3f3f3">
+								<td>
+									<div align="center">
+										<input onClick=fonct_form(this.form) type=button value="Envoyer" name="button1">
+									</div>
+								</td>
+								<td>
+									<div align="center">
+										<input onClick=fonct_dial(this.form) type=reset value="R&eacute;tablir" name="button2">
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</form> 
 			</article>
 		</section>
+
+
+
+
+		<!-- Back To Top -->
+		<div class="to-top">
+			<a href="#top">
+				<img src="./images/to-top1.png" alt="back to top button" title="Back to top">
+			</a>
+		</div>
 
 
 		<!-- FOOTER -->

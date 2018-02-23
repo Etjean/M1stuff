@@ -4,7 +4,7 @@
 *{
 	margin : 0px; 
 	padding : 0px; 
-	font-size: 100%;	
+	font-size: 100%;
 }
 
 em{font-style:normal;}
@@ -34,7 +34,6 @@ body{
 
 /* ---------------------- NAV -------------------------*/
 nav{
-	z-index: 4;
 	margin-top: 20px;
 }
 
@@ -54,11 +53,12 @@ ul#menu li a{
 	display: inline-block;
 	padding : 10px; 
 	text-decoration: none;		/*retire le soulignement*/
+	transition: 0.05s;
 }
 
 ul#menu li a:hover{
-	-moz-transform:scale(1.7);	/*agrandie les liens*/
-    color:#DAA520;				/*met en jaune*/
+	-moz-transform:scale(1.3);	/*agrandie les liens*/
+    color:rgb(255, 70, 50);		/*met en orange*/
 }
 
 /*------------------------ MAIN --------------------------*/
@@ -68,7 +68,7 @@ main {
 
 
 article{
- 	background-color: rgba(0, 0, 0, 0.6);
+ 	background-color: rgba(0, 0, 0, 0.6);	/*article en noir transparent*/
  	padding: 30px 40px;
  	margin : 40px auto;			/*centre l'article*/
  	width: 50%;
@@ -87,7 +87,6 @@ article p{
 
 /*--------------------- FOOTER ------------------------------*/
 footer{
- 	color: #F0FFFF; 
  	text-align: center;
  }
 
