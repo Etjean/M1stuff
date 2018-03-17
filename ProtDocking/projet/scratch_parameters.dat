@@ -1,0 +1,19 @@
+
+Global Scan
+
+Command line controllable values
+Static molecule                    :: 1K9Vatom.pdb
+Mobile molecule                    :: 1THFatom.pdb
+Output file name                   :: 1GPW.ftdock
+
+Global grid size                   ::    102      (user defined calculated)
+Global search angle step           ::     12      (user defined)
+Global surface thickness           ::      1.30   (user defined)
+Global internal deterrent value    ::    -15.00   (user defined)
+Electrostatics                     ::    off      (user defined)
+Global keep per rotation           ::      3      (user defined)
+
+Calculated values
+Global rotations                   ::   9240
+Global total span (angstroms)      ::    121.917
+Global grid cell span (angstroms)  ::      1.195

@@ -1,0 +1,238 @@
+
+SCWRL 3.0
+Copyright (c) 2003 Adrian A. Canutescu and Roland L. Dunbrack Jr.		   
+Fox Chase Cancer Center
+Philadelphia, PA, USA
+
+TotalNoOfResidues   200
+
+
+NoOfResWithOnlyOneLibraryRotamer    31
+
+Checking for disulfide bonds
+::::::::::::::::::::::::::::
+
+
+NoOfInteractionsMayClash   1547
+LogCombinationsLibraryRotamers 106.49
+
+Entering Goldstein's DEE
+::::::::::::::::::::::::
+
+NoOfResiduesEnteringDEE    176
+NoOfRotamersEnteringDEE   1203
+
+Round   1
+.........
+NoOfResiduesReducedToOneRot    118
+NoOfRotamersEliminatedByDEE    910
+
+Round   2
+.........
+NoOfResiduesReducedToOneRot     41
+NoOfRotamersEliminatedByDEE     68
+
+Round   3
+.........
+NoOfResiduesReducedToOneRot     29
+NoOfRotamersEliminatedByDEE      2
+
+Log10CombinationsAfterDEE   9.43
+
+NoOfClusters    5
+NoOfResiduesInClusters   22
+
+Cluster   1 NoOfNodes= 12 Log10Combinations=  5.17
+==================================================
+  0 - HIS F   53   2
+  1 - GLU F   96   4
+  2 - TYR F  143   2
+  3 - GLN F   88   4
+  4 - HIS F  141   2
+  5 - ARG F  144   6
+  6 - LEU F  113   2
+  7 - GLU F  161   6
+  8 - ARG F  114   2
+  9 - PHE F  163   2
+ 10 - THR F  156   2
+ 11 - LYS F  112   2
+
+>>Biconn Comp   0 - NoOfNodes   2
+ ARG F  114   2
+ GLU F  161   6
+
+>>Biconn Comp   1 - NoOfNodes   2
+ THR F  156   2
+ PHE F  163   2
+
+>>Biconn Comp   2 - NoOfNodes   4
+ LEU F  113   2
+ ARG F  144   6
+ GLU F  161   6
+ PHE F  163   2
+
+>>Biconn Comp   3 - NoOfNodes   2
+ HIS F  141   2
+ ARG F  144   6
+
+>>Biconn Comp   4 - NoOfNodes   3
+ GLN F   88   4
+ HIS F  141   2
+ TYR F  143   2
+
+>>Biconn Comp   5 - NoOfNodes   2
+ LYS F  112   2
+ TYR F  143   2
+
+>>Biconn Comp   6 - NoOfNodes   2
+ GLU F   96   4
+ TYR F  143   2
+
+>>Biconn Comp   7 - NoOfNodes   2
+ HIS F   53   2
+ GLU F   96   4
+
+NoOfBiconnComp    8
+BiconnComp   0 NoOfArtPts   1
+BiconnComp   1 NoOfArtPts   1
+BiconnComp   2 NoOfArtPts   3
+BiconnComp   3 NoOfArtPts   2
+BiconnComp   4 NoOfArtPts   2
+BiconnComp   5 NoOfArtPts   1
+BiconnComp   6 NoOfArtPts   2
+BiconnComp   7 NoOfArtPts   1
+
+Solving Biconn Comp   0
+-----------------------
+Log10Combinations     1.08
+Combinations         12
+SearchFullTree       12
+
+Solving Biconn Comp   1
+-----------------------
+Log10Combinations     0.60
+Combinations          4
+SearchFullTree        4
+
+Solving Biconn Comp   2
+-----------------------
+Log10Combinations     2.16
+Combinations        144
+SearchFullTree       72
+
+Solving Biconn Comp   3
+-----------------------
+Log10Combinations     1.08
+Combinations         12
+SearchFullTree       12
+
+Solving Biconn Comp   4
+-----------------------
+Log10Combinations     1.20
+Combinations         16
+SearchFullTree        8
+
+Solving Biconn Comp   5
+-----------------------
+Log10Combinations     0.60
+Combinations          4
+SearchFullTree        4
+
+Solving Biconn Comp   6
+-----------------------
+Log10Combinations     0.90
+Combinations          8
+SearchFullTree        8
+
+Solving Biconn Comp   7
+-----------------------
+Log10Combinations     0.90
+Combinations          8
+SearchFullTree        4
+
+Cluster   2 NoOfNodes=  2 Log10Combinations=  0.60
+==================================================
+  0 - ARG F   62   2
+  1 - ILE F   67   2
+
+>>Biconn Comp   0 - NoOfNodes   2
+ ARG F   62   2
+ ILE F   67   2
+
+NoOfBiconnComp    1
+BiconnComp   0 NoOfArtPts   0
+
+Solving Biconn Comp   0
+-----------------------
+Log10Combinations     0.60
+Combinations          4
+SearchFullTree        4
+
+Cluster   3 NoOfNodes=  4 Log10Combinations=  2.46
+==================================================
+  0 - TYR F   79   2
+  1 - ARG F  171   8
+  2 - ARG F  200   9
+  3 - LEU F  173   2
+
+>>Biconn Comp   0 - NoOfNodes   3
+ TYR F   79   2
+ ARG F  171   8
+ ARG F  200   9
+
+>>Biconn Comp   1 - NoOfNodes   2
+ TYR F   79   2
+ LEU F  173   2
+
+NoOfBiconnComp    2
+BiconnComp   0 NoOfArtPts   1
+BiconnComp   1 NoOfArtPts   1
+
+Solving Biconn Comp   0
+-----------------------
+Log10Combinations     2.16
+Combinations        144
+SearchFullTree       27
+
+Solving Biconn Comp   1
+-----------------------
+Log10Combinations     0.60
+Combinations          4
+SearchFullTree        2
+
+Cluster   4 NoOfNodes=  2 Log10Combinations=  0.60
+==================================================
+  0 - CYS F   84   2
+  1 - HIS F  178   2
+
+>>Biconn Comp   0 - NoOfNodes   2
+ CYS F   84   2
+ HIS F  178   2
+
+NoOfBiconnComp    1
+BiconnComp   0 NoOfArtPts   0
+
+Solving Biconn Comp   0
+-----------------------
+Log10Combinations     0.60
+Combinations          4
+SearchFullTree        4
+
+Cluster   5 NoOfNodes=  2 Log10Combinations=  0.60
+==================================================
+  0 - LYS F  184   2
+  1 - LYS F  188   2
+
+>>Biconn Comp   0 - NoOfNodes   2
+ LYS F  184   2
+ LYS F  188   2
+
+NoOfBiconnComp    1
+BiconnComp   0 NoOfArtPts   0
+
+Solving Biconn Comp   0
+-----------------------
+Log10Combinations     0.60
+Combinations          4
+SearchFullTree        2
+

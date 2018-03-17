@@ -1,0 +1,46 @@
+l_commands=no
+l_info=no
+l_warn=no
+
+
+# you can run this script from your linux shell as:
+#       $MOLBROWSERPROHOME/icmbrowserpro calcRMSD.icm > outputfile.log
+
+
+
+# you have to define the following variables to avoid defining later again all these names
+s_basename = "1PPE_"
+s_ref = "1PPE_ref.pdb"
+s_recmol = "1:1"
+s_ligmol = "2:2"
+
+
+# this is the list of complex numbers you want to analyze
+# (it assumes that the complex names are 1PPE_1.pdb, 1PPE_2.pdb...)
+I_conf = {2,3,4,6,8,9,13,18,20,21}
+
+
+read pdb s_ref
+
+
+R_RMSD = Rarray(Nof(I_conf))
+
+
+
+for i=1,Nof(I_conf)
+
+  s_nameconf = "conf"+String(i)
+  read pdb s_basename+String(I_conf[i])+".pdb"
+  rename a_ s_nameconf
+
+  superimpose a_1.$s_recmol//ca a_$s_nameconf.$s_recmol//ca align
+
+  R_RMSD [i] = Srmsd(a_1.$s_ligmol//ca a_$s_nameconf.$s_ligmol//ca align) 
+
+endfor
+
+group table "RMSDTAB" I_conf R_RMSD 
+
+show table
+
+q

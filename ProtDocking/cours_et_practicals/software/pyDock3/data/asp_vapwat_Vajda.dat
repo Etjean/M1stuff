@@ -1,0 +1,16 @@
+octanol to water parameters for ten atom types
+(Vajda et al. 1994 Biochemistry 33, 13977-13988; 
+corrected here for the atom types different from the original ones)
+
+       Atom-Type          energy(kcal/mol(A2))   radius
+   ------------------    --------------------    ------
+ASP  1   C aliphatic             0.03053          1.900 
+ASP  2   C aromatic              0.03053          1.900 
+ASP  3   N uncharged            -0.00085          1.700 
+ASP  4   N in Lys+              -0.03878          1.700 
+ASP  5   N in Arg+              -0.01981          1.700  # (n,n+)/2
+ASP  6   O hydroxyl             -0.00085          1.400 
+ASP  7   O carbonyl             -0.00085          1.400 
+ASP  8   O in Glu,Asp           -0.00792          1.400  # (o,o-)/2
+ASP  9   S in SH                 0.00995          1.800 
+ASP 10   S in Met or S-S         0.00995          1.800 

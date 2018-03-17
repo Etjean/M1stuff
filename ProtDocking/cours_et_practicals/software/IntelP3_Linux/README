@@ -1,0 +1,39 @@
+				ZDOCK 2.1
+
+This is the README file for release 2.1 of ZDOCK program. ZDOCK is an
+initial stage protein-protein docking program, developed by Rong Chen 
+and Zhiping Weng in 2002. It evaluates Pairwise shape complementarity, 
+using Fast Fourier Transform algorithm. Detailed description can be 
+found in zdock2.1.pdf. Please reference "Chen R. & Weng Z., A Novel 
+Shape Complementarirty Scoring Function for Protein-Protein Docking, 
+Proteins 2003;51:397-408.
+
+This distribution includes an executable file (zdock) of the ZDOCK program,
+PDB processing file (mark_sur, uniCHARMM, block.pl), and auxiliary files
+(create.pl, create_lig) to create predicted complex structures from a ZDOCK
+output. All files have been compiled on a GenuineIntel Pentium III processor
+(http://www.intel.com/design/PentiumIII/prodbref/index.htm) with LINUX
+operation system. 
+
+Example:
+mark_sur PDB new_PDB
+zdock -R receptor.pdb -L ligand.pdb -o zdock.out
+create.pl zdock.out
+
+Attention: receptor.pdb, ligand.pdb and create_lig must be in your current
+directory when you try to create all predicted structures using create.pl.
+
+Standard PDB format files must be processed by mark_sur before used as the
+input of ZDOCK. Formatted PDB files of docking benchmark can be downloaded at
+http://zlab.bu.edu/~rong/dock/download.html. If you know that some atoms
+are not in the binding site, you can block them by changing their ACE type
+(column 55-56) to 19. This blocking procedure can improve docking
+performance significantly. A blocking script block.pl is included, type
+"block.pl" for usage information.
+
+More options can be found by typing "zdock".
+
+The computing time depends on the sizes of input proteins.  On average, it 
+takes 1 hours with single processor with the default rotational sampling 
+density of 15 degrees (without -D flag). The average computation time will
+be 15 hours with 6 degree when -D flag is used.

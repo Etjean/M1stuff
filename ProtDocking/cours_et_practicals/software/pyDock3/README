@@ -1,0 +1,66 @@
+######################################################################
+#                                                                    #
+#                         PyDock3 - README                           #
+#                                                                    #
+######################################################################
+
+
+1. Introduction
+----------------------------------------------------------------------
+PyDock is a set of tools for protein-protein docking. First version was 
+written by Juan Fernandez-Recio in 2004.
+
+2. Installation
+----------------------------------------------------------------------
+
+2.1. Setup
+pyDock directory will look as below:
+  
+  |--data  	 -> data required by pyDock
+  |--etc
+  |--pydock.conf -> configuration file
+  |--LICENSE     -> a copy of the license file
+  |--README      -> this file
+  |--pyDock3 	 -> pyDock binary
+
+You can add pyDock3 to you path, e.g.: 
+  In .bashrc, add the line:
+  export PATH=$PATH:/path/to/pyDock3/
+
+You will need extra software in order to properly execute all pyDock modules:
+
+2.2. FTDock
+pyDock can use FTDock program to generate docking poses (Note that FTDock is not
+distributed in this package, you can find it at: http://www.sbg.bio.ic.ac.uk/docking/ftdock.html)
+In pyDock configuration file (etc/pydock.conf) you can specify the path for
+FTDock and in [ftdock] section parameters used.
+
+2.3. ZDock
+pyDock can use ZDock as well to generate docking poses. You will be able to download
+ZDock at http://zlab.bu.edu/zdock.
+Change pydock.conf file according to your installation path.
+
+2.4 SCWRL
+pyDock makes use of SCWRL software to rebuild missing side chains. You can find this software 
+here: http://dunbrack.fccc.edu/scwrl4/
+
+
+3. Tutorial and official documentation
+----------------------------------------------------------------------
+Official documentation and tutorials can be found online at:
+
+http://life.bsc.es/pid/pydock/doc/
+
+
+4. Problems, doubts and bugs
+----------------------------------------------------------------------
+Please, feel free to contact us at pydock@mmb.pcb.ub.es
+
+
+5. Copyright
+----------------------------------------------------------------------
+Protein interactions and docking group - Life Sciences Department
+Barcelona Supercomputing Center
+
+http://life.bsc.es/pid/pydock/
+http://www.bsc.es

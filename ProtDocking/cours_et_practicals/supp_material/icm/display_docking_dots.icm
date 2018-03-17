@@ -1,0 +1,26 @@
+# example to show ligands in docking solutions as dots
+
+
+read pdb "firedock2.out_20.ref.pdb"
+read pdb "firedock2.out_30.ref.pdb"
+
+display a_1.1//ca,c,n grey
+display a_1.2//ca,c,n red
+
+display a_2.1//ca,c,n grey
+display a_2.2//ca,c,n green
+
+
+dsXyz Matrix(Mean(Xyz(a_1.2//*)))
+rename a_dots. "dots20"
+ds a_dots20. cpk red
+
+dsXyz Matrix(Mean(Xyz(a_2.2//*)))
+rename a_dots. "dots30"
+ds a_dots30. cpk green
+
+
+undisplay a_1.2
+undisplay a_2.2
+
+

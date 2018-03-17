@@ -1,0 +1,13 @@
+
+This version of PatchDock is from 2011, and would need the following commands before running PatchDock:
+
+$PATCHDOCK/buildMS.pl ovine.pdb
+$PATCHDOCK/buildMS.pl antibody.pdb
+
+
+
+A newer version of PatchDock (2014) is available at ../sofware/install/
+
+
+
+

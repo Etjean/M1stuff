@@ -1,0 +1,40 @@
+After Refinement: 
+########### Program Parameters ##################
+ACEWeight	(Str)	1.6
+HBWeight	(Str)	1.32
+aliphWeight	(Str)	0.5
+attrElWeight	(Str)	0.07
+attrVdWWeight	(Str)	1.0
+catpiWeight	(Str)	0.8
+confProbWeight	(Str)	0.0
+energiesOutFileName	(Str)	1ACB.firedock.out
+extraRotamers	(Int)	0
+flexibleLigandChains	(Str)	
+flexibleReceptorChains	(Str)	
+insidenessWeight	(Str)	1.55
+l_attrElWeight	(Str)	0.0
+l_repElWeight	(Str)	0.3
+ligandFixedResiduesFile	(Str)	
+ligandFlexibleResiduesFile	(Str)	
+ligandOnlyClashesMovable	(Int)	1
+ligandPDBFileName	(Str)	1ACB_l.pdb.CHB.pdb
+lpMethod	(Int)	2
+onlyEnergyCalculation	(Int)	0
+pdbConventionFile	(Str)	
+pipiWeight	(Str)	1.0
+printRefinedComplexes	(Int)	0
+protLib	(Str)	/specific/a/netapp2/vol/private/mol/bluvsh/FireDock123/lib/chem.lib
+radiiScaling	(Str)	0.8
+receptorFixedResiduesFile	(Str)	
+receptorFlexibleResiduesFile	(Str)	
+receptorOnlyClashesMovable	(Int)	1
+receptorPDBFileName	(Str)	1ACB_r.pdb.CHB.pdb
+repElWeight	(Str)	0.12
+repVdWWeight	(Str)	0.95
+rigidBodyMinimizationCycles	(Int)	50
+rotamerLibFile	(Str)	/specific/a/netapp2/vol/private/mol/bluvsh/FireDock123/lib/bbdep02.May.sortlib
+templateLigandPDBFileName	(Str)	
+templateReceptorPDBFileName	(Str)	
+transFileName	(Str)	1ACB.zdock.trans
+#################################################
+    Sol # |    Lrmsd |    Irmsd | st_Lrmsd | st_Irmsd |     glob |     aVdW |     rVdW |      ACE |   inside |    aElec |    rElec |   laElec |   lrElec |       hb |      piS |   catpiS |    aliph |     prob |

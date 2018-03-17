@@ -1,0 +1,166 @@
+Readme file for FireDock Program.
+
+##########################################################################
+# Program Input Preparation
+##########################################################################
+
+1. Create directory for you complex and copy there input receptor and ligand PDB files (for example, 1ACB_r.pdb 1ACB_l.pdb):
+	
+2. Add hydrogens to your input files
+	addHydrogens.pl 1ACB_r.pdb 1ACB_l.pdb
+
+3. If you start from the output file of PatchDock (1ACB.patchdock.out) run:
+	ZDOCKOut2Trans.pl 1ACB.zdock.out > ! 1ACB.zdock.trans
+   If you start from the output file of ZDOCK 2.3 (1ACB.zdock.out) run:
+        PatchDockOut2Trans.pl 1ACB.patchdock.out > ! 1ACB.patchdock.trans
+   (You can create the transformations file by yourself. See an example in the "examples" directory.)
+
+4. Additional input may include "fixed residues", which will be frozen during the optimization. In addition, we can explicitly specify which residues will be flexible. (The residue can be flexible if its chain was specified in flexibleReceptorChains or if flexibleReceptorChains is empty).
+   The format of the files is as follows: each line includes
+   residue number and chain id for one residue. No empty lines are allowed.
+   For example:
+	  347 A
+	  348 A
+   The names of these files are specified in parameter file, simply add or uncomment the following lines:   
+	# receptorFixedResiduesFile rec_fixed_residues.txt
+	# ligandFixedResiduesFile lig_fixed_residues.txt
+	# receptorFlexibleResiduesFile rec_flex_residues.txt
+	# ligandFlexibleResiduesFile lig_flex_residues.txt
+
+			
+##########################################################################
+# Building the parameters file
+##########################################################################
+Create parameter file by running the script: buildFireDockParams.pl.
+The script receives as an input following parameters:
+
+buildFireDockParams.pl <receptorPDB> <ligandPDB> <(Un)bound> <(Un)bound> <complexType> <trans> <outFile> <RISCO/FISCO> <numRBOCycles> <radiiScale> <output refined PDBs> <paramsFile>
+
+(Un)bound        {B,U}           - B if the receptor is bound, U if the receptor is unbound.
+complexType      {EI,AA,Default} - EI for enzyme-inhibitor complexes, AA for antibody-antigen and Default for others.
+trans            fileName        - Transformations of the input ligand.
+outFile          fileName        - Output file for scoring.
+RISCO/FISCO      {0,1}           - 0 - Restricted Side-Chain Optimization, 1 - Full Side-Chain Optimization.
+numRBOCycles     {unsigned int}  - Number of Monte Carlo cycles in rigid-body minimization.
+radiiScale       {0,1}           - Radii Scaling for soft rigid-body optimization and scoring.
+output complexes {0,1}           - Output refined PDBs.
+paramsFile       fileName        - Name of the parameters file.
+
+The script will create parameter file named <paramsFile>. All the parameters
+are explained within the parameter file. In addition, FireDock_score_params.pdf summarizes the FireDock scoring parameters.
+
+You can also change the parameters file manually. 
+
+On default, FireDock uses GLPK package for solving the LP problem of the side-chain optimization.
+If CPLEX is installed on your computer you can use it by adding the following line to the parameters file:
+"lpMethod 1"
+
+##########################################################################
+# Running the program
+##########################################################################
+
+runFireDock.pl <paramsFile>
+
+##########################################################################
+# Examples
+##########################################################################
+
+### Example for unbound enzyme-inhibitor case:
+
+1. preparePDBs.pl 1ACB_r.pdb 1ACB_l.pdb
+
+2. ZDOCKOut2Trans.pl 1ACB.zdock.out > ! 1ACB.zdock.trans
+
+3. Here we run the "coarse refinement" (RISCO, 50 cycles of RBO and radiiScale=0.8):
+	buildFireDockParams.pl 1ACB_r.pdb.CHB.pdb 1ACB_l.pdb.CHB.pdb U U EI 1ACB.zdock.trans 1ACB.firedock.out 0 50 0.8 0 FireDock_params.txt
+	nice +20 runFireDock.pl FireDock_params.txt   >& 1ACB.firedock.out.log &
+	or 	
+	nice +20 runFireDock.pl FireDock_params.txt   >& 1ACB.firedock.out.log &
+
+4. Afterwards we can choose, for example, 25 top-ranked candidates and run the "full refinement" stage (FISCO, 50 cycles of RBO and radiiScale=0.85):
+	buildFireDockParams.pl 1ACB_r.pdb.CHB.pdb 1ACB_l.pdb.CHB.pdb U U EI trans_top25.txt 1ACB.firedock.out.25 1 50 0.85 0 FireDock_params.txt
+        runFireDock.pl FireDock_params.txt 
+
+5. Finally we choose the final hypotheses and run the full side-chain optimization stage again (FISCO and radiiScale=0.85, without RBO). In addition, we print the refined complexes.
+	buildFireDockParams.pl 1ACB_r.pdb.CHB.pdb 1ACB_l.pdb.CHB.pdb U U EI trans_top10.txt 1ACB.firedock.out.10 1 0 0.85 1 FireDock_params.txt
+        runFireDock.pl FireDock_params.txt 
+
+### Example for semi-unbound antibody-antigen. 
+
+1. preparePDBs.pl 2VIR_r.pdb 2VIR_l.pdb
+
+2. PatchDockOut2Trans.pl 2VIR.patchdock.out > ! 2VIR.patchdock.trans
+
+3. The "coarse refinement" stage (RISCO, 50 cycles of RBO and radiiScale=0.8). PatchDock swaps between the antibody and antigen. So, we should refer to them as PatchDock did. (ZDOCK 2.3 does not swap between the antibody and antigen). In the following example, the antibody is bound.
+	buildFireDockParams.pl 2VIR_l.pdb.CHB.pdb 2VIR_r.pdb.CHB.pdb U B AA 2VIR.patchdock.trans 2VIR.firedock.out 0 50 0.8 0 FireDock_params.txt
+	nice +20 runFireDock.pl FireDock_params.txt   >& 2VIR.firedock.out.log &
+
+4. 	buildFireDockParams.pl 2VIR_l.pdb.CHB.pdb 2VIR_r.pdb.CHB.pdb U B AA trans_top25.txt 2VIR.firedock.out.25 1 50 0.8 0 FireDock_params.txt
+   	runFireDock.pl FireDock_params.txt 
+
+5. 	buildFireDockParams.pl 2VIR_l.pdb.CHB.pdb 2VIR_r.pdb.CHB.pdb U B AA trans_top10.txt 2VIR.firedock.out.10 1 0 0.85 1 FireDock_params.txt
+   	runFireDock.pl FireDock_params.txt 
+
+##########################################################################
+# Program Output
+##########################################################################
+
+FireDock generates the following output files:
+1. 1ACB.firedock.out.unref - information about the candidates before refinement.
+2. 1ACB.firedock.out.ref   - information about the candidates after refinement.
+3. The refined complexes (If you have specified in parameters file to print it.)
+
+
+In order to obtain ranking by the global score, please run:
+sort -nk6 -t"|" 1ACB_output.ref > 1ACB_output.ref.s
+
+The output file includes all program parameters and information about each candidate.
+Each candidate is represented by a line.
+The format is as follows:
+
+Sol # |    Lrmsd |    Irmsd | st_Lrmsd | st_Irmsd |     glob |     aVdW |     rVdW |      ACE |   inside |    aElec | ...  
+    1 |    17.72 |     7.97 |    17.87 |     8.02 |   -34.80 |   -45.34 |    22.69 |   -11.42 |    12.23 |     0.00 | ...   
+
+Lrmsd     - ligand rmsd of the final position, after the rigid-body optimization. 
+Irmsd     - interface rmsd of the final position, after the rigid-body optimization. 
+st_Lrmsd  - initial ligand rmsd.
+st_Irmsd  - initial ligand rmsd.
+glob      - global score of the candidate, which is linear combination of the terms described bellow. To rank the candidates, you should sort the rows by this column in ascending order.
+aVdW      - attractive van der Waals
+rVdW      - repulsive van der Waals
+ACE       - Atomic Contact Energy
+inside    - "Insideness" measure, which reflects the concavity of the interface.
+aElec     - short-range attractive electrostatic term
+rElec     - short-range repulsive electrostatic term
+laElec    - long-range attractive electrostatic term
+lrElec    - long-range repulsive electrostatic term
+hb        - hydrogen and disulfide bonding 
+piS	  - pi-stacking interactions
+catpiS	  - cation-pi interactions
+aliph	  - aliphatic interactions
+prob      - rotamer probability
+The optimized transformation is given at the end of the line
+(3 rotational and 3 translational parameters)
+
+##########################################################################
+# References
+##########################################################################
+
+Before you run FireDock you should run preparePDBs.pl script, which runs two programs:
+
+1. REDUCE program, which adds missing hydrogens. 
+J. M. Word, S. C. Lovell, J. S. Richardson, and D. C. Richardson. Asparagine and glutamine: using hydrogen atom contacts in the choice of side-chain amide orientation. J. Mol. Biol., 285(4):1735?1747, 1999. (http://kinemage.biochem.duke.edu/software/reduce.php).
+
+2. PDBPreliminaries program, which normalizes atoms' names and adds missing atoms. It uses the BALL library. 
+O. Kohlbacher and H. P Lenhof. Ball-rapid software prototyping in computational molecular biology. Bioinformatics, 16(9):815-824, 2000.(http://www.bioinf.uni-sb.de/OK/BALL/).
+
+We use the Integer Linear Programming (ILP) formulation and scripts proposed by Kingsford et al.
+C. L. Kingsford, B. Chazelle, M. Singh. Solving and analyzing side-chain positioning problems using linear and integer programming. Bioinformatics 2005 21(7):1028-1039. (http://compbio.cs.princeton.edu/scplp/)
+
+One of the following LP/ILP solvers can be used:
+1. GLPK (www.gnu.org/software/glpk/)
+2. ILOG CPLEX. ILOG CPLEX 7.1, 2000. (http://www.ilog.com/products/cplex/).
+
+
+
+

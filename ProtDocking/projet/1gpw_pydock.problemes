@@ -1,0 +1,364 @@
+
+SCWRL 3.0
+Copyright (c) 2003 Adrian A. Canutescu and Roland L. Dunbrack Jr.		   
+Fox Chase Cancer Center
+Philadelphia, PA, USA
+
+
+Usage: scwrl3 -i <input_file> -o <output_file>
+Options:
+-u disables the disulfide bonds identification
+-s <sequence_file> loads a sequence file
+-f <frame_file> loads a frame file
+-d prints dihedral angles to <output_file.dihed>
+
+PyDock3
+  A set of tools for protein-protein docking
+  Version 3.2.3
+
+[pyDock3] INFO: Setting up docking files...
+[pyDock3] INFO: [ Receptor ]
+[Molsetup] INFO: Reading PDB...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Removing alternative positions...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Removing original hydrogens...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Removing OXT atoms...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Reading AMBER parameters...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Checking residue and atom names...
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Done.
+[Molsetup] WARNING: Residue F.ARG.322 has missing side chain atoms: ['CG', 'NE', 'CD', 'CZ', 'NH1', 'NH2']
+[Molsetup] WARNING: Residue F.GLU.325 has missing side chain atoms: ['OE2', 'OE1', 'CG', 'CD']
+[Molsetup] WARNING: Residue F.ASN.326 has missing side chain atoms: ['ND2', 'CG', 'OD1']
+[Molsetup] WARNING: Residue F.ASP.344 has missing side chain atoms: ['OD2', 'CG', 'OD1']
+[Molsetup] WARNING: Residue F.GLU.377 has missing side chain atoms: ['OE2', 'OE1', 'CG', 'CD']
+[Molsetup] WARNING: Residue F.GLU.448 has missing side chain atoms: ['OE2', 'OE1', 'CG', 'CD']
+[Molsetup] WARNING: Residue F.SER.483 has missing side chain atoms: ['OG']
+[Molsetup] WARNING: Residue F.LYS.484 has missing side chain atoms: ['NZ', 'CG', 'CE', 'CD']
+[Molsetup] WARNING: Residue F.ARG.487 has missing side chain atoms: ['CG', 'NE', 'CD', 'CZ', 'NH1', 'NH2']
+[Molsetup] WARNING: Residue F.ARG.500 has missing side chain atoms: ['CG', 'NE', 'CD', 'CZ', 'NH1', 'NH2']
+[Molsetup] INFO: Multiple residues with missing side chains have been found
+[Molsetup] INFO: Running /opt/sdv/scwrl3_lin/scwrl3  # SCWRL=/home/master/bin/scwrl/scwrl3 to fix those residues...
+[Molsetup] INFO: Created temporal PDB file
+[Molsetup] INFO: Created sequence file
+[Molsetup] INFO: Running /opt/sdv/scwrl3_lin/scwrl3  # SCWRL=/home/master/bin/scwrl/scwrl3...
+[pyDock3] ERROR: Receptor PDB file not suitable for pyDock
+[pyDock3] ERROR: Details: [SetupError] PDB with fixed side chains not found. Check scwrl.output
+[pyDock3] INFO: [ Ligand ]
+[Molsetup] INFO: Reading PDB...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Removing alternative positions...
+[Residue] INFO: Atom found with multiple positions: VAL.79-CG1
+[Residue] INFO: Removing 2 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO:  position: C
+[Residue] INFO: Atom found with multiple positions: VAL.79-CG2
+[Residue] INFO: Removing 2 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO:  position: C
+[Residue] INFO: Atom found with multiple positions: SER.90-OG
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO: Atom found with multiple positions: LYS.99-NZ
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO: Atom found with multiple positions: SER.122-OG
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO: Atom found with multiple positions: ARG.175-NE
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO: Atom found with multiple positions: ARG.175-CZ
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO: Atom found with multiple positions: ARG.175-NH1
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Residue] INFO: Atom found with multiple positions: ARG.175-NH2
+[Residue] INFO: Removing 1 alternative positions...
+[Residue] INFO:  position: B
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Removing original hydrogens...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Removing OXT atoms...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Reading AMBER parameters...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Checking residue and atom names...
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Renaming residue HIS
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Fixing disulfide bridges...
+[Molsetup] INFO: Done.
+[Residue] INFO: Adding hydrogens to MET.1
+[Residue] INFO: Adding hydrogens to LEU.2
+[Residue] INFO: Adding hydrogens to ALA.3
+[Residue] INFO: Adding hydrogens to LYS.4
+[Residue] INFO: Adding hydrogens to ARG.5
+[Residue] INFO: Adding hydrogens to ILE.6
+[Residue] INFO: Adding hydrogens to ILE.7
+[Residue] INFO: Adding hydrogens to ALA.8
+[Residue] INFO: Adding hydrogens to CYS.9
+[Residue] INFO: Adding hydrogens to LEU.10
+[Residue] INFO: Adding hydrogens to ASP.11
+[Residue] INFO: Adding hydrogens to VAL.12
+[Residue] INFO: Adding hydrogens to LYS.13
+[Residue] INFO: Adding hydrogens to ASP.14
+[Residue] INFO: Adding hydrogens to GLY.15
+[Residue] INFO: Adding hydrogens to ARG.16
+[Residue] INFO: Adding hydrogens to VAL.17
+[Residue] INFO: Adding hydrogens to VAL.18
+[Residue] INFO: Adding hydrogens to LYS.19
+[Residue] INFO: Adding hydrogens to GLY.20
+[Residue] INFO: Adding hydrogens to SER.21
+[Residue] INFO: Adding hydrogens to ASN.22
+[Residue] INFO: Adding hydrogens to PHE.23
+[Residue] INFO: Adding hydrogens to GLU.24
+[Residue] INFO: Adding hydrogens to ASN.25
+[Residue] INFO: Adding hydrogens to LEU.26
+[Residue] INFO: Adding hydrogens to ARG.27
+[Residue] INFO: Adding hydrogens to ASP.28
+[Residue] INFO: Adding hydrogens to SER.29
+[Residue] INFO: Adding hydrogens to GLY.30
+[Residue] INFO: Adding hydrogens to ASP.31
+[Residue] INFO: Adding hydrogens to PRO.32
+[Residue] INFO: Adding hydrogens to VAL.33
+[Residue] INFO: Adding hydrogens to GLU.34
+[Residue] INFO: Adding hydrogens to LEU.35
+[Residue] INFO: Adding hydrogens to GLY.36
+[Residue] INFO: Adding hydrogens to LYS.37
+[Residue] INFO: Adding hydrogens to PHE.38
+[Residue] INFO: Adding hydrogens to TYR.39
+[Residue] INFO: Adding hydrogens to SER.40
+[Residue] INFO: Adding hydrogens to GLU.41
+[Residue] INFO: Adding hydrogens to ILE.42
+[Residue] INFO: Adding hydrogens to GLY.43
+[Residue] INFO: Adding hydrogens to ILE.44
+[Residue] INFO: Adding hydrogens to ASP.45
+[Residue] INFO: Adding hydrogens to GLU.46
+[Residue] INFO: Adding hydrogens to LEU.47
+[Residue] INFO: Adding hydrogens to VAL.48
+[Residue] INFO: Adding hydrogens to PHE.49
+[Residue] INFO: Adding hydrogens to LEU.50
+[Residue] INFO: Adding hydrogens to ASP.51
+[Residue] INFO: Adding hydrogens to ILE.52
+[Residue] INFO: Adding hydrogens to THR.53
+[Residue] INFO: Adding hydrogens to ALA.54
+[Residue] INFO: Adding hydrogens to SER.55
+[Residue] INFO: Adding hydrogens to VAL.56
+[Residue] INFO: Adding hydrogens to GLU.57
+[Residue] INFO: Adding hydrogens to LYS.58
+[Residue] INFO: Adding hydrogens to ARG.59
+[Residue] INFO: Adding hydrogens to LYS.60
+[Residue] INFO: Adding hydrogens to THR.61
+[Residue] INFO: Adding hydrogens to MET.62
+[Residue] INFO: Adding hydrogens to LEU.63
+[Residue] INFO: Adding hydrogens to GLU.64
+[Residue] INFO: Adding hydrogens to LEU.65
+[Residue] INFO: Adding hydrogens to VAL.66
+[Residue] INFO: Adding hydrogens to GLU.67
+[Residue] INFO: Adding hydrogens to LYS.68
+[Residue] INFO: Adding hydrogens to VAL.69
+[Residue] INFO: Adding hydrogens to ALA.70
+[Residue] INFO: Adding hydrogens to GLU.71
+[Residue] INFO: Adding hydrogens to GLN.72
+[Residue] INFO: Adding hydrogens to ILE.73
+[Residue] INFO: Adding hydrogens to ASP.74
+[Residue] INFO: Adding hydrogens to ILE.75
+[Residue] INFO: Adding hydrogens to PRO.76
+[Residue] INFO: Adding hydrogens to PHE.77
+[Residue] INFO: Adding hydrogens to THR.78
+[Residue] INFO: Adding hydrogens to VAL.79
+[Residue] INFO: Adding hydrogens to GLY.80
+[Residue] INFO: Adding hydrogens to GLY.81
+[Residue] INFO: Adding hydrogens to GLY.82
+[Residue] INFO: Adding hydrogens to ILE.83
+[Residue] INFO: Adding hydrogens to HID.84
+[Residue] INFO: Adding hydrogens to ASP.85
+[Residue] INFO: Adding hydrogens to PHE.86
+[Residue] INFO: Adding hydrogens to GLU.87
+[Residue] INFO: Adding hydrogens to THR.88
+[Residue] INFO: Adding hydrogens to ALA.89
+[Residue] INFO: Adding hydrogens to SER.90
+[Residue] INFO: Adding hydrogens to GLU.91
+[Residue] INFO: Adding hydrogens to LEU.92
+[Residue] INFO: Adding hydrogens to ILE.93
+[Residue] INFO: Adding hydrogens to LEU.94
+[Residue] INFO: Adding hydrogens to ARG.95
+[Residue] INFO: Adding hydrogens to GLY.96
+[Residue] INFO: Adding hydrogens to ALA.97
+[Residue] INFO: Adding hydrogens to ASP.98
+[Residue] INFO: Adding hydrogens to LYS.99
+[Residue] INFO: Adding hydrogens to VAL.100
+[Residue] INFO: Adding hydrogens to SER.101
+[Residue] INFO: Adding hydrogens to ILE.102
+[Residue] INFO: Adding hydrogens to ASN.103
+[Residue] INFO: Adding hydrogens to THR.104
+[Residue] INFO: Adding hydrogens to ALA.105
+[Residue] INFO: Adding hydrogens to ALA.106
+[Residue] INFO: Adding hydrogens to VAL.107
+[Residue] INFO: Adding hydrogens to GLU.108
+[Residue] INFO: Adding hydrogens to ASN.109
+[Residue] INFO: Adding hydrogens to PRO.110
+[Residue] INFO: Adding hydrogens to SER.111
+[Residue] INFO: Adding hydrogens to LEU.112
+[Residue] INFO: Adding hydrogens to ILE.113
+[Residue] INFO: Adding hydrogens to THR.114
+[Residue] INFO: Adding hydrogens to GLN.115
+[Residue] INFO: Adding hydrogens to ILE.116
+[Residue] INFO: Adding hydrogens to ALA.117
+[Residue] INFO: Adding hydrogens to GLN.118
+[Residue] INFO: Adding hydrogens to THR.119
+[Residue] INFO: Adding hydrogens to PHE.120
+[Residue] INFO: Adding hydrogens to GLY.121
+[Residue] INFO: Adding hydrogens to SER.122
+[Residue] INFO: Adding hydrogens to GLN.123
+[Residue] INFO: Adding hydrogens to ALA.124
+[Residue] INFO: Adding hydrogens to VAL.125
+[Residue] INFO: Adding hydrogens to VAL.126
+[Residue] INFO: Adding hydrogens to VAL.127
+[Residue] INFO: Adding hydrogens to ALA.128
+[Residue] INFO: Adding hydrogens to ILE.129
+[Residue] INFO: Adding hydrogens to ASP.130
+[Residue] INFO: Adding hydrogens to ALA.131
+[Residue] INFO: Adding hydrogens to LYS.132
+[Residue] INFO: Adding hydrogens to ARG.133
+[Residue] INFO: Adding hydrogens to VAL.134
+[Residue] INFO: Adding hydrogens to ASP.135
+[Residue] INFO: Adding hydrogens to GLY.136
+[Residue] INFO: Adding hydrogens to GLU.137
+[Residue] INFO: Adding hydrogens to PHE.138
+[Residue] INFO: Adding hydrogens to MET.139
+[Residue] INFO: Adding hydrogens to VAL.140
+[Residue] INFO: Adding hydrogens to PHE.141
+[Residue] INFO: Adding hydrogens to THR.142
+[Residue] INFO: Adding hydrogens to TYR.143
+[Residue] INFO: Adding hydrogens to SER.144
+[Residue] INFO: Adding hydrogens to GLY.145
+[Residue] INFO: Adding hydrogens to LYS.146
+[Residue] INFO: Adding hydrogens to LYS.147
+[Residue] INFO: Adding hydrogens to ASN.148
+[Residue] INFO: Adding hydrogens to THR.149
+[Residue] INFO: Adding hydrogens to GLY.150
+[Residue] INFO: Adding hydrogens to ILE.151
+[Residue] INFO: Adding hydrogens to LEU.152
+[Residue] INFO: Adding hydrogens to LEU.153
+[Residue] INFO: Adding hydrogens to ARG.154
+[Residue] INFO: Adding hydrogens to ASP.155
+[Residue] INFO: Adding hydrogens to TRP.156
+[Residue] INFO: Adding hydrogens to VAL.157
+[Residue] INFO: Adding hydrogens to VAL.158
+[Residue] INFO: Adding hydrogens to GLU.159
+[Residue] INFO: Adding hydrogens to VAL.160
+[Residue] INFO: Adding hydrogens to GLU.161
+[Residue] INFO: Adding hydrogens to LYS.162
+[Residue] INFO: Adding hydrogens to ARG.163
+[Residue] INFO: Adding hydrogens to GLY.164
+[Residue] INFO: Adding hydrogens to ALA.165
+[Residue] INFO: Adding hydrogens to GLY.166
+[Residue] INFO: Adding hydrogens to GLU.167
+[Residue] INFO: Adding hydrogens to ILE.168
+[Residue] INFO: Adding hydrogens to LEU.169
+[Residue] INFO: Adding hydrogens to LEU.170
+[Residue] INFO: Adding hydrogens to THR.171
+[Residue] INFO: Adding hydrogens to SER.172
+[Residue] INFO: Adding hydrogens to ILE.173
+[Residue] INFO: Adding hydrogens to ASP.174
+[Residue] INFO: Adding hydrogens to ARG.175
+[Residue] INFO: Adding hydrogens to ASP.176
+[Residue] INFO: Adding hydrogens to GLY.177
+[Residue] INFO: Adding hydrogens to THR.178
+[Residue] INFO: Adding hydrogens to LYS.179
+[Residue] INFO: Adding hydrogens to SER.180
+[Residue] INFO: Adding hydrogens to GLY.181
+[Residue] INFO: Adding hydrogens to TYR.182
+[Residue] INFO: Adding hydrogens to ASP.183
+[Residue] INFO: Adding hydrogens to THR.184
+[Residue] INFO: Adding hydrogens to GLU.185
+[Residue] INFO: Adding hydrogens to MET.186
+[Residue] INFO: Adding hydrogens to ILE.187
+[Residue] INFO: Adding hydrogens to ARG.188
+[Residue] INFO: Adding hydrogens to PHE.189
+[Residue] INFO: Adding hydrogens to VAL.190
+[Residue] INFO: Adding hydrogens to ARG.191
+[Residue] INFO: Adding hydrogens to PRO.192
+[Residue] INFO: Adding hydrogens to LEU.193
+[Residue] INFO: Adding hydrogens to THR.194
+[Residue] INFO: Adding hydrogens to THR.195
+[Residue] INFO: Adding hydrogens to LEU.196
+[Residue] INFO: Adding hydrogens to PRO.197
+[Residue] INFO: Adding hydrogens to ILE.198
+[Residue] INFO: Adding hydrogens to ILE.199
+[Residue] INFO: Adding hydrogens to ALA.200
+[Residue] INFO: Adding hydrogens to SER.201
+[Residue] INFO: Adding hydrogens to GLY.202
+[Residue] INFO: Adding hydrogens to GLY.203
+[Residue] INFO: Adding hydrogens to ALA.204
+[Residue] INFO: Adding hydrogens to GLY.205
+[Residue] INFO: Adding hydrogens to LYS.206
+[Residue] INFO: Adding hydrogens to MET.207
+[Residue] INFO: Adding hydrogens to GLU.208
+[Residue] INFO: Adding hydrogens to HID.209
+[Residue] INFO: Adding hydrogens to PHE.210
+[Residue] INFO: Adding hydrogens to LEU.211
+[Residue] INFO: Adding hydrogens to GLU.212
+[Residue] INFO: Adding hydrogens to ALA.213
+[Residue] INFO: Adding hydrogens to PHE.214
+[Residue] INFO: Adding hydrogens to LEU.215
+[Residue] INFO: Adding hydrogens to ALA.216
+[Residue] INFO: Adding hydrogens to GLY.217
+[Residue] INFO: Adding hydrogens to ALA.218
+[Residue] INFO: Adding hydrogens to ASP.219
+[Residue] INFO: Adding hydrogens to ALA.220
+[Residue] INFO: Adding hydrogens to ALA.221
+[Residue] INFO: Adding hydrogens to LEU.222
+[Residue] INFO: Adding hydrogens to ALA.223
+[Residue] INFO: Adding hydrogens to ALA.224
+[Residue] INFO: Adding hydrogens to SER.225
+[Residue] INFO: Adding hydrogens to VAL.226
+[Residue] INFO: Adding hydrogens to PHE.227
+[Residue] INFO: Adding hydrogens to HID.228
+[Residue] INFO: Adding hydrogens to PHE.229
+[Residue] INFO: Adding hydrogens to ARG.230
+[Residue] INFO: Adding hydrogens to GLU.231
+[Residue] INFO: Adding hydrogens to ILE.232
+[Residue] INFO: Adding hydrogens to ASP.233
+[Residue] INFO: Adding hydrogens to VAL.234
+[Residue] INFO: Adding hydrogens to ARG.235
+[Residue] INFO: Adding hydrogens to GLU.236
+[Residue] INFO: Adding hydrogens to LEU.237
+[Residue] INFO: Adding hydrogens to LYS.238
+[Residue] INFO: Adding hydrogens to GLU.239
+[Residue] INFO: Adding hydrogens to TYR.240
+[Residue] INFO: Adding hydrogens to LEU.241
+[Residue] INFO: Adding hydrogens to LYS.242
+[Residue] INFO: Adding hydrogens to LYS.243
+[Residue] INFO: Adding hydrogens to HID.244
+[Residue] INFO: Adding hydrogens to GLY.245
+[Residue] INFO: Adding hydrogens to VAL.246
+[Residue] INFO: Adding hydrogens to ASN.247
+[Residue] INFO: Adding hydrogens to VAL.248
+[Residue] INFO: Adding hydrogens to ARG.249
+[Residue] INFO: Adding hydrogens to LEU.250
+[Residue] INFO: Adding hydrogens to GLU.251
+[Residue] INFO: Adding hydrogens to GLY.252
+[Residue] INFO: Adding hydrogens to LEU.253
+[Molsetup] INFO: Writing 1gpw_pydock_lig.pdb file...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Writing 1gpw_pydock_lig.pdb.H file...
+[Molsetup] INFO: Done.
+[Molsetup] INFO: Creating support 1gpw_pydock_lig.pdb.amber file...
+[Molsetup] INFO: Done.
+[pyDock3] INFO: Ligand molecule successfully created!
+[pyDock3] ERROR: Error in setup. Please check preceding errors.

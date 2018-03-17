@@ -1,0 +1,144 @@
+Start loading rigid molecule
+ASCII
+    In Layer 0 out of 13 curr->size() 9643
+    In Layer 1 out of 13 curr->size() 25685
+    In Layer 2 out of 13 curr->size() 25997
+    In Layer 3 out of 13 curr->size() 26652
+    In Layer 4 out of 13 curr->size() 28712
+    In Layer 5 out of 13 curr->size() 32851
+    In Layer 6 out of 13 curr->size() 38922
+    In Layer 7 out of 13 curr->size() 46001
+    In Layer 8 out of 13 curr->size() 53270
+    In Layer 9 out of 13 curr->size() 61123
+    In Layer 10 out of 13 curr->size() 69199
+    In Layer 11 out of 13 curr->size() 77676
+    In Layer 12 out of 13 curr->size() 86779
+   markTheInside: in Layer 1 out of 13 curr->size() 210
+   markTheInside: in Layer 2 out of 13 curr->size() 4881
+   markTheInside: in Layer 3 out of 13 curr->size() 8086
+   markTheInside: in Layer 4 out of 13 curr->size() 3031
+   markTheInside: in Layer 5 out of 13 curr->size() 310
+   markTheInside: in Layer 6 out of 13 curr->size() 2
+New volume function cut values: 0.292605 0.438977
+Old volume function cut values: 0.372152 0.485111
+Done loading rigid molecule
+ASCII
+ASCII
+    In Layer 0 out of 13 curr->size() 18540
+    In Layer 1 out of 13 curr->size() 49046
+    In Layer 2 out of 13 curr->size() 49319
+    In Layer 3 out of 13 curr->size() 51200
+    In Layer 4 out of 13 curr->size() 53941
+    In Layer 5 out of 13 curr->size() 59049
+    In Layer 6 out of 13 curr->size() 64329
+    In Layer 7 out of 13 curr->size() 69135
+    In Layer 8 out of 13 curr->size() 74588
+    In Layer 9 out of 13 curr->size() 81641
+    In Layer 10 out of 13 curr->size() 89390
+    In Layer 11 out of 13 curr->size() 98091
+    In Layer 12 out of 13 curr->size() 107710
+   markTheInside: in Layer 1 out of 13 curr->size() 597
+   markTheInside: in Layer 2 out of 13 curr->size() 13774
+   markTheInside: in Layer 3 out of 13 curr->size() 26169
+   markTheInside: in Layer 4 out of 13 curr->size() 15262
+   markTheInside: in Layer 5 out of 13 curr->size() 3137
+   markTheInside: in Layer 6 out of 13 curr->size() 182
+New volume function cut values: 0.355236 0.523696
+Old volume function cut values: 0.42947 0.555711
+    In Layer 0 out of 13 curr->size() 17795
+    In Layer 1 out of 13 curr->size() 46669
+    In Layer 2 out of 13 curr->size() 46636
+    In Layer 3 out of 13 curr->size() 47529
+    In Layer 4 out of 13 curr->size() 49819
+    In Layer 5 out of 13 curr->size() 54557
+    In Layer 6 out of 13 curr->size() 59628
+    In Layer 7 out of 13 curr->size() 64220
+    In Layer 8 out of 13 curr->size() 69572
+    In Layer 9 out of 13 curr->size() 76167
+    In Layer 10 out of 13 curr->size() 84154
+    In Layer 11 out of 13 curr->size() 92927
+    In Layer 12 out of 13 curr->size() 102412
+   markTheInside: in Layer 1 out of 13 curr->size() 567
+   markTheInside: in Layer 2 out of 13 curr->size() 13137
+   markTheInside: in Layer 3 out of 13 curr->size() 24314
+   markTheInside: in Layer 4 out of 13 curr->size() 14120
+   markTheInside: in Layer 5 out of 13 curr->size() 2966
+   markTheInside: in Layer 6 out of 13 curr->size() 157
+New volume function cut values: 0.357892 0.533203
+Old volume function cut values: 0.418426 0.552076
+N term 1 : -8.474 30.422 20.41
+C term 0 : -8.862 29.388 21.136
+NATIVETRANS 0 0 2.77556e-17 -1.11022e-16 0 7.32903e-16 -7.10543e-15
+NATIVETRANS 1 3.88578e-16 2.77556e-16 -3.88578e-16 1.037e-15 4.14452e-15 -5.32907e-15
+Done loading flexible molecule
+flexMols_[i].size 597 rigidMol_.size 210
+Error in active site array
+Error in active site array
+.............
+
+...................
+Transforms remain after clustering with RMSD 2 : 2643
+flexMols_[i].size 567 rigidMol_.size 210
+Error in active site array
+Error in active site array
+............
+
+..................
+Transforms remain after clustering with RMSD 2 : 2248
+rigidResults[i].size(): 2643
+rigidResults[i].size(): 2248
+Error in active site array
+Error in active site array
+part # 0
+resultID 0
+resultID 100
+resultID 200
+resultID 300
+resultID 400
+resultID 500
+resultID 600
+resultID 700
+resultID 800
+resultID 900
+resultID 1000
+resultID 1100
+resultID 1200
+resultID 1300
+resultID 1400
+resultID 1500
+resultID 1600
+resultID 1700
+resultID 1800
+resultID 1900
+resultID 2000
+resultID 2100
+resultID 2200
+resultID 2300
+resultID 2400
+resultID 2500
+resultID 2600
+part # 1
+resultID 0
+resultID 100
+resultID 200
+resultID 300
+resultID 400
+resultID 500
+resultID 600
+resultID 700
+resultID 800
+resultID 900
+resultID 1000
+resultID 1100
+resultID 1200
+resultID 1300
+resultID 1400
+resultID 1500
+resultID 1600
+resultID 1700
+resultID 1800
+resultID 1900
+resultID 2000
+resultID 2100
+resultID 2200
+Transforms remain after interface clustering with RMSD 4 : 15918

@@ -1,0 +1,49 @@
+C       1     #sp2 C carbonyl group                          
+CA      2     #sp2 C pure aromatic (benzene)
+CB      2     #sp2 aromatic C, 5&6 membered ring junction
+CC      2     #sp2 aromatic C, 5 memb. ring HIS
+CD      1     #sp2 C atom in the middle of: C=CD-CD=C
+CK      2     #sp2 C 5 memb.ring in purines
+CM      2     #sp2 C  pyrimidines in pos. 5 & 6
+CN      2     #sp2 C aromatic 5&6 memb.ring junct.(TRP)
+CQ      2     #sp2 C in 5 mem.ring of purines between 2 N
+CR      2     #sp2 arom as CQ but in HIS
+CT      1     #sp3 aliphatic C
+CV      2     #sp2 arom. 5 memb.ring w/1 N and 1 H (HIS)
+CW      2     #sp2 arom. 5 memb.ring w/1 N-H and 1 H (HIS)
+C*      2     #sp2 arom. 5 memb.ring w/1 subst. (TRP)
+CY      1     #nitrile C (Howard et al.JCC,16,243,1995)
+CZ      1     #sp C (Howard et al.JCC,16,243,1995)
+N       3     #sp2 nitrogen in amide groups
+NA      3     #sp2 N in 5 memb.ring w/H atom (HIS,HIP)
+NB      3     #sp2 N in 5 memb.ring w/LP (HIS,ADE,GUA)
+NC      3     #sp2 N in 6 memb.ring w/LP (ADE,GUA)
+N2      3     #sp2 N in amino groups
+N3      4     #sp3 N for charged amino groups (Lys, etc) 
+NT      3     #sp3 N for amino groups 
+N*      3     #sp2 N 
+NY      3     #nitrile N (Howard et al.JCC,16,243,1995)
+O       7     #carbonyl group oxygen
+O2      8     #carboxyl and phosphate group oxygen
+O3      8     #carboxyl and phosphate group oxygen
+OW      6     #oxygen in TIP3P water
+OH      6     #oxygen in hydroxyl group
+OS      6     #ether and ester oxygen                     
+P       0     #phosphate,pol:JACS,112,8543,90,K.J.Miller
+S      10     #S in disulfide linkage,pol:JPC,102,2399,98
+SH      9     #S in cystine
+CU      0     #copper
+FE      0     #iron
+Li      0     #lithium, ions pol:J.PhysC,11,1541,(1978)
+Na      0     #Na+, ions pol:J.PhysC,11,1541,(1978)
+K       0     #potassium
+Rb      0     #rubidium
+Cs      0     #cesium
+Zn      0     #Zn2+ 
+MG      0     #magnesium
+C0      0     #calcium
+F       0     #fluorine
+Cl      0     #chlorine  
+Br      0     #bromine  
+I       0     #iodine  
+MG      0     #magnesium

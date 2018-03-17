@@ -1,0 +1,60 @@
+### I/O
+receptorPDBFileName 1ACB_r.pdb.CHB.pdb
+ligandPDBFileName 1ACB_l.pdb.CHB.pdb
+## reference for rmsd calculations 
+# templateLigandPDBFileName 1ACB_l.pdb.CHB.pdb
+# transformations for refinement
+transFileName 1ACB.zdock.trans
+## libraries files
+rotamerLibFile  /specific/a/netapp2/vol/private/mol/bluvsh/FireDock123/lib/bbdep02.May.sortlib
+protLib /specific/a/netapp2/vol/private/mol/bluvsh/FireDock123/lib/chem.lib
+# pdbConventionFile /specific/a/netapp2/vol/private/mol/bluvsh/FireDock123/lib/Names.CHARMM.db
+## output file
+energiesOutFileName 1ACB.firedock.out
+
+### Input Options
+## these residues will be fixed unless appear also in receptorFlexibleResiduesFile
+# receptorFixedResiduesFile rec_fixed_residues.txt
+# ligandFixedResiduesFile lig_fixed_residues.txt
+## defines for which chains to build surface residues rotamers. If empty than will build for all chains
+## For bound receptor, you should uncomment it
+# flexibleReceptorChains @
+## For bound ligand, you should uncomment it 
+# flexibleLigandChains @
+## Residues specified here will be flexible
+## The residue can be flexible if its chain was specified in flexibleReceptorChains or if flexibleReceptorChains is empty
+# receptorFlexibleResiduesFile rec_flex_residues.txt
+# ligandFlexibleResiduesFile lig_flex_residues.txt
+
+### Output Options
+# to output refined complexes
+printRefinedComplexes 0
+## 1 - only energy caclulaltion is performed without refinement (run only with flag toAMPL)
+onlyEnergyCalculation 0
+
+### side-chain optimization
+# 1 - only clashing residues are flexible, 0 - all residues are flexible
+receptorOnlyClashesMovable 1
+ligandOnlyClashesMovable 1
+# 0 - small rotamer set, 1 - extended rotamer set
+extraRotamers 0
+
+### rigid-body optimization
+# num of MC cycles for rigid-body minimization (if 0 - no RBM)
+rigidBodyMinimizationCycles 50
+
+### weights for energy score (Enzyme-Inhibitor)
+attrVdWWeight   1.0
+repVdWWeight    0.95
+ACEWeight       1.6
+attrElWeight    0.07
+repElWeight     0.12
+l_attrElWeight  0.0
+l_repElWeight   0.3
+HBWeight        1.32
+pipiWeight      1.0
+catpiWeight     0.8
+aliphWeight     0.5
+insidenessWeight        1.55
+confProbWeight  0.0
+radiiScaling 0.8

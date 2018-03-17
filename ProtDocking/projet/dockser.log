@@ -1,0 +1,120 @@
+
+PyDock3
+  A set of tools for protein-protein docking
+  Version 3.2.3
+
+[pyDock3] INFO: Running pyDockSER...
+[scoring] INFO: Reading pdb files...
+[scoring] INFO: Reading receptor file with hydrogens...
+[scoring] INFO: Done.
+[scoring] INFO: Reading ligand file with hydrogens...
+[scoring] INFO: Done.
+[scoring] INFO: Calculating solvation of unbound receptor.
+[scoring] INFO: Calculating solvation of unbound ligand.
+[scoring] INFO: Assigning charges...
+[scoring] INFO: Done.
+[scoring] INFO: Calculating van der Waals terms
+[scoring] INFO: Done.
+[scoring] INFO: Conformation 1 done.
+[scoring] INFO: Conformation 2 done.
+[scoring] INFO: Conformation 3 done.
+[scoring] INFO: Conformation 4 done.
+[scoring] INFO: Conformation 5 done.
+[scoring] INFO: Conformation 6 done.
+[scoring] INFO: Conformation 7 done.
+[scoring] INFO: Conformation 8 done.
+[scoring] INFO: Conformation 9 done.
+[scoring] INFO: Conformation 10 done.
+[scoring] INFO: Conformation 11 done.
+[scoring] INFO: Conformation 12 done.
+[scoring] INFO: Conformation 13 done.
+[scoring] INFO: Conformation 14 done.
+[scoring] INFO: Conformation 15 done.
+[scoring] INFO: Conformation 16 done.
+[scoring] INFO: Conformation 17 done.
+[scoring] INFO: Conformation 18 done.
+[scoring] INFO: Conformation 19 done.
+[scoring] INFO: Conformation 20 done.
+[scoring] INFO: Conformation 21 done.
+[scoring] INFO: Conformation 22 done.
+[scoring] INFO: Conformation 23 done.
+[scoring] INFO: Conformation 24 done.
+[scoring] INFO: Conformation 25 done.
+[scoring] INFO: Conformation 26 done.
+[scoring] INFO: Conformation 27 done.
+[scoring] INFO: Conformation 28 done.
+[scoring] INFO: Conformation 29 done.
+[scoring] INFO: Conformation 30 done.
+[scoring] INFO: Conformation 31 done.
+[scoring] INFO: Conformation 32 done.
+[scoring] INFO: Conformation 33 done.
+[scoring] INFO: Conformation 34 done.
+[scoring] INFO: Conformation 35 done.
+[scoring] INFO: Conformation 36 done.
+[scoring] INFO: Conformation 37 done.
+[scoring] INFO: Conformation 38 done.
+[scoring] INFO: Conformation 39 done.
+[scoring] INFO: Conformation 40 done.
+[scoring] INFO: Conformation 41 done.
+[scoring] INFO: Conformation 42 done.
+[scoring] INFO: Conformation 43 done.
+[scoring] INFO: Conformation 44 done.
+[scoring] INFO: Conformation 45 done.
+[scoring] INFO: Conformation 46 done.
+[scoring] INFO: Conformation 47 done.
+[scoring] INFO: Conformation 48 done.
+[scoring] INFO: Conformation 49 done.
+[scoring] INFO: Conformation 50 done.
+[scoring] INFO: Conformation 51 done.
+[scoring] INFO: Conformation 52 done.
+[scoring] INFO: Conformation 53 done.
+[scoring] INFO: Conformation 54 done.
+[scoring] INFO: Conformation 55 done.
+[scoring] INFO: Conformation 56 done.
+[scoring] INFO: Conformation 57 done.
+[scoring] INFO: Conformation 58 done.
+[scoring] INFO: Conformation 59 done.
+[scoring] INFO: Conformation 60 done.
+[scoring] INFO: Conformation 61 done.
+[scoring] INFO: Conformation 62 done.
+[scoring] INFO: Conformation 63 done.
+[scoring] INFO: Conformation 64 done.
+[scoring] INFO: Conformation 65 done.
+[scoring] INFO: Conformation 66 done.
+[scoring] INFO: Conformation 67 done.
+[scoring] INFO: Conformation 68 done.
+[scoring] INFO: Conformation 69 done.
+[scoring] INFO: Conformation 70 done.
+[scoring] INFO: Conformation 71 done.
+[scoring] INFO: Conformation 72 done.
+[scoring] INFO: Conformation 73 done.
+[scoring] INFO: Conformation 74 done.
+[scoring] INFO: Conformation 75 done.
+[scoring] INFO: Conformation 76 done.
+[scoring] INFO: Conformation 77 done.
+[scoring] INFO: Conformation 78 done.
+[scoring] INFO: Conformation 79 done.
+[scoring] INFO: Conformation 80 done.
+[scoring] INFO: Conformation 81 done.
+[scoring] INFO: Conformation 82 done.
+[scoring] INFO: Conformation 83 done.
+[scoring] INFO: Conformation 84 done.
+[scoring] INFO: Conformation 85 done.
+[scoring] INFO: Conformation 86 done.
+[scoring] INFO: Conformation 87 done.
+[scoring] INFO: Conformation 88 done.
+[scoring] INFO: Conformation 89 done.
+[scoring] INFO: Conformation 90 done.
+[scoring] INFO: Conformation 91 done.
+[scoring] INFO: Conformation 92 done.
+[scoring] INFO: Conformation 93 done.
+[scoring] INFO: Conformation 94 done.
+[scoring] INFO: Conformation 95 done.
+[scoring] INFO: Conformation 96 done.
+[scoring] INFO: Conformation 97 done.
+[scoring] INFO: Conformation 98 done.
+[scoring] INFO: Conformation 99 done.
+[scoring] INFO: Conformation 100 done.
+[scoring] INFO: Creating Table
+[scoring] INFO: Done.
+[pyDock3] INFO: pyDock FINISHED!

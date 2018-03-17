@@ -1,0 +1,130 @@
+Readme file for FlexDock Program.
+
+##########################################################################
+# Installation
+##########################################################################
+
+No installation is required, you can add the FlexDock
+directory to your path for convinient usage
+
+##########################################################################
+# Program Input Preparation
+##########################################################################
+
+1) Prepare 2 pdb files with the molecules you want to dock: rigid.pdb and flexible.pdb (you can name the files as you wish)
+   rigid molecule can be anything in PDB format, flexible molecule must be a protein!
+
+2) Detect hinges in the flexible.pdb by running HingeProt webserver:
+   http://bioinfo3d.cs.tau.ac.il/HingeProt/
+   At the buttom of the server output page there is a link to "HingeProt output file".
+   Please download and save this file. A sample file will look like this:
+
+----> Slowest mode 1:
+ # of rigid parts: 2
+Part 1 A:1-77  direction 0.0085 -0.058 -0.1 size 0.12 score 0.98
+Part 2 A:78-148  direction -0.0063 0.065 0.11 size 0.13 score 0.98
+Hinge residues: 77A 
+----> Slowest mode 2:
+ # of rigid parts: 3
+Part 1 A:1-17,64-91,138-148  direction -0.47 -0.018 0.11 size 0.48 score 0.75
+Part 2 A:18-63  direction 0.49 -0.57 -0.22 size 0.78 score 0.86
+Part 3 A:92-137  direction 0.081 0.58 0.087 size 0.59 score 0.85
+Hinge residues: 17A 63A 91A 137A 
+
+   Please take a look at the partition the server created and see if it looks reasonable,
+   i.e. 2-3 rigid well defined globular rigid parts.
+
+3) Create parameter file by running the script: buildParams.pl.
+   The script recieves as an input 5 parameters:
+   1,2: the names of the PDB files (rigid.pdb and flexible.pdb),
+   3: HingeProt partition output (the file you have downloaded from webserver): flexible.hinges
+   4: clustering RMSD parameter (optional)
+   5: the type of molecules (optional). Currently there are special sets of parameters
+      for some types of docking:
+      EI: the receptor/rigid molecule is an enzyme and the ligand/flexible is an inhibitor.
+          In this case the program docks the inhibitor into cavities of the enzyme.
+      drug: The receptor is a flexible protein molecule and the ligand is a small 
+            rigid molecule: drug like or peptide.
+   The script will create parameter file named params.txt. All the parameters
+   are explained within the parameter file.
+
+4) Additional input can be potential binding site residues for one or two molecules.
+   This reduces running time and the quality of the results obtained by the program.
+   The format of the active site file is as follows: each line includes
+   residue number and chain id for one residue. No empty lines are allowed.
+   For example:
+	  347 A
+	  348 A
+   The name of this file is specified in parameter file, simply add or uncomment line
+   "rigidMoleculeSites site1.txt site2.txt" or "flexibleMoleculeSites site_files".
+   You can add one site on the rigid molecule and/or one on the flexible for each rigid part.
+   If you have only partial information, you have to put "-" for missing files.
+   For example: "rigidMoleculeSites site1.txt -"
+
+##########################################################################
+# Running the program
+##########################################################################
+
+simply type:
+
+    flex_dock.Linux <params_file> <output_file>
+
+params_file is the parameter file "flex-params.txt" that was previously created
+by "buildParams.pl".
+output_file is the name of the file that will include the results.
+
+##########################################################################
+# Program Output
+##########################################################################
+
+If you run: ./flex_dock.Linux flex-params.txt flex.res
+than the output of the program is stored in flex.res file
+ 
+   (*) The program log is saved in log file named flex_dock.log.
+
+The output file includes all program parameters and the solutions obtained.
+Each solution is represented as follows:
+
+Res 1 rmsd 47.91 (22.47)  score 16998 ACE 0.00
+ 0 |    5 |  7570 |  0.00 |    0.00 |     0 |     0 |     0 |    0.00 |    0.00 |    0.00 |     0 | 0.00 || 1.02433 -0.50679 -2.13151 14.93187 13.97838 -46.33892
+ 1 |    1 |  8216 |  0.00 |    0.00 |     0 |     0 |     0 |    0.00 |    0.00 |    0.00 |     0 | 0.00 || -1.65579 0.41295 -2.50906 -7.51850 15.78558 15.59898
+
+The first line represents the score of the solution, the following lines present the scores of docking of the rigid parts docking:
+
+# | rank | score | pen.  | Area    | as1   | as2   | as12  | ACE     | hydroph | Energy  |cluster| dist. || Part Transformation
+0 |    5 |  7570 |  0.00 |    0.00 |     0 |     0 |     0 |    0.00 |    0.00 |    0.00 |     0 | 0.00 || 1.02433 -0.50679 -2.13151 14.93187 13.97838 -46.33
+
+#       - solution number
+rank    - rank of this solution in the rigid part docking
+score   - geometric shape complementarity score
+pen.    - maximal surface penetration of surface points
+Area    - approximate interface area of the complex
+as1     - geometric score based only on receptor residues that were given as potential binding site
+as2     - geometric score based only on ligand residues that were given as potential binding site
+as12    - geometric score based on both receptor and ligand residues that were given as potential binding site
+ACE     - atomic contact energy according to Zhang et al.
+hydroph - approximate hydrophobic contacting interface area of the complex
+Energy  - currently unused
+cluster - currently unused
+dist.   - currently unused
+Part Transformation - the transformation of the rigid part on the rigid molecule (3 rotational and 3 translational parameters)
+
+The results are sorted according to the geometric score.
+
+##########################################################################
+# Generating PDB files with results
+##########################################################################
+
+To produce PDB files for docking solutions, run
+
+   transOutput.pl <output file name> <first result> <last result>
+
+The output file is the file created by the program earlier.
+The <first result> <last result> are the numbers of transformations to generate.
+For example running: 
+    transOutput.pl flex.res 1 10
+will create PDB files with first 10 transformations.
+
+
+
+

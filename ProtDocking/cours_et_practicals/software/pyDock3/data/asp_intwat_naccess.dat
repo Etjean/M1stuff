@@ -1,0 +1,15 @@
+interface to water parameters for ten atom types
+according to NACCESS
+
+       Atom-Type          energy(kcal/mol(A2))   radius
+   ------------------    --------------------    ------
+ASP  1   C aliphatic             0.01918          1.870 
+ASP  2   C aromatic              0.11080          1.760 
+ASP  3   N uncharged            -0.03910          1.650 
+ASP  4   N in Lys+              -0.12604          1.500 
+ASP  5   N in Arg+              -0.06256          1.650 
+ASP  6   O hydroxyl             -0.04255          1.400 
+ASP  7   O carbonyl             -0.03128          1.400 
+ASP  8   O in Glu,Asp           -0.06877          1.400 
+ASP  9   S in SH                 0.02576          1.850 
+ASP 10   S in Met or S-S         0.00506          1.850 
