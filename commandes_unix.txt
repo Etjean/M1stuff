@@ -1,20 +1,66 @@
-
+################ Programmes #################
 gedit             #textes sur ubuntu
 medit             #textes sur mon portable
+st 				  #sublime texte
 evince            #pdfs sur ubuntu
 xpdf              #pdfs sur mon portable
 firefox           
 
-#Pour Windows 10
+
+################ VIM #################
+# Source : https://www.linux.com/learn/vim-101-beginners-guide-vim
+#MOVING
+h 		moves the cursor one character to the left.
+j 		moves the cursor down one line.
+k 		moves the cursor up one line.
+l 		moves the cursor one character to the right.
+0 		moves the cursor to the beginning of the line.
+$ 		moves the cursor to the end of the line.
+w 		move forward one word.
+b 		move backward one word.
+G 		move to the end of the file.
+gg 		move to the beginning of the file.
+#EDITING
+d 		starts the delete operation.
+dw 		will delete a word.
+d0 		will delete to the beginning of a line.
+d$ 		will delete to the end of a line.
+dgg 	will delete to the beginning of the file.
+dG 		will delete to the end of the file.
+u 		will undo the last operation.
+Ctrl-r 	will redo the last undo
+#SEARCHING & REPLACING
+/text 	search for text in the document, going forward.
+n 		move the cursor to the next instance of the text from the last search. This will wrap to the beginning of the document.
+N 		move the cursor to the previous instance of the text from the last search.
+?text 	search for text in the document, going backwards.
+:%s/text/replacement text/g 		search through the entire document for text and replace it with replacement text.
+:%s/text/replacement text/gc 		search through the entire document and confirm before replacing text.
+#COPY & PASTE
+v 		highlight one character at a time.
+V 		highlight one line at a time.
+Ctrl-v 	highlight by columns.
+p 		paste text after the current line.
+P 		paste text on the current line.
+y 		yank text into the copy buffer.
+#SAVING & QUITTING
+:q 		quit vim
+:w 		write changes
+ZZ 		save changes and quit vim
+
+
+################ Windows 10 #################
 export DISPLAY=:0                   #après avoir lancé Xming, pour pouvoir ouvrir les applis graphiques linux sur win10
 /mnt/c/Users/Etienne/Desktop        #chemin du bureau windows
 
-#Pour Ubuntu unity (après installation)
-sudo update-grub                                    #pour mettre à jour le dual boot ubuntu/windows
+
+################ Ubuntu unity - après installation #################
+sudo update-grub                                    #pour mettre à jour le dual boot
 sudo service network-manager restart                #pour relancer la wifi qd ca bug
 sudo apt-get update && sudo apt-get dist-upgrade    #pour tout mettre à jour et corriger les problèmes de wifi après installation
 
 
+################ GIT #################
 git                                      #affiche l'aide générale
 git help [sketuveux]                     #affiche l'aide à propos de sketuveux
 git clone http://github.com/Etjean/ejean
@@ -30,56 +76,62 @@ git commit file
 git push                                 #modifie définitivemet github depuis le local
 
 
+################ DRIVE #################
+# Download the go archive for your distribution on the Go website (example : "go1.10.3.linux-amd64.tar.gz")
+sudo tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+# Follow instructions on the Go website to test the installation
+go get -u github.com/odeke-em/drive/cmd/drive
+cat ~/go/src/cloud.google.com/go/README.md
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
+drive init ~/gdrive
+
+
+################ Manage Packages #################
 sudo                        #execute en tant que root
 sudo apt-cache update
 sudo apt-cache search [mots clés]
 sudo apt-cache show [nom paquet]
 sudo apt-get install [nom paquet]
 sudo apt-get remove [nom paquet]
+sudo apt-get update [PKG]
+sudo apt-get upgrade [PKG]
 
 
-
+################ BASH #################
 mkdir
 grep
-cat
-head
-help
-man
+wc -l
+awk
+cat / head / tail
+help / man
 history
-!511          #execute la commande 511 de l'history
-
+!511                   		#execute la commande 511 de l'history
 chmod
-ls -l file      #montre les droits de file
-chmod +x file      #rend file executable par tt le monde
-chmod -w file      #rend file non editable par tlm
+du -sh --max-depth=2   		#affiche la taille des fichiers et sous-dossiers
+mv file1 file2      		#renommer
+mv dir1/file1 dir2/     	#déplacer
+mv dir1/file1 dir2/file2 	#déplacer et renommer
+rm -r        				#remove recursivement
+rm -f        				#force le remove
+rm -rf dir   				#remove dir et son contenu sans demander confirmation
+rm -d dir    				#remove un dir (s'il est vide je crois)
 
-ls
-ls -a  #fichiers cachés = fichiers ".qqchose"
-ls -l
-ls -al
-ls -lh     #affiche la taille des fichiers
-du -h      #affiche la taille des fichiers et sous-dossiers
 
-cd
-cd ..
-cd ~
-cd /           #cd vers répertoire ancetre
-cd dir1/dir2/  #cd dir2 dans dir1
+################ IP Adresses & SSH #################
+#Externalip & Internalip scripts - Put them in /usr/bin
+sudo wget https://raw.githubusercontent.com/rsp/scripts/master/externalip
+sudo wget https://raw.githubusercontent.com/rsp/scripts/master/internalip
+sudo apt-get install openssh-server 
+ssh login@ipaddress
+scp file1 login@ipaddress:/path1/
+(echo >/dev/tcp/localhost/22) &>/dev/null && echo "TCP port 22 open" || echo "TCP port 22 close"		#Tests if port 22 is open or close
 
-mv
-mv file1 file2      #renommer
-mv dir1/file1 dir2/     #déplacer
-mv dir1/file1 dir2/file2      #déplacer et renommer
-mv dir1/ dir2/           #renommer si dir2 n'existe pas, déplacer dir1 dans dir2 sinon
 
-cp            #copier
-cp path1/file path2
 
-rm           #remove
-rm -r        #remove recursivement
-rm -r dir    #remove tous les fichier de dir1 en demandant confirmation à chaque fois
-rm -f        #force le remove
-ATTENTION avec la prochaine, je crois qu'il y a moyen de faire des conneries... (genre rm -rf /*)
-rm -rf dir   #remove dir et son contenu sans demander confirmation
-rm -d dir    #remove un dir (s'il est vide je crois)
+
+
+
+
 
